@@ -1,0 +1,58 @@
+<div class="mobile-container">
+  <!-- Cabecera de sección -->
+  <header class="section-header">
+    <span class="section-tag">CATÁLOGO Y CARACTERÍSTICAS</span>
+    <h1 class="section-title">Explorar 🧭</h1>
+    <p class="section-description">
+      Descubre los pilares técnicos y patrones modernos implementados en esta aplicación.
+    </p>
+  </header>
+
+  <!-- Barra de búsqueda minimalista -->
+  <div class="search-box">
+    <app-icon name="search" [size]="18" class="search-icon" />
+    <input
+      type="search"
+      class="search-input"
+      placeholder="Buscar características..."
+      [value]="searchQuery()"
+      (input)="onSearch($event)"
+      aria-label="Buscar en el catálogo"
+    />
+  </div>
+
+  <!-- Chips de Categoría con scroll horizontal táctil -->
+  <div class="category-chips-wrapper" role="tablist" aria-label="Filtrar por categoría">
+    @for (cat of categories; track cat.id) {
+      <button
+        type="button"
+        class="category-chip touch-target"
+        [class.active]="selectedCategory() === cat.id"
+        (click)="setCategory(cat.id)"
+        role="tab"
+        [attr.aria-selected]="selectedCategory() === cat.id"
+      >
+        {{ cat.label }}
+      </button>
+    }
+  </div>
+
+  <!-- Lista de Resultados -->
+  <section class="explore-list" aria-live="polite">
+    @for (item of filteredItems(); track item.id) {
+      <app-card>
+        <div class="item-header">
+          <h2 class="item-title">{{ item.title }}</h2>
+          <span class="item-tag">{{ item.tag }}</span>
+        </div>
+        <p class="item-description">{{ item.description }}</p>
+      </app-card>
+    } @empty {
+      <div class="empty-state">
+        <app-icon name="info" [size]="32" class="empty-icon" />
+        <h2 class="empty-title">Sin resultados</h2>
+        <p class="empty-text">No se encontraron elementos que coincidan con "{{ searchQuery() }}".</p>
+      </div>
+    }
+  </section>
+</div>

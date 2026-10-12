@@ -1,0 +1,103 @@
+<div class="mobile-container">
+  <!-- Cabecera de la sección -->
+  <header class="section-header">
+    <h1 class="section-title">SIDEBOARD ⚔️</h1>
+    <p class="section-description">
+      Elige un arquetipo para acceder a su subsección de estrategia de banquillo, planes In/Out y emparejamientos clave.
+    </p>
+  </header>
+
+  <!-- Buscador en tiempo real -->
+  <div class="search-box">
+    <app-icon name="search" [size]="18" class="search-icon" />
+    <input
+      type="search"
+      class="search-input"
+      placeholder="Buscar por mazo o carta clave..."
+      [value]="sideboardService.searchQuery()"
+      (input)="onSearch($event)"
+      aria-label="Buscar arquetipos de Pauper"
+    />
+  </div>
+
+  <!-- Filtro por estilo de mazo -->
+  <div class="archetype-chips" role="tablist" aria-label="Filtrar por estilo">
+    @for (filter of filters; track filter.id) {
+      <button
+        type="button"
+        class="chip-btn touch-target"
+        [class.active]="sideboardService.filterArchetype() === filter.id"
+        (click)="setFilter(filter.id)"
+        role="tab"
+        [attr.aria-selected]="sideboardService.filterArchetype() === filter.id"
+      >
+        {{ filter.label }}
+      </button>
+    }
+  </div>
+
+  <!-- Cuadrícula de Cards de Mazos de Pauper -->
+  <section class="decks-grid" aria-label="Arquetipos del metagame">
+    @for (deck of sideboardService.filteredDecks(); track deck.id) {
+      <article
+        class="deck-card"
+        [routerLink]="['/sideboard', deck.slug]"
+        tabindex="0"
+        role="button"
+        [attr.aria-label]="'Abrir guía de banquillo de ' + deck.name"
+      >
+        <!-- Banner con Imagen de la Carta de MTGGoldfish -->
+        <div class="deck-media-wrap">
+          <img
+            [src]="deck.imageUrl"
+            [alt]="deck.name"
+            class="deck-card-image"
+            loading="lazy"
+          />
+          <div class="media-overlay"></div>
+          <div class="media-badge-meta">
+            <span class="meta-pct">{{ deck.metaPercentage }}</span>
+            <span class="meta-label">META</span>
+          </div>
+          <div class="media-badge-type">
+            {{ deck.archetypeType }}
+          </div>
+        </div>
+
+        <!-- Contenido e información del mazo -->
+        <div class="deck-info">
+          <div class="deck-title-row">
+            <h2 class="deck-name">{{ deck.name }}</h2>
+            <div class="color-tags">
+              @for (color of deck.colors; track color) {
+                <span class="color-pip" [class]="'mana-' + color">{{ color }}</span>
+              }
+            </div>
+          </div>
+
+          <p class="deck-desc">{{ deck.description }}</p>
+
+          <div class="key-cards-preview">
+            <span class="key-label">Claves:</span>
+            <div class="tags-container">
+              @for (card of deck.keyCards.slice(0, 3); track card) {
+                <span class="key-tag">{{ card }}</span>
+              }
+            </div>
+          </div>
+
+          <div class="deck-footer-action">
+            <span class="action-hint">Ver guía de Sideboard</span>
+            <app-icon name="chevron-right" [size]="16" class="arrow-icon" />
+          </div>
+        </div>
+      </article>
+    } @empty {
+      <div class="empty-state">
+        <app-icon name="info" [size]="32" class="empty-icon" />
+        <h2 class="empty-title">Sin arquetipos encontrados</h2>
+        <p class="empty-text">No hay mazos que coincidan con "{{ sideboardService.searchQuery() }}".</p>
+      </div>
+    }
+  </section>
+</div>

@@ -1,0 +1,37 @@
+<header class="app-header">
+  <div class="header-container">
+    <!-- Botón Hamburguesa -->
+    <button
+      type="button"
+      class="nav-toggle-btn touch-target"
+      [attr.aria-expanded]="navService.isDrawerOpen()"
+      aria-label="Abrir menú de navegación"
+      (click)="onToggleDrawer()"
+    >
+      <app-icon
+        [name]="navService.isDrawerOpen() ? 'close' : 'menu'"
+        [size]="22"
+      />
+    </button>
+
+    <!-- Marca / Título dinámico -->
+    <div class="header-brand">
+      <span class="brand-title">FASE DE PENSAR</span>
+    </div>
+
+    <!-- Acciones Rápidas (Toggle Tema Dark/Light) -->
+    <div class="header-actions">
+      <button
+        type="button"
+        class="action-btn touch-target"
+        [attr.aria-label]="themeService.isDark() ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
+        (click)="onToggleTheme()"
+      >
+        <app-icon
+          [name]="themeService.isDark() ? 'sun' : 'moon'"
+          [size]="20"
+        />
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,137 @@
+<div class="mobile-container">
+  <!-- Cabecera de sección -->
+  <header class="section-header">
+    <span class="section-tag">CONFIGURACIÓN</span>
+    <h1 class="section-title">Ajustes ⚙️</h1>
+    <p class="section-description">
+      Personaliza tu experiencia visual y revisa los estándares de Clean Code del proyecto.
+    </p>
+  </header>
+
+  <!-- Bloque: Apariencia y Tema -->
+  <section class="settings-group">
+    <h2 class="group-title">Apariencia</h2>
+    <div class="theme-selector-grid">
+      <button
+        type="button"
+        class="theme-card touch-target"
+        [class.selected]="themeService.themeMode() === 'light'"
+        (click)="setTheme('light')"
+      >
+        <div class="theme-icon-wrap">
+          <app-icon name="sun" [size]="20" />
+        </div>
+        <span class="theme-label">Claro</span>
+      </button>
+
+      <button
+        type="button"
+        class="theme-card touch-target"
+        [class.selected]="themeService.themeMode() === 'dark'"
+        (click)="setTheme('dark')"
+      >
+        <div class="theme-icon-wrap">
+          <app-icon name="moon" [size]="20" />
+        </div>
+        <span class="theme-label">Oscuro</span>
+      </button>
+
+      <button
+        type="button"
+        class="theme-card touch-target"
+        [class.selected]="themeService.themeMode() === 'system'"
+        (click)="setTheme('system')"
+      >
+        <div class="theme-icon-wrap">
+          <app-icon name="sliders" [size]="20" />
+        </div>
+        <span class="theme-label">Sistema</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Bloque: Preferencias de Interfaz -->
+  <section class="settings-group">
+    <h2 class="group-title">Preferencias Móviles</h2>
+    <div class="settings-card-list">
+      <div class="setting-row">
+        <div class="setting-info">
+          <span class="setting-title">Notificaciones Push</span>
+          <span class="setting-subtitle">Alertas visuales en tiempo real</span>
+        </div>
+        <button
+          type="button"
+          class="switch-btn touch-target"
+          [class.active]="notificationsEnabled()"
+          (click)="toggleNotifications()"
+          role="switch"
+          [attr.aria-checked]="notificationsEnabled()"
+          aria-label="Notificaciones Push"
+        >
+          <span class="switch-thumb"></span>
+        </button>
+      </div>
+
+      <div class="setting-row">
+        <div class="setting-info">
+          <span class="setting-title">Micro-animaciones</span>
+          <span class="setting-subtitle">Transiciones fluidas del drawer y tarjetas</span>
+        </div>
+        <button
+          type="button"
+          class="switch-btn touch-target"
+          [class.active]="animationsEnabled()"
+          (click)="toggleAnimations()"
+          role="switch"
+          [attr.aria-checked]="animationsEnabled()"
+          aria-label="Micro-animaciones"
+        >
+          <span class="switch-thumb"></span>
+        </button>
+      </div>
+
+      <div class="setting-row">
+        <div class="setting-info">
+          <span class="setting-title">Feedback Háptico</span>
+          <span class="setting-subtitle">Respuesta táctil al pulsar elementos</span>
+        </div>
+        <button
+          type="button"
+          class="switch-btn touch-target"
+          [class.active]="hapticFeedback()"
+          (click)="toggleHaptic()"
+          role="switch"
+          [attr.aria-checked]="hapticFeedback()"
+          aria-label="Feedback Háptico"
+        >
+          <span class="switch-thumb"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bloque: Buenas Prácticas Aplicadas -->
+  <section class="settings-group">
+    <h2 class="group-title">Estándares de Código Limpio</h2>
+    <app-card>
+      <ul class="best-practices-list">
+        <li>
+          <app-icon name="check" [size]="16" class="check-icon" />
+          <span><strong>Signals Reactivas:</strong> Estado predecible y OnPush por defecto.</span>
+        </li>
+        <li>
+          <app-icon name="check" [size]="16" class="check-icon" />
+          <span><strong>Componentes Standalone:</strong> Cero NgModules para máxima modularidad.</span>
+        </li>
+        <li>
+          <app-icon name="check" [size]="16" class="check-icon" />
+          <span><strong>Inyección con inject():</strong> Inyección tipada y composable.</span>
+        </li>
+        <li>
+          <app-icon name="check" [size]="16" class="check-icon" />
+          <span><strong>Mobile First & A11y:</strong> Safe areas, ARIA roles y targets de 44px+.</span>
+        </li>
+      </ul>
+    </app-card>
+  </section>
+</div>

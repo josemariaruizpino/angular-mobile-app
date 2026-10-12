@@ -1,0 +1,87 @@
+<!-- Backdrop translúcido con desenfoque -->
+<div
+  class="drawer-backdrop"
+  [class.is-visible]="navService.isDrawerOpen()"
+  (click)="onBackdropClick($event)"
+  aria-hidden="true"
+></div>
+
+<!-- Panel del Menú Lateral Desplegable -->
+<aside
+  class="drawer-panel"
+  [class.is-open]="navService.isDrawerOpen()"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Menú de navegación principal"
+>
+  <!-- Cabecera del Drawer -->
+  <div class="drawer-header">
+    <div class="drawer-brand">
+      <div class="brand-avatar">
+        <app-icon name="sparkles" [size]="18" />
+      </div>
+      <div class="brand-info">
+        <h2 class="brand-name">FASE DE PENSAR</h2>
+        <!-- <span class="brand-tag">Pauper tro</span> -->
+      </div>
+    </div>
+    <button
+      type="button"
+      class="close-btn touch-target"
+      aria-label="Cerrar menú"
+      (click)="onClose()"
+    >
+      <app-icon name="close" [size]="20" />
+    </button>
+  </div>
+
+  <!-- Navegación y Secciones -->
+  <nav class="drawer-nav">
+    <span class="nav-section-title">SECCIONES</span>
+    <ul class="nav-list">
+      @for (item of navService.items(); track item.id) {
+        <li class="nav-item">
+          <a
+            [routerLink]="item.path"
+            routerLinkActive="active"
+            (click)="onClose()"
+            class="nav-link touch-target"
+          >
+            <div class="nav-icon-wrapper">
+              <app-icon [name]="item.icon" [size]="20" />
+            </div>
+            <div class="nav-text">
+              <span class="nav-label">{{ item.label }}</span>
+              @if (item.description) {
+                <span class="nav-desc">{{ item.description }}</span>
+              }
+            </div>
+            @if (item.badge) {
+              <span class="nav-badge">{{ item.badge }}</span>
+            }
+            <app-icon name="chevron-right" [size]="16" class="nav-arrow" />
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+
+  <!-- Pie del Drawer -->
+  <div class="drawer-footer">
+    <div class="theme-switch-row">
+      <span class="footer-label">Tema {{ themeService.isDark() ? 'Oscuro' : 'Claro' }}</span>
+      <button
+        type="button"
+        class="theme-toggle-pill touch-target"
+        (click)="themeService.toggleTheme()"
+        [attr.aria-label]="themeService.isDark() ? 'Activar tema claro' : 'Activar tema oscuro'"
+      >
+        <app-icon [name]="themeService.isDark() ? 'moon' : 'sun'" [size]="16" />
+        <span>{{ themeService.isDark() ? 'Modo Noche' : 'Modo Día' }}</span>
+      </button>
+    </div>
+    <div class="footer-meta">
+      <span>Angular v19 • Mobile First</span>
+    </div>
+  </div>
+</aside>

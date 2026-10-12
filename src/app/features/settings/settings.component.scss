@@ -1,0 +1,144 @@
+.settings-group {
+  margin-bottom: 1.75rem;
+}
+
+.group-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.theme-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.625rem;
+}
+
+.theme-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0.5rem;
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  transition: all 0.15s ease;
+
+  &:active {
+    transform: scale(0.96);
+  }
+
+  &.selected {
+    border-color: var(--accent);
+    background-color: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 600;
+
+    .theme-icon-wrap {
+      color: var(--accent);
+    }
+  }
+}
+
+.theme-icon-wrap {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-label {
+  font-size: 0.8125rem;
+}
+
+.settings-card-list {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.125rem;
+  border-bottom: 1px solid var(--border-subtle);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.setting-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.setting-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.setting-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.125rem;
+}
+
+.switch-btn {
+  width: 48px;
+  height: 28px;
+  background-color: var(--border-strong);
+  border-radius: var(--radius-full);
+  position: relative;
+  transition: background-color 0.2s ease;
+  padding: 2px;
+
+  &.active {
+    background-color: var(--accent);
+
+    .switch-thumb {
+      transform: translateX(20px);
+    }
+  }
+}
+
+.switch-thumb {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border-radius: var(--radius-full);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.best-practices-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+}
+
+.check-icon {
+  color: #10b981;
+  margin-top: 2px;
+  flex-shrink: 0;
+}

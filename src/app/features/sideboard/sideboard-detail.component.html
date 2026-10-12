@@ -1,0 +1,298 @@
+<div class="mobile-container">
+  @if (deck(); as currentDeck) {
+    <!-- Barra superior de navegación -->
+    <div class="detail-nav-bar">
+      <a
+        routerLink="/sideboard"
+        class="back-btn touch-target"
+        aria-label="Volver a lista de mazos de Sideboard"
+      >
+        <app-icon name="arrow-left" [size]="20" />
+        <span>Todos los Mazos</span>
+      </a>
+      <div class="header-badges">
+        @if (currentDeck.author) {
+          <span class="author-badge">Guía por {{ currentDeck.author }}</span>
+        }
+        <span class="meta-badge-top">{{ currentDeck.metaPercentage }} Meta</span>
+      </div>
+    </div>
+
+    <!-- Cabecera del mazo Hero -->
+    <header class="deck-hero-header">
+      <div class="hero-image-wrap">
+        <img
+          [src]="currentDeck.imageUrl"
+          [alt]="currentDeck.name"
+          class="hero-img"
+        />
+        <div class="hero-overlay"></div>
+        <div class="hero-info">
+          <div class="hero-tags">
+            <span class="badge-type">{{ currentDeck.archetypeType }}</span>
+            <div class="color-tags">
+              @for (c of currentDeck.colors; track c) {
+                <span class="color-pip" [class]="'mana-' + c">{{ c }}</span>
+              }
+            </div>
+            @if (currentDeck.decklistUrl) {
+              <a
+                [href]="currentDeck.decklistUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="external-deck-link"
+              >
+                Ver en MTGGoldfish ↗
+              </a>
+            }
+          </div>
+          <h1 class="hero-title">{{ currentDeck.name }}</h1>
+        </div>
+      </div>
+    </header>
+
+    <!-- Pestañas de Navegación de la Guía -->
+    <nav class="guide-nav-tabs" role="tablist">
+      <button
+        type="button"
+        class="guide-tab-btn touch-target"
+        [class.active]="activeSection() === 'matchups'"
+        (click)="setActiveSection('matchups')"
+        role="tab"
+        [attr.aria-selected]="activeSection() === 'matchups'"
+      >
+        <span>Emparejamientos</span>
+        <span class="tab-count-badge">{{ currentDeck.matchups.length }}</span>
+      </button>
+
+      @if (currentDeck.proTips && currentDeck.proTips.length > 0) {
+        <button
+          type="button"
+          class="guide-tab-btn touch-target"
+          [class.active]="activeSection() === 'tips'"
+          (click)="setActiveSection('tips')"
+          role="tab"
+          [attr.aria-selected]="activeSection() === 'tips'"
+        >
+          <span>TIPS</span>
+        </button>
+      }
+
+      @if (currentDeck.maybeboard && currentDeck.maybeboard.length > 0) {
+        <button
+          type="button"
+          class="guide-tab-btn touch-target"
+          [class.active]="activeSection() === 'maybeboard'"
+          (click)="setActiveSection('maybeboard')"
+          role="tab"
+          [attr.aria-selected]="activeSection() === 'maybeboard'"
+        >
+          <span>Maybeboard</span>
+        </button>
+      }
+    </nav>
+
+    <!-- SECCIÓN 1: EMPAREJAMIENTOS (MATCHUPS) -->
+    @if (activeSection() === 'matchups') {
+      <section class="matchups-section">
+        <!-- Buscador de emparejamientos rápido para móvil -->
+        <div class="matchup-search-box">
+          <app-icon name="search" [size]="16" class="search-icon" />
+          <input
+            type="search"
+            class="matchup-input"
+            placeholder="Buscar rival (ej. Terror, Affinity, Fae, Gates...)"
+            [value]="matchupQuery()"
+            (input)="onMatchupSearch($event)"
+            aria-label="Buscar emparejamiento específico"
+          />
+        </div>
+
+        <!-- Filtros de dificultad -->
+        <div class="difficulty-filters" role="tablist">
+          <button
+            type="button"
+            class="diff-filter-chip touch-target"
+            [class.active]="selectedDifficulty() === 'all'"
+            (click)="setDifficultyFilter('all')"
+          >
+            Todos ({{ currentDeck.matchups.length }})
+          </button>
+          <button
+            type="button"
+            class="diff-filter-chip touch-target chip-favorable"
+            [class.active]="selectedDifficulty() === 'favorable'"
+            (click)="setDifficultyFilter('favorable')"
+          >
+            Favorables
+          </button>
+          <button
+            type="button"
+            class="diff-filter-chip touch-target chip-even"
+            [class.active]="selectedDifficulty() === 'even'"
+            (click)="setDifficultyFilter('even')"
+          >
+            Even
+          </button>
+          <button
+            type="button"
+            class="diff-filter-chip touch-target chip-unfavorable"
+            [class.active]="selectedDifficulty() === 'unfavorable'"
+            (click)="setDifficultyFilter('unfavorable')"
+          >
+            Desfavorables
+          </button>
+        </div>
+
+        <!-- Selector horizontal de emparejamientos filtrados -->
+        <div class="matchup-tabs" role="tablist" aria-label="Seleccionar emparejamiento">
+          @for (m of filteredMatchups(); track m.vsDeckName; let idx = $index) {
+            <button
+              type="button"
+              class="matchup-tab-btn touch-target"
+              [class.active]="selectedMatchupIndex() === idx"
+              (click)="selectMatchup(idx)"
+              role="tab"
+              [attr.aria-selected]="selectedMatchupIndex() === idx"
+            >
+              <span class="diff-dot" [class]="'dot-' + m.difficulty"></span>
+              <span>vs {{ m.vsDeckName }}</span>
+            </button>
+          } @empty {
+            <div class="empty-chip-msg">Sin emparejamientos para "{{ matchupQuery() }}"</div>
+          }
+        </div>
+
+        <!-- Detalle del Matchup Activo -->
+        @if (currentMatchup(); as matchup) {
+          <article class="matchup-detail-card" aria-live="polite">
+            <!-- Cabecera del Matchup con Dificultad y Rol -->
+            <div class="matchup-header">
+              <div>
+                <span class="vs-label">PLAN DE BANQUILLO CONTRA</span>
+                <h2 class="vs-title">{{ matchup.vsDeckName }}</h2>
+              </div>
+              <div class="matchup-status-badges">
+                @if (matchup.role) {
+                  <span class="role-pill">{{ matchup.role }}</span>
+                }
+                <span
+                  class="difficulty-pill"
+                  [class]="'diff-' + matchup.difficulty"
+                >
+                  {{ matchup.difficulty }}
+                </span>
+              </div>
+            </div>
+
+            <!-- Tabla de Cambios: IN vs OUT -->
+            <div class="in-out-grid">
+              <!-- Entran (IN) -->
+              <div class="in-box">
+                <div class="box-header in-header">
+                  <span class="box-action-icon">+</span>
+                  <span class="box-title">ENTRAN (SIDE IN)</span>
+                </div>
+                @if (matchup.inCards.length > 0) {
+                  <ul class="cards-change-list">
+                    @for (c of matchup.inCards; track c.cardName) {
+                      <li class="change-item">
+                        <div class="change-head">
+                          <span class="change-qty">+{{ c.quantity }}</span>
+                          <strong class="change-name">{{ c.cardName }}</strong>
+                        </div>
+                        @if (c.reason) {
+                          <p class="change-reason">{{ c.reason }}</p>
+                        }
+                      </li>
+                    }
+                  </ul>
+                } @else {
+                  <p class="no-changes-text">Sin cambios requeridos (mantener lista principal).</p>
+                }
+              </div>
+
+              <!-- Salen (OUT) -->
+              <div class="out-box">
+                <div class="box-header out-header">
+                  <span class="box-action-icon">−</span>
+                  <span class="box-title">SALEN (SIDE OUT)</span>
+                </div>
+                @if (matchup.outCards.length > 0) {
+                  <ul class="cards-change-list">
+                    @for (c of matchup.outCards; track c.cardName) {
+                      <li class="change-item">
+                        <div class="change-head">
+                          <span class="change-qty-out">−{{ c.quantity }}</span>
+                          <strong class="change-name">{{ c.cardName }}</strong>
+                        </div>
+                        @if (c.reason) {
+                          <p class="change-reason">{{ c.reason }}</p>
+                        }
+                      </li>
+                    }
+                  </ul>
+                } @else {
+                  <p class="no-changes-text">Sin cambios requeridos (mantener lista principal).</p>
+                }
+              </div>
+            </div>
+
+            <!-- Consejos Tácticos de la Partida -->
+            @if (matchup.gameplayTips.length > 0) {
+              <div class="tips-box">
+                <h3 class="tips-title">💡 Estrategia y Claves de la Partida</h3>
+                <ul class="tips-list">
+                  @for (tip of matchup.gameplayTips; track tip) {
+                    <li>{{ tip }}</li>
+                  }
+                </ul>
+              </div>
+            }
+          </article>
+        }
+      </section>
+    }
+
+    <!-- SECCIÓN 2: 7 REGLAS DE ORO DE MISTER TWIN -->
+    @if (activeSection() === 'tips') {
+      <section class="tips-master-section">
+        <h2 class="sub-title">Consejos para Jugadores de Rojo</h2>
+        <p class="section-subtext">Fundamentos para maximizar el porcentaje de victoria con Mono Red Madness:</p>
+        <div class="pro-tips-list">
+          @for (tip of currentDeck.proTips; track tip; let idx = $index) {
+            <div class="pro-tip-card">
+              <div class="tip-number">{{ idx + 1 }}</div>
+              <p class="tip-text">{{ tip }}</p>
+            </div>
+          }
+        </div>
+      </section>
+    }
+
+    <!-- SECCIÓN 3: MAYBEBOARD & CONSIDERACIONES -->
+    @if (activeSection() === 'maybeboard') {
+      <section class="maybeboard-section">
+        <h2 class="sub-title">Maybeboard & Opciones del Metagame</h2>
+        <p class="section-subtext">Cartas probadas y alternativas según la evolución del torneo:</p>
+        <div class="maybe-cards-grid">
+          @for (card of currentDeck.maybeboard; track card.name) {
+            <app-card [title]="card.name">
+              <p class="maybe-note">{{ card.note }}</p>
+            </app-card>
+          }
+        </div>
+      </section>
+    }
+  } @else {
+    <!-- Estado de no encontrado -->
+    <div class="empty-state">
+      <app-icon name="info" [size]="36" class="empty-icon" />
+      <h2 class="empty-title">Arquetipo no encontrado</h2>
+      <p class="empty-text">El mazo "{{ slug() }}" no existe en la base de datos de Pauper.</p>
+      <a routerLink="/sideboard" class="btn-return touch-target">
+        Volver a SIDEBOARD
+      </a>
+    </div>
+  }
+</div>

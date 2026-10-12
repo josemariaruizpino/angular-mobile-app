@@ -1,0 +1,100 @@
+<div class="mobile-container">
+  <!-- Sección Header / Saludo -->
+  <header class="section-header">
+    <span class="section-tag">RESUMEN GENERAL</span>
+    <h1 class="section-title">Bienvenido 👋</h1>
+    <p class="section-description">
+      Aplicación mobile-first construida con Angular v19, Signals y arquitectura limpia.
+    </p>
+  </header>
+
+  <!-- Banner de Acceso Rápido al Menú -->
+  <div class="menu-callout">
+    <div class="callout-content">
+      <div class="callout-icon">
+        <app-icon name="menu" [size]="20" />
+      </div>
+      <div>
+        <h2 class="callout-title">Navegación por Hamburguesa</h2>
+        <p class="callout-text">Pulsa el botón superior o el botón de abajo para explorar las secciones.</p>
+      </div>
+    </div>
+    <button type="button" class="btn-action touch-target" (click)="openMenu()">
+      Abrir Menú
+    </button>
+  </div>
+
+  <!-- Métricas Rápidas (Grid Mobile) -->
+  <section class="stats-grid" aria-label="Métricas destacadas">
+    @for (stat of stats; track stat.label) {
+      <div class="stat-card">
+        <div class="stat-top">
+          <span class="stat-label">{{ stat.label }}</span>
+          <div class="stat-icon-wrap">
+            <app-icon [name]="stat.icon" [size]="16" />
+          </div>
+        </div>
+        <div class="stat-value">{{ stat.value }}</div>
+        <div class="stat-trend">{{ stat.trend }}</div>
+      </div>
+    }
+  </section>
+
+  <!-- Acciones y Atajos -->
+  <section class="quick-links-section">
+    <h2 class="block-title">Secciones Principales</h2>
+    <div class="links-grid">
+      <app-card [clickable]="true" [routerLink]="['/sideboard']">
+        <div class="card-link-body">
+          <div class="card-icon-accent">
+            <app-icon name="sparkles" [size]="22" />
+          </div>
+          <div class="card-text">
+            <h3 class="card-headline">SIDEBOARD (Pauper)</h3>
+            <p class="card-subline">Metagame MTGGoldfish y planes de banquillo por mazo.</p>
+          </div>
+          <app-icon name="chevron-right" [size]="18" class="card-arrow" />
+        </div>
+      </app-card>
+
+      <app-card [clickable]="true" [routerLink]="['/explore']">
+        <div class="card-link-body">
+          <div class="card-icon-accent">
+            <app-icon name="compass" [size]="22" />
+          </div>
+          <div class="card-text">
+            <h3 class="card-headline">Explorar Catálogo</h3>
+            <p class="card-subline">Descubre componentes, filtros y búsqueda rápida.</p>
+          </div>
+          <app-icon name="chevron-right" [size]="18" class="card-arrow" />
+        </div>
+      </app-card>
+
+      <app-card [clickable]="true" [routerLink]="['/activity']">
+        <div class="card-link-body">
+          <div class="card-icon-accent">
+            <app-icon name="pulse" [size]="22" />
+          </div>
+          <div class="card-text">
+            <h3 class="card-headline">Centro de Actividad</h3>
+            <p class="card-subline">Consulta eventos, novedades y notificaciones.</p>
+          </div>
+          <app-icon name="chevron-right" [size]="18" class="card-arrow" />
+        </div>
+      </app-card>
+
+      <app-card [clickable]="true" [routerLink]="['/settings']">
+        <div class="card-link-body">
+          <div class="card-icon-accent">
+            <app-icon name="sliders" [size]="22" />
+          </div>
+          <div class="card-text">
+            <h3 class="card-headline">Ajustes & Apariencia</h3>
+            <p class="card-subline">Alterna temas claro/oscuro y preferencias.</p>
+          </div>
+          <app-icon name="chevron-right" [size]="18" class="card-arrow" />
+        </div>
+      </app-card>
+    </div>
+  </section>
+</div>

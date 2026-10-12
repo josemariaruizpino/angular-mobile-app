@@ -1,0 +1,44 @@
+<div class="mobile-container">
+  <!-- Cabecera de sección -->
+  <header class="section-header">
+    <span class="section-tag">CENTRO DE NOTIFICACIONES</span>
+    <h1 class="section-title">Actividad ⚡</h1>
+    <p class="section-description">
+      Registro cronológico de eventos del sistema e interacciones de usuario.
+    </p>
+  </header>
+
+  <!-- Lista de Actividades -->
+  <div class="timeline-list">
+    @for (act of activities(); track act.id) {
+      <div class="timeline-item">
+        <div class="timeline-marker" [class]="'marker-' + act.type">
+          <app-icon [name]="act.icon" [size]="14" />
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h2 class="timeline-title">{{ act.title }}</h2>
+            <span class="timeline-time">{{ act.time }}</span>
+          </div>
+          <p class="timeline-detail">{{ act.detail }}</p>
+          <div class="timeline-footer">
+            <button
+              type="button"
+              class="dismiss-btn touch-target"
+              (click)="clearActivity(act.id)"
+              aria-label="Descartar notificación"
+            >
+              Descartar
+            </button>
+          </div>
+        </div>
+      </div>
+    } @empty {
+      <div class="empty-state">
+        <app-icon name="check" [size]="32" class="empty-icon" />
+        <h2 class="empty-title">Todo al día</h2>
+        <p class="empty-text">No hay actividades pendientes en este momento.</p>
+      </div>
+    }
+  </div>
+</div>
