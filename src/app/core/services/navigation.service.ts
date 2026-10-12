@@ -26,28 +26,28 @@ export class NavigationService {
       badge: 'Pauper',
       description: 'Metagame de Pauper y guías de banquillo'
     },
-    {
-      id: 'explore',
-      label: 'Explorar',
-      path: '/explore',
-      icon: 'compass',
-      description: 'Descubre recursos y secciones destacadas'
-    },
-    {
-      id: 'activity',
-      label: 'Actividad',
-      path: '/activity',
-      icon: 'pulse',
-      badge: '3',
-      description: 'Historial y notificaciones recientes'
-    },
-    {
-      id: 'settings',
-      label: 'Ajustes',
-      path: '/settings',
-      icon: 'sliders',
-      description: 'Preferencias de usuario y apariencia'
-    }
+    // {
+    //   id: 'explore',
+    //   label: 'Explorar',
+    //   path: '/explore',
+    //   icon: 'compass',
+    //   description: 'Descubre recursos y secciones destacadas'
+    // },
+    // {
+    //   id: 'activity',
+    //   label: 'Actividad',
+    //   path: '/activity',
+    //   icon: 'pulse',
+    //   badge: '3',
+    //   description: 'Historial y notificaciones recientes'
+    // },
+    // {
+    //   id: 'settings',
+    //   label: 'Ajustes',
+    //   path: '/settings',
+    //   icon: 'sliders',
+    //   description: 'Preferencias de usuario y apariencia'
+    // }
   ]);
 
   // Estado del menú hamburguesa (drawer)
