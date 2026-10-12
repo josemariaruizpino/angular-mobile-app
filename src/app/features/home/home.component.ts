@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NavigationService } from '../../core/services/navigation.service';
-import { CardComponent } from '../../shared/components/card/card.component';
 import { IconComponent } from '../../shared/components/icon/icon.component';
 
 interface QuickStat {
@@ -14,7 +13,7 @@ interface QuickStat {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, CardComponent, IconComponent],
+  imports: [RouterLink, IconComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

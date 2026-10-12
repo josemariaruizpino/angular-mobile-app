@@ -32,9 +32,9 @@ describe('NavigationService', () => {
     expect(service.isDrawerOpen()).toBeFalse();
   });
 
-  it('should provide the 5 mobile sections including SIDEBOARD', () => {
+  it('should provide the active mobile sections including SIDEBOARD', () => {
     const items = service.items();
-    expect(items.length).toBe(5);
-    expect(items.map((i) => i.id)).toEqual(['home', 'sideboard', 'explore', 'activity', 'settings']);
+    expect(items.length).toBe(2);
+    expect(items.map((i) => i.id)).toEqual(['home', 'sideboard']);
   });
 });
