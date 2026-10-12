@@ -1,0 +1,100 @@
+<div class="mobile-container">
+  <!-- Cabecera de la Sección -->
+  <header class="section-header">
+    <div class="header-badge">
+      <app-icon name="users" [size]="14" />
+      <span>COMUNIDAD PAUPER</span>
+    </div>
+    <h1 class="section-title">Jugadores</h1>
+    <p class="section-description">
+      Perfiles de jugadores de "Fase de pensar" y enlaces directos a sus mazos en MTGDecks y Magic Online.
+    </p>
+  </header>
+
+  <!-- Barra de Búsqueda -->
+  <div class="search-box">
+    <app-icon name="search" [size]="18" class="search-icon" />
+    <input
+      type="text"
+      placeholder="Buscar jugador, alias o mazo..."
+      [value]="searchQuery()"
+      (input)="onSearch($event)"
+      class="search-input"
+    />
+    @if (searchQuery()) {
+      <button
+        type="button"
+        (click)="clearSearch()"
+        class="search-clear-btn"
+        aria-label="Limpiar búsqueda"
+      >
+        <app-icon name="close" [size]="16" />
+      </button>
+    }
+  </div>
+
+  <!-- Listado de Cards de Jugadores -->
+  <div class="players-list">
+    @for (player of players(); track player.id) {
+      <a [routerLink]="['/players', player.slug]" class="player-card">
+        <div class="player-card-header">
+          <!-- Avatar con iniciales -->
+          <div class="player-avatar">
+            {{ getInitials(player.name) }}
+          </div>
+
+          <div class="player-main-info">
+            <div class="player-name-row">
+              <h2 class="player-name">{{ player.name }}</h2>
+              @if (player.alias) {
+                <span class="player-alias">&#64;{{ player.alias }}</span>
+              }
+            </div>
+
+            @if (player.location) {
+              <div class="player-location">
+                <span class="location-dot"></span>
+                <span>{{ player.location }}</span>
+              </div>
+            }
+          </div>
+
+          <div class="player-chevron">
+            <app-icon name="chevron-right" [size]="18" />
+          </div>
+        </div>
+
+        @if (player.bio) {
+          <p class="player-bio">{{ player.bio }}</p>
+        }
+
+        <!-- Mazos favoritos / arquetipos -->
+        @if (player.favoriteDecks && player.favoriteDecks.length > 0) {
+          <div class="player-decks">
+            @for (deck of player.favoriteDecks; track deck) {
+              <span class="deck-tag">{{ deck }}</span>
+            }
+          </div>
+        }
+
+        <!-- Contador de enlaces -->
+        <div class="player-card-footer">
+          <span class="links-count">
+            <app-icon name="sparkles" [size]="13" />
+            <span>{{ player.links.length }} enlaces a mazos y perfiles</span>
+          </span>
+          <span class="view-profile-label">Ver perfil</span>
+        </div>
+      </a>
+    } @empty {
+      <div class="empty-state">
+        <app-icon name="search" [size]="32" />
+        <p class="empty-title">No se encontraron jugadores</p>
+        <p class="empty-desc">Prueba a buscar con otro nombre o alias.</p>
+        <button type="button" (click)="clearSearch()" class="btn-reset">
+          Ver todos los jugadores
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -26,6 +26,14 @@ export class NavigationService {
       badge: 'Pauper',
       description: 'Metagame de Pauper y guías de banquillo'
     },
+    {
+      id: 'players',
+      label: 'JUGADORES',
+      path: '/players',
+      icon: 'users',
+      badge: 'Comunidad',
+      description: 'Perfiles de jugadores y enlaces a sus mazos'
+    },
     // {
     //   id: 'explore',
     //   label: 'Explorar',

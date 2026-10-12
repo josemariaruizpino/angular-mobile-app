@@ -25,6 +25,18 @@ export const routes: Routes = [
       import('./features/sideboard/sideboard-detail.component').then((m) => m.SideboardDetailComponent)
   },
   {
+    path: 'players',
+    title: 'Jugadores • Pauper',
+    loadComponent: () =>
+      import('./features/players/players-list.component').then((m) => m.PlayersListComponent)
+  },
+  {
+    path: 'players/:slug',
+    title: 'Perfil de Jugador • Pauper',
+    loadComponent: () =>
+      import('./features/players/player-detail.component').then((m) => m.PlayerDetailComponent)
+  },
+  {
     path: 'explore',
     title: 'Explorar • MinimalApp',
     loadComponent: () =>

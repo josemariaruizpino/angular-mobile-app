@@ -1,0 +1,128 @@
+<div class="mobile-container">
+  @if (player(); as p) {
+    <!-- Botón Volver -->
+    <div class="top-nav">
+      <a routerLink="/players" class="back-link">
+        <app-icon name="arrow-left" [size]="18" />
+        <span>Volver a Jugadores</span>
+      </a>
+    </div>
+
+    <!-- Cabecera del Jugador -->
+    <header class="player-header">
+      <div class="avatar-large">
+        {{ getInitials(p.name) }}
+      </div>
+
+      <div class="header-info">
+        <div class="name-badge-row">
+          <h1 class="player-title">{{ p.name }}</h1>
+          @if (p.alias) {
+            <span class="alias-pill">&#64;{{ p.alias }}</span>
+          }
+        </div>
+
+        @if (p.location) {
+          <div class="player-location-meta">
+            <span class="dot"></span>
+            <span>{{ p.location }}</span>
+          </div>
+        }
+      </div>
+    </header>
+
+    <!-- Bio / Descripción -->
+    @if (p.bio) {
+      <div class="bio-card">
+        <p class="bio-text">{{ p.bio }}</p>
+      </div>
+    }
+
+    <!-- Mazos / Arquetipos que juega -->
+    @if (p.favoriteDecks && p.favoriteDecks.length > 0) {
+      <section class="section-block">
+        <h2 class="block-heading">Arquetipos Favoritos</h2>
+        <div class="deck-tags-cloud">
+          @for (deck of p.favoriteDecks; track deck) {
+            <span class="deck-chip">{{ deck }}</span>
+          }
+        </div>
+      </section>
+    }
+
+    <!-- Sección de Enlaces a Mazos y Perfiles -->
+    <section class="section-block">
+      <div class="block-title-row">
+        <h2 class="block-heading">Enlaces a sus Mazos</h2>
+        <span class="link-count-badge">{{ p.links.length }} enlaces</span>
+      </div>
+
+      <div class="links-list">
+        @for (link of p.links; track link.url) {
+          <div class="deck-link-card">
+            <div class="link-card-top">
+              <span
+                class="platform-badge"
+                [style.background-color]="getPlatformColor(link.platform) + '1a'"
+                [style.color]="getPlatformColor(link.platform)"
+                [style.border-color]="getPlatformColor(link.platform) + '40'"
+              >
+                {{ link.badge || link.platform }}
+              </span>
+
+              <a
+                [href]="link.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="open-btn"
+                [title]="'Abrir ' + link.title"
+              >
+                <span>Abrir lista de decks</span>
+                <app-icon name="external-link" [size]="14" />
+              </a>
+            </div>
+
+            <h3 class="link-title">{{ link.title }}</h3>
+
+            @if (link.description) {
+              <p class="link-desc">{{ link.description }}</p>
+            }
+
+            <a
+              [href]="link.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="url-snippet"
+            >
+              <span>{{ link.url }}</span>
+            </a>
+          </div>
+        }
+      </div>
+    </section>
+
+    <!-- Enlace directo a Guías de Sideboard -->
+    <div class="sideboard-callout">
+      <div class="callout-content">
+        <app-icon name="sparkles" [size]="20" />
+        <div>
+          <h4 class="callout-title">Guías de Sideboard</h4>
+          <p class="callout-sub">Consulta los planes contra cada mazo del metagame</p>
+        </div>
+      </div>
+      <a routerLink="/sideboard" class="btn-sideboard">
+        Ir a Sideboard
+      </a>
+    </div>
+
+  } @else {
+    <div class="not-found">
+      <app-icon name="info" [size]="36" />
+      <h2>Jugador no encontrado</h2>
+      <p>No se ha encontrado el perfil del jugador solicitado.</p>
+      <a routerLink="/players" class="btn-back">
+        Volver a la lista
+      </a>
+    </div>
+  }
+</div>
