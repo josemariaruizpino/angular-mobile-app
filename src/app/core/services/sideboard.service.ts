@@ -7731,7 +7731,7 @@ export class SideboardService {
         "archetypeType": "Aggro",
         "format": "modern",
         "author": "Ethan Gaieski (@ethanmtg) & Andrea Mengucci (TCGplayer)",
-        "decklistUrl": "https://www.tcgplayer.com/content/article/Modern-Izzet-Prowess-MTG-Deck-Guide-Best-Cards-Sideboarding-and-More/e83ed2d4-d0db-443c-a00f-df2cf4c1d9e9/?srsltid=AU7gw4VAg7PujizBcnjRrdtNFt6TC1pqrQb_jua-bYDsW08prkDtWaGg",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-izzet-prowess#paper",
         "description": "Guía competitiva definitiva de Izzet Prowess en Modern basada en la tabla de banquillo de Ethan Gaieski (@ethanmtg) y el análisis de Andrea Mengucci en TCGplayer. Potencia hiperagresiva con Slickshot Show-Off, Dragon's Rage Channeler y Cori-Steel Cutter de Tarkir: Dragonstorm, respaldada por un banquillo quirúrgico con Unholy Heat, Consign to Memory, Meltdown, Into the Flood Maw y Murktide Regent.",
         "keyCards": [
             "Slickshot Show-Off",
