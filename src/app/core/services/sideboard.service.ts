@@ -7533,30 +7533,30 @@ export class SideboardService {
         "sideboardCards": [
             "Chalice of the Void",
             "Dismember",
-            "End the Festivities",
-            "Pick Your Poison",
             "Trinisphere",
+            "Pick Your Poison",
             "Relic of Progenitus",
-            "Warping Wail"
+            "Warping Wail",
+            "Cavern of Souls"
         ],
         "maybeboard": [
             {
                 "name": "Ulamog, the Defiler",
-                "note": "Amenaza aniquiladora alternativa para partidas largas."
+                "note": "Amenaza aniquiladora alternativa para partidas largas de desgaste."
             },
             {
                 "name": "Null Rod",
-                "note": "Hate directo de artefactos si el metagame lo demanda."
+                "note": "Hate directo de artefactos si el metagame tiene alta presencia de Affinity."
             },
             {
                 "name": "Boseiju, Who Endures",
-                "note": "Respuesta incounterable a Blood Moon y Torpor Orb."
+                "note": "Respuesta incounterable e instantánea a Blood Moon y Torpor Orb."
             }
         ],
         "proTips": [
-            "Thought-Knot Seer en turno 2 con Eldrazi Temple desarticula la mano rival antes de que bajen sus respuestas.",
-            "Kozilek's Command es una navaja suiza: exilia cementerio, rampa Eldrazi Scions, roba carta y remueve criaturas.",
-            "Through the Breach con Emrakul al final del turno rival o en tu fase principal fuerza sacrificios masivos y cierra la partida."
+            "Consign to Memory es el principal counter del meta 2026 contra nosotros: contrarresta hechizos incoloros por {U} y anula habilidades disparadas (como el control mental de Emrakul o el tutor de tierras de Mycospawn).",
+            "Contra mazos agresivos y de Energy (Boros/Jeskai), un Chalice of the Void con X=1 en turno 1 frena Guide of Souls, Ocelot Pride, Galvanic Discharge y Consign to Memory.",
+            "Through the Breach con Emrakul al final del turno rival o en fase principal esquiva respuestas a velocidad de conjuro como Wrath of the Skies o Phlage y limpia la mesa rival con Annihilator 6."
         ],
         "matchups": [
             {
@@ -7574,7 +7574,13 @@ export class SideboardService {
                         "cardName": "Dismember",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Responde de forma inmediata a Phlage y bichos tempranos."
+                        "reason": "Responde de forma inmediata a Phlage y criaturas rápidas."
+                    },
+                    {
+                        "cardName": "Trinisphere",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Frena en seco su tempo y les impide jugar múltiples amenazas por turno."
                     }
                 ],
                 "outCards": [
@@ -7582,18 +7588,25 @@ export class SideboardService {
                         "cardName": "Through the Breach",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "Lento si te presionan agresivamente."
+                        "reason": "Lento si te presionan agresivamente desde el turno 1."
                     },
                     {
                         "cardName": "All Is Dust",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "Curva 7 demasiado pesada."
+                        "reason": "Curva 7 demasiado pesada frente a su velocidad."
+                    },
+                    {
+                        "cardName": "Sowing Mycospawn",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de curva para acelerar la interacción temprana."
                     }
                 ],
                 "gameplayTips": [
                     "Un Chalice of the Void con X=1 en turno 1-2 gana automáticamente gran porcentaje de partidas.",
-                    "Kozilek's Command exiliando el cementerio previene el Escape de Phlage, Titan of Fire's Fury."
+                    "Kozilek's Command exiliando el cementerio previene el Escape de Phlage, Titan of Fire's Fury.",
+                    "Ten cuidado con Wear/Tear del rival, que destruye tanto Chalice como Trinisphere."
                 ]
             },
             {
@@ -7612,6 +7625,12 @@ export class SideboardService {
                         "quantity": 2,
                         "role": "in",
                         "reason": "Mata a Slickshot Show-Off a velocidad instantánea."
+                    },
+                    {
+                        "cardName": "Trinisphere",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Impide por completo sus cadenas de hechizos y dopadores baratos."
                     }
                 ],
                 "outCards": [
@@ -7622,15 +7641,78 @@ export class SideboardService {
                         "reason": "Demasiado lenta ante salidas explosivas."
                     },
                     {
+                        "cardName": "Through the Breach",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Innecesario cuando la prioridad es frenar su ataque terrestre y aéreo."
+                    },
+                    {
                         "cardName": "Sowing Mycospawn",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "Ajuste de velocidad."
+                        "reason": "Ajuste de velocidad para no caer ante turnos 2-3 de 20 daños."
+                    },
+                    {
+                        "cardName": "All Is Dust",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Demasiado cara si te colocan en rango de letal rápido."
                     }
                 ],
                 "gameplayTips": [
                     "Mantén maná abierto para removal cuando lancen Slickshot Show-Off.",
-                    "No te confíes de sus 2 vidas restantes; pueden matar de un solo golpe si te descuidas."
+                    "No te confíes de sus pocas cartas en mano; un Cori-Steel Cutter con Prowess puede infligir daño letal por sorpresa.",
+                    "Chalice a 1 frena Lightning Bolt, Lava Dart, Preordain y Mutagenic Growth de un solo golpe."
+                ]
+            },
+            {
+                "vsDeckName": "Esper Blink / Control",
+                "difficulty": "favorable",
+                "role": "Beatdown",
+                "inCards": [
+                    {
+                        "cardName": "Trinisphere",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Fuerza a que Solitude y counterspells como Spell Snare y Consign to Memory cuesten al menos 3 manás."
+                    },
+                    {
+                        "cardName": "Thought-Knot Seer",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Despoja su mano de Solitude o Supreme Verdict antes de que puedan lanzarlos."
+                    },
+                    {
+                        "cardName": "Cavern of Souls",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Hace incounterables tus Eldrazis gigantes frente a Consign to Memory y Counterspell."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Through the Breach",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Vulnerable a Teferi, Time Raveler y contrahechizos."
+                    },
+                    {
+                        "cardName": "Dismember",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Poco efectivo contra Solitude evocado o criaturas de resistencia 5+."
+                    },
+                    {
+                        "cardName": "All Is Dust",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Pueden parpadear o salvar criaturas con Ephemerate."
+                    }
+                ],
+                "gameplayTips": [
+                    "Cavern of Souls nombrando Eldrazi invalida todo su paquete de counterspells.",
+                    "Trinisphere frena en seco sus turnos de disrupción barata por 1 maná.",
+                    "Ataca prioritariamente a Teferi, Time Raveler para recuperar la velocidad de juego instantáneo."
                 ]
             }
         ]
@@ -7648,85 +7730,102 @@ export class SideboardService {
         ],
         "archetypeType": "Aggro",
         "format": "modern",
-        "author": "",
-        "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-izzet-prowess#online",
-        "description": "Furia y velocidad explosiva en mesa con Slickshot Show-Off, Cori-Steel Cutter y Monastery Swiftspear, conectando 20 de daño letal en turnos 2-3.",
+        "author": "Ethan Gaieski (@ethanmtg) & Andrea Mengucci (TCGplayer)",
+        "decklistUrl": "https://www.tcgplayer.com/content/article/Modern-Izzet-Prowess-MTG-Deck-Guide-Best-Cards-Sideboarding-and-More/e83ed2d4-d0db-443c-a00f-df2cf4c1d9e9/?srsltid=AU7gw4VAg7PujizBcnjRrdtNFt6TC1pqrQb_jua-bYDsW08prkDtWaGg",
+        "description": "Guía competitiva definitiva de Izzet Prowess en Modern basada en la tabla de banquillo de Ethan Gaieski (@ethanmtg) y el análisis de Andrea Mengucci en TCGplayer. Potencia hiperagresiva con Slickshot Show-Off, Dragon's Rage Channeler y Cori-Steel Cutter de Tarkir: Dragonstorm, respaldada por un banquillo quirúrgico con Unholy Heat, Consign to Memory, Meltdown, Into the Flood Maw y Murktide Regent.",
         "keyCards": [
             "Slickshot Show-Off",
             "Cori-Steel Cutter",
-            "Mishra's Bauble",
             "Monastery Swiftspear",
+            "Dragon's Rage Channeler",
+            "Mishra's Bauble",
             "Lightning Bolt",
             "Lava Dart",
-            "Expressive Iteration",
             "Mutagenic Growth",
             "Preordain",
+            "Expressive Iteration",
+            "Violent Urge",
             "Unholy Heat"
         ],
         "sideboardCards": [
-            "Flusterstorm",
+            "Consign to Memory",
+            "Unholy Heat",
             "Spell Pierce",
-            "Blood Moon",
-            "Magus of the Moon",
-            "Abrade",
-            "Tormod's Crypt",
-            "Smash to Smithereens"
+            "Surgical Extraction",
+            "Meltdown",
+            "Into the Flood Maw",
+            "Murktide Regent"
         ],
         "maybeboard": [
             {
-                "name": "Underworld Breach",
-                "note": "Rejugar cantrips y quemadura para daño masivo."
-            },
-            {
                 "name": "Subtlety",
-                "note": "Respuesta gratuita de tempo contra bichos grandes o planeswalkers."
+                "note": "Respuesta gratuita para retrasar Phlage, Titan of Fire's Fury o Primeval Titan al entrar al campo de batalla."
             },
             {
-                "name": "Soul-Guide Lantern",
-                "note": "Hate de cementerio sin perder carta."
+                "name": "Stern Scolding",
+                "note": "Corta criaturas clave de bajo coste como Guide of Souls, Ocelot Pride o Ajani por un solo maná azul."
+            },
+            {
+                "name": "Blood Moon",
+                "note": "Opción alternativa de hate de tierras contra Amulet Titan y Tron tradicional."
             }
         ],
         "proTips": [
-            "Slickshot Show-Off gana +2/+0 por cada hechizo lanzado de no criatura; con Plot o 2 manás y 3 cantrips ataca por más de 10 de daño con volar y prisa.",
-            "Cori-Steel Cutter genera fichas con destreza adicionales cada vez que lanzas hechizos.",
-            "Secuencia los cantrips gratuitos (Mishra's Bauble, Mutagenic Growth) antes de declarar atacantes para maximizar la sorpresa."
+            "Regla de oro de Ethan (@ethanmtg) y Mengucci: En emparejamientos de carrera pura o combo (Amulet Titan, Eldrazi Tron, Ruby Storm), retira las 4 copias de Expressive Iteration; en el metagame moderno no hay tiempo de pagar dos manás por robo lento.",
+            "Contra mazos de artefactos (Affinity / Izzet Steel-Cutter), Meltdown con X=1 o X=2 destruye de un plumazo toda su presencia de mesa (Mox Opal, tokens de Urza's Saga, Cranial Ram, Cori-Steel Cutter) por un coste mínimo de maná.",
+            "Into the Flood Maw es la navaja suiza de rebote por {U}: con Gift a tapped Fish responde instantáneamente a permanentes que no sean tierra imposibles de matar (The One Ring, Phlage escapado, Murktide Regent, Atraxa, Leylines).",
+            "Murktide Regent desde el banquillo actúa como condición de victoria titánica en emparejamientos justos (Boros Energy, Mirror): vuela por encima de Ocelot Pride y esquiva Lightning Bolt y Galvanic Discharge.",
+            "Surgical Extraction exilia de raíz las cartas clave del rival tras verlas en el cementerio: Phlage contra Boros Energy, Atraxa/Griselbrand contra Goryo's Vengeance o rituales contra Ruby Storm."
         ],
         "matchups": [
             {
                 "vsDeckName": "Boros Energy",
                 "difficulty": "even",
-                "role": "Aggro",
+                "role": "Midrange",
                 "inCards": [
                     {
-                        "cardName": "Spell Pierce",
-                        "quantity": 2,
+                        "cardName": "Unholy Heat",
+                        "quantity": 4,
                         "role": "in",
-                        "reason": "Corta Galvanic Discharge y cartas clave de energía."
+                        "reason": "Elimina a Phlage (con Delirium activo hace 6 daños) y mata a Guide of Souls y Ocelot Pride limpiamente."
                     },
                     {
-                        "cardName": "Abrade",
+                        "cardName": "Surgical Extraction",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Mata criaturas y artefactos de valor."
+                        "reason": "Exilia a Phlage, Titan of Fire's Fury del cementerio para anular permanentemente su Escape."
+                    },
+                    {
+                        "cardName": "Murktide Regent",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Amenaza voladora gigantesca que evade a sus bloqueadores terrestres y esquiva Galvanic Discharge."
                     }
                 ],
                 "outCards": [
                     {
-                        "cardName": "Expressive Iteration",
-                        "quantity": 2,
+                        "cardName": "Mutagenic Growth",
+                        "quantity": 3,
                         "role": "out",
-                        "reason": "Lento si te presionan en curva 1."
+                        "reason": "Evita intercambios 2x1 desfavorables contra su abundante removal barato."
                     },
                     {
-                        "cardName": "Lava Dart",
+                        "cardName": "Violent Urge",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Prescindible cuando la partida pasa a ser una guerra de desgaste y control de mesa."
+                    },
+                    {
+                        "cardName": "Expressive Iteration",
                         "quantity": 1,
                         "role": "out",
-                        "reason": "Ajuste de daño."
+                        "reason": "Ajuste de ratio exacto (7 In / 7 Out según la guía de Ethan)."
                     }
                 ],
                 "gameplayTips": [
-                    "Prioriza matar a Ocelot Pride antes de que alcancen la bendición de la ciudad.",
-                    "Usa Mutagenic Growth para salvar a tus atacantes de Galvanic Discharge."
+                    "Prioriza matar a Guide of Souls y Ocelot Pride de inmediato con Unholy Heat antes de que acumulen valor.",
+                    "Usa Surgical Extraction en respuesta al disparo de Escape de Phlage para exiliar todas las copias de su baraja.",
+                    "Murktide Regent en el midgame domina la mesa aérea y cierra la partida rápidamente."
                 ]
             },
             {
@@ -7735,35 +7834,396 @@ export class SideboardService {
                 "role": "Aggro",
                 "inCards": [
                     {
-                        "cardName": "Blood Moon",
+                        "cardName": "Consign to Memory",
                         "quantity": 3,
                         "role": "in",
-                        "reason": "Inhabilita Eldrazi Temple y Urza lands por completo."
+                        "reason": "Contrarresta por {U} a Emrakul, Devourer of Destiny, Kozilek's Command y disparos de Mycospawn."
                     },
                     {
                         "cardName": "Spell Pierce",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Corta Kozilek's Command y mapas."
+                        "reason": "Contrarresta hechizos de rampa como Ancient Stirrings, Kozilek's Command o All Is Dust."
                     }
                 ],
                 "outCards": [
                     {
-                        "cardName": "Unholy Heat",
-                        "quantity": 2,
+                        "cardName": "Lava Dart",
+                        "quantity": 4,
                         "role": "out",
-                        "reason": "No mata fácilmente a sus amenazas de resistencia 6+."
+                        "reason": "Inútil contra criaturas incoloras de resistencia 5+."
                     },
                     {
-                        "cardName": "Lava Dart",
-                        "quantity": 2,
+                        "cardName": "Lightning Bolt",
+                        "quantity": 1,
                         "role": "out",
-                        "reason": "Daño insuficiente."
+                        "reason": "Ajuste de 5 Out para incorporar los 5 contrahechizos."
                     }
                 ],
                 "gameplayTips": [
-                    "Blood Moon en turno 2-3 es game over para bases de maná Eldrazi.",
-                    "Ataca por el aire con Slickshot Show-Off antes de que estabilicen."
+                    "Consign to Memory es tu mejor herramienta: contrarresta tanto la criatura incolora como la habilidad disparada al ser lanzada.",
+                    "Slickshot Show-Off con Plot o prisa puede infligir más de 12 daños de un solo golpe si encadenas Baubles y dopadores.",
+                    "Aprovecha la falta de interacción instantánea en los primeros turnos del rival para presionar al máximo."
+                ]
+            },
+            {
+                "vsDeckName": "Eldrazi Tron",
+                "difficulty": "even",
+                "role": "Aggro-Control",
+                "inCards": [
+                    {
+                        "cardName": "Consign to Memory",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Anula Chalice of the Void, Karn the Great Creator y amenazas incoloras gigantes."
+                    },
+                    {
+                        "cardName": "Unholy Heat",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Con Delirium activo elimina a Thought-Knot Seer, Karn y bloqueadores pesados."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Expressive Iteration",
+                        "quantity": 4,
+                        "role": "out",
+                        "reason": "Regla de Ethan: fuera todo el robo lento en favor de interacción directa y velocidad."
+                    },
+                    {
+                        "cardName": "Mutagenic Growth",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Poco eficaz ante bloqueadores incoloros gigantes y Dismember rival."
+                    }
+                ],
+                "gameplayTips": [
+                    "Consign to Memory por {U} sobre Chalice of the Void o Karn salva tu partida.",
+                    "Unholy Heat con 6 daños derriba a Thought-Knot Seer y limpia el camino terrestre.",
+                    "Mantén una presión rápida con Monastery Swiftspear y Cori-Steel Cutter antes de que ensamblen Tron."
+                ]
+            },
+            {
+                "vsDeckName": "Affinity",
+                "difficulty": "favorable",
+                "role": "Aggro",
+                "inCards": [
+                    {
+                        "cardName": "Meltdown",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Con X=1 o X=2 barre toda su mesa de artefactos (Mox Opal, tokens de Saga, Cranial Ram, Frogmite)."
+                    },
+                    {
+                        "cardName": "Into the Flood Maw",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Rebota a Kappa Cannoneer con Ward o a un Constructo letal por un solo maná azul."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Mutagenic Growth",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Ajuste exacto de 3 cartas fuera según la tabla de Ethan para incluir el hate de artefactos."
+                    }
+                ],
+                "gameplayTips": [
+                    "Meltdown en turno 2-3 es game over para ellos, destruyendo artefactos de coste 0, 1 y 2.",
+                    "Into the Flood Maw te compra el turno necesario devolviendo a Kappa Cannoneer a su mano para conectar daño letal.",
+                    "Lava Dart y Lightning Bolt limpian señales de maná como Ornithopter o piezas con Cranial Ram."
+                ]
+            },
+            {
+                "vsDeckName": "Amulet Titan",
+                "difficulty": "favorable",
+                "role": "Pure Aggro",
+                "inCards": [
+                    {
+                        "cardName": "Consign to Memory",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Contrarresta los disparos de entrada de Amulet of Vigor y Primeval Titan."
+                    },
+                    {
+                        "cardName": "Unholy Heat",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Mata a Primeval Titan (6 daños con Delirium) y a Dryad of the Ilysian Grove."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Expressive Iteration",
+                        "quantity": 4,
+                        "role": "out",
+                        "reason": "Fuera todo el robo lento según la regla de Ethan; no hay tiempo para gastar 2 manás en robar."
+                    },
+                    {
+                        "cardName": "Lightning Bolt",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Daño insuficiente frente a la resistencia 6 de Primeval Titan."
+                    },
+                    {
+                        "cardName": "Lava Dart",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste para completar los 7 Out exactos."
+                    }
+                ],
+                "gameplayTips": [
+                    "Maximiza el daño en turnos 1 a 3; la mejor defensa contra su combo es matarlos antes de que activen el titán.",
+                    "Consign to Memory anula el disparo de búsqueda de Primeval Titan, ganándote el turno decisivo para rematar.",
+                    "Unholy Heat con Delirium elimina a Primeval Titan en cuanto toque el campo."
+                ]
+            },
+            {
+                "vsDeckName": "Domain Zoo",
+                "difficulty": "even",
+                "role": "Aggro",
+                "inCards": [
+                    {
+                        "cardName": "Consign to Memory",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Contrarresta por {U} a Scion of Draco al ser un artefacto incoloro."
+                    },
+                    {
+                        "cardName": "Unholy Heat",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Con Delirium derriba a Territorial Kavu 5/5, Nishoba Brawler y Scion of Draco."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Lava Dart",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Inútil frente a criaturas con resistencia 4+ o protegidas por Scion de Draco."
+                    },
+                    {
+                        "cardName": "Mutagenic Growth",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Mala interacción contra Leyline Binding y Lightning Bolt rival."
+                    },
+                    {
+                        "cardName": "Violent Urge",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste exacto de 7 Out según la guía de Ethan."
+                    }
+                ],
+                "gameplayTips": [
+                    "Consign to Memory frena a Scion of Draco antes de que otorgue Hexproof y Lifelink a toda su mesa.",
+                    "Activa Delirium rápidamente con Channeler y Bauble para tener Unholy Heat listo con 6 daños.",
+                    "Evita ataques suicidas si Territorial Kavu tiene Lifelink activo."
+                ]
+            },
+            {
+                "vsDeckName": "Goryo's Vengeance",
+                "difficulty": "favorable",
+                "role": "Tempo-Disruptive",
+                "inCards": [
+                    {
+                        "cardName": "Surgical Extraction",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Exilia a Atraxa o Griselbrand en respuesta a Goryo's Vengeance en el cementerio."
+                    },
+                    {
+                        "cardName": "Spell Pierce",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Contrarresta Goryo's Vengeance o Ephemerate por un solo maná azul."
+                    },
+                    {
+                        "cardName": "Into the Flood Maw",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Rebota la criatura legendaria reanimada al final de su turno por {U}."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Mutagenic Growth",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Riesgoso frente a removal negro y descarte."
+                    },
+                    {
+                        "cardName": "Violent Urge",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Ajuste de banquillo para priorizar la interacción instantánea contra el cementerio."
+                    }
+                ],
+                "gameplayTips": [
+                    "Mantén maná o 2 vidas abiertas para Surgical Extraction en el turno en que tiren a Atraxa al cementerio.",
+                    "Spell Pierce es devastador si intentan combar en turno 2-3 sin maná libre de respaldo.",
+                    "Into the Flood Maw anula su intento de ataque con Griselbrand devolviéndolo a la mano."
+                ]
+            },
+            {
+                "vsDeckName": "Jeskai Blink",
+                "difficulty": "even",
+                "role": "Tempo",
+                "inCards": [
+                    {
+                        "cardName": "Unholy Heat",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Elimina a Phlage (con Delirium) y otras criaturas problemáticas."
+                    },
+                    {
+                        "cardName": "Spell Pierce",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Contrarresta Wrath of the Skies, Teferi, Time Raveler o Ephemerate."
+                    },
+                    {
+                        "cardName": "Into the Flood Maw",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Rebota permanentes de bloqueo o The One Ring a velocidad instantánea."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Mutagenic Growth",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Muy vulnerable al removal exiliador con Solitude y Prismatic Ending."
+                    },
+                    {
+                        "cardName": "Violent Urge",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Ajuste de 6 Out según la tabla de Ethan para sumar interacción."
+                    }
+                ],
+                "gameplayTips": [
+                    "Guarda Spell Pierce para contrarrestar Wrath of the Skies cuando intenten limpiar tu mesa.",
+                    "Slickshot Show-Off con Plot te permite esperar a que giren maná para evitar Solitude.",
+                    "Unholy Heat con Delirium es tu respuesta para limpiar a Phlage antes de que gane vidas."
+                ]
+            },
+            {
+                "vsDeckName": "Ruby Storm",
+                "difficulty": "favorable",
+                "role": "Tempo",
+                "inCards": [
+                    {
+                        "cardName": "Spell Pierce",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Contrarresta rituales iniciales (Desperate/Pyretic Ritual) o Ruby Medallion."
+                    },
+                    {
+                        "cardName": "Surgical Extraction",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Exilia rituales clave o Past in Flames del cementerio para cortar el bucle."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Expressive Iteration",
+                        "quantity": 4,
+                        "role": "out",
+                        "reason": "Completamente fuera en una carrera pura hacia el letal (4 Out / 4 In según Ethan)."
+                    }
+                ],
+                "gameplayTips": [
+                    "Corta el primer ritual con Spell Pierce; sin maná duplicado se atascan.",
+                    "Surgical Extraction sobre Desperate Ritual o Past in Flames les deja sin motor de tormenta.",
+                    "Tu reloj es tan rápido que puedes cerrar la partida en turno 3 antes de que se recuperen."
+                ]
+            },
+            {
+                "vsDeckName": "Izzet Prowess (Mirror)",
+                "difficulty": "even",
+                "role": "Control-Tempo",
+                "inCards": [
+                    {
+                        "cardName": "Unholy Heat",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "El mejor removal del espejo: con Delirium mata a cualquier atacante inflado."
+                    },
+                    {
+                        "cardName": "Murktide Regent",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Condición de victoria insuperable que vuela y esquiva Lightning Bolt y Lava Dart."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Slickshot Show-Off",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Vulnerable a Lightning Bolt y Unholy Heat rival si no tienes mana abierto."
+                    },
+                    {
+                        "cardName": "Expressive Iteration",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Lenta en los primeros compases del combate."
+                    },
+                    {
+                        "cardName": "Violent Urge",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste exacto de 5 Out / 5 In según la guía de Ethan."
+                    }
+                ],
+                "gameplayTips": [
+                    "Quien controle el tempo con Unholy Heat y Dragon's Rage Channeler gana el emparejamiento.",
+                    "Murktide Regent con 5 contadores o más es casi imposible de responder para el espejo.",
+                    "No uses Lava Dart a la cabeza; resérvalo para rematar criaturas rivales tras bloqueos."
+                ]
+            },
+            {
+                "vsDeckName": "Dimir Midrange",
+                "difficulty": "even",
+                "role": "Midrange",
+                "inCards": [
+                    {
+                        "cardName": "Unholy Heat",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Mata a Murktide Regent (con Delirium) y a Psychic Frog antes de que crezca."
+                    },
+                    {
+                        "cardName": "Spell Pierce",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Protege tus amenazas de Fatal Push o Drown in the Loch."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Mutagenic Growth",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Ethan aconseja retirar trucos de combate que regalan ventajas ante removal negro barato."
+                    },
+                    {
+                        "cardName": "Violent Urge",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Demasiado arriesgado frente a counterspells y removal instantáneo."
+                    }
+                ],
+                "gameplayTips": [
+                    "Surveilea agresivamente con Dragon's Rage Channeler para activar Delirium rápido y alimentar Unholy Heat.",
+                    "Spell Pierce te protege en el turno en que atacas con Slickshot Show-Off.",
+                    "Unholy Heat con 6 daños es tu seguro de vida contra Psychic Frog crecida y Murktide Regent."
                 ]
             }
         ]
@@ -7782,83 +8242,108 @@ export class SideboardService {
         "format": "modern",
         "author": "",
         "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-eldrazi-ramp#online",
-        "description": "Rampa pura de Eldrazis apoyada en Sowing Mycospawn, Kozilek's Command y Ugin's Labyrinth para bajar titanes ancestrales antes del turno 4.",
+        "description": "Dominio de maná incoloro acelerado con Ugin's Labyrinth y Eldrazi Temple, desplegando The One Ring, Sowing Mycospawn y titanes imposibles de frenar.",
         "keyCards": [
-            "Eldrazi Temple",
             "Ugin's Labyrinth",
+            "Eldrazi Temple",
+            "The One Ring",
             "Sowing Mycospawn",
-            "Emrakul, the Promised End",
             "Kozilek's Command",
             "Devourer of Destiny",
-            "The One Ring",
-            "Expedition Map",
-            "Chalice of the Void",
-            "Ulamog, the Defiler"
+            "Emrakul, the Promised End",
+            "Ancient Stirrings",
+            "Malevolent Rumble",
+            "Boseiju, Who Endures"
         ],
         "sideboardCards": [
-            "Chalice of the Void",
             "Dismember",
+            "All Is Dust",
             "Trinisphere",
             "Pick Your Poison",
-            "Relic of Progenitus",
-            "Warping Wail",
-            "All Is Dust"
+            "Chalice of the Void",
+            "Kozilek's Return",
+            "Consign to Memory"
         ],
         "maybeboard": [
             {
-                "name": "Karn, the Great Creator",
-                "note": "Caja de herramientas de banquillo en listas clásicas."
+                "name": "Sire of Seven Deaths",
+                "note": "Amenaza incolora masiva con protección y toque mortal."
             },
             {
-                "name": "Boseiju, Who Endures",
-                "note": "Destrucción incolora de Blood Moon y encantamientos."
+                "name": "Grafdigger's Cage",
+                "note": "Hate directo para Goryo's Vengeance y reanimator."
             },
             {
-                "name": "Null Rod",
-                "note": "Hate de artefactos."
+                "name": "Pithing Needle",
+                "note": "Anula The One Ring, Agatha's Soul Cauldron y caminantes."
             }
         ],
         "proTips": [
-            "Ugin's Labyrinth estampa un Eldrazi incoloro de coste 7+ para generar 2 manás incoloros de inmediato.",
-            "Sowing Mycospawn con Kicker busca cualquier tierra de tu mazo y la pone enderezada mientras exilia una tierra rival.",
-            "The One Ring te otorga protección contra todo por un turno y rellena tu mano con recursos infinitos."
+            "Ugin's Labyrinth con una carta estampada de coste 7+ (como Devourer of Destiny o Emrakul) produce 2 manás en turno 1; ojo con Blood Moon rival que la convierte en una simple Montaña perdiendo el maná incoloro.",
+            "Kozilek's Command es la navaja suiza de 2026: exilia cementerios (anula Phlage o Living End), pone 2 Scions, roba carta y aplica -X/-X a cualquier criatura rival.",
+            "Solitude rival puede exiliar a Emrakul porque su invocación es un hechizo de criatura (no un instantáneo); sin embargo, su protección contra instantáneos la salva de Galvanic Discharge y Dismember."
         ],
         "matchups": [
             {
                 "vsDeckName": "Boros Energy",
                 "difficulty": "even",
-                "role": "Control",
+                "role": "Midrange",
                 "inCards": [
-                    {
-                        "cardName": "Chalice of the Void",
-                        "quantity": 3,
-                        "role": "in",
-                        "reason": "Cierra sus jugadas de curva 1."
-                    },
                     {
                         "cardName": "Dismember",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Removal para Phlage y Guide of Souls."
+                        "reason": "Mata criaturas tempranas y frena el lifegain de Guide of Souls."
+                    },
+                    {
+                        "cardName": "All Is Dust",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Barre toda la mesa de permanentes de colores rivales de un solo golpe."
+                    },
+                    {
+                        "cardName": "Trinisphere",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Impide que jueguen múltiples hechizos baratos por turno."
+                    },
+                    {
+                        "cardName": "Pick Your Poison",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Responde a Blood Moon y Static Prison por un solo maná verde."
                     }
                 ],
                 "outCards": [
                     {
                         "cardName": "The One Ring",
-                        "quantity": 1,
-                        "role": "out",
-                        "reason": "Lento si te bajan mucha presión."
-                    },
-                    {
-                        "cardName": "Expedition Map",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "Ajuste de velocidad."
+                        "reason": "Demasiado lento ante presión masiva con tokens."
+                    },
+                    {
+                        "cardName": "Sowing Mycospawn",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Ajuste de velocidad para interactuar más rápido."
+                    },
+                    {
+                        "cardName": "Devourer of Destiny",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Coste elevado si no encontramos aceleración perfecta."
+                    },
+                    {
+                        "cardName": "Ancient Stirrings",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Reemplazado por interactividad directa."
                     }
                 ],
                 "gameplayTips": [
-                    "Bajar Chalice con X=1 te protege de todo su arsenal agresivo.",
-                    "Kozilek's Command es clave para exiliar el cementerio y evitar el escape de Phlage."
+                    "Blood Moon rival es letal si no tienes bosques básicos o talismanes; busca Forest básico temprano con Ancient Stirrings.",
+                    "Trinisphere y All Is Dust limpian su mesa si sobrevives al turno 4.",
+                    "Kozilek's Command exiliando el cementerio impide el Escape de Phlage."
                 ]
             },
             {
@@ -7870,32 +8355,101 @@ export class SideboardService {
                         "cardName": "Chalice of the Void",
                         "quantity": 3,
                         "role": "in",
-                        "reason": "Anula cantrips de coste 1."
+                        "reason": "Chalice a 1 maná apaga completamente el 80% de su baraja."
                     },
                     {
-                        "cardName": "Trinisphere",
+                        "cardName": "Dismember",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Los fuerza a pagar 3 manás por cada hechizo barato."
+                        "reason": "Respuesta instantánea a Slickshot Show-Off antes de que conecte."
+                    },
+                    {
+                        "cardName": "Kozilek's Return",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Limpia bichos de Prowess a velocidad de instantáneo por 3 manás."
                     }
                 ],
                 "outCards": [
                     {
-                        "cardName": "Emrakul, the Promised End",
+                        "cardName": "The One Ring",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "Demasiado pesada."
+                        "reason": "Demasiado lento frente a daño en turno 3."
                     },
                     {
-                        "cardName": "The One Ring",
+                        "cardName": "Emrakul, the Promised End",
                         "quantity": 1,
                         "role": "out",
-                        "reason": "Ajuste de curva."
+                        "reason": "Partida decidida antes de reunir el maná."
+                    },
+                    {
+                        "cardName": "Sowing Mycospawn",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Rampa prescindible ante tanta agresividad."
+                    },
+                    {
+                        "cardName": "Devourer of Destiny",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Curva demasiado pesada."
                     }
                 ],
                 "gameplayTips": [
-                    "Trinisphere o Chalice en mesa es game over para su plan de tormenta/prowess.",
-                    "Usa Kozilek's Command para crear Scions y bloquear atacantes con arrollar."
+                    "Bajar Chalice of the Void a 1 frena en seco toda su generación de ventaja.",
+                    "No permitas que Slickshot Show-Off ataque sin respuesta abierta.",
+                    "Un Devourer of Destiny en mano inicial puede exiliar a su primer atacante antes de que empiece la partida."
+                ]
+            },
+            {
+                "vsDeckName": "Amulet Titan",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Consign to Memory",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Contrarresta disparos de Primeval Titan, Amulet of Vigor y Urza's Saga."
+                    },
+                    {
+                        "cardName": "Pick Your Poison",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Obliga a sacrificar Amulet of Vigor o criaturas voladoras."
+                    },
+                    {
+                        "cardName": "Damping Sphere",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Hace que sus bouncelands produzcan 1 solo incoloro, destruyendo su aceleración."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Dismember",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "No mata a Primeval Titan ni a Cultivator Colossus."
+                    },
+                    {
+                        "cardName": "Kozilek's Command",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Lento comparado con la interacción específica contra artefactos."
+                    },
+                    {
+                        "cardName": "Devourer of Destiny",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Ajuste de banquillo para frenar su combo en turno 2-3."
+                    }
+                ],
+                "gameplayTips": [
+                    "Damping Sphere convierte sus bouncelands y Urza's Saga en productoras de un solo incoloro, desarmando su combo.",
+                    "Consign to Memory anula los disparos de entrada de Primeval Titan.",
+                    "Sowing Mycospawn con kicker puede exiliar su Valakut o bounceland clave."
                 ]
             }
         ]
@@ -7916,87 +8470,50 @@ export class SideboardService {
         "format": "modern",
         "author": "",
         "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-esper-blink#online",
-        "description": "Mazo de control y valor acumulativo que abusa de efectos de entrar al campo con Ephemerate, Solitude, Quantum Riddler y Grief para estrangular al rival.",
+        "description": "Valor infinito y control disruptivo combinando Solitude, Ephemerate, Psychic Frog, Orcish Bowmasters y Teferi, Time Raveler.",
         "keyCards": [
             "Solitude",
             "Ephemerate",
-            "Quantum Riddler",
+            "Psychic Frog",
             "Orcish Bowmasters",
-            "Subtlety",
-            "Prismatic Ending",
-            "Counterspell",
             "Teferi, Time Raveler",
-            "Raffine's Tower",
-            "Flooded Strand"
+            "Fallaji Archaeologist",
+            "Counterspell",
+            "Fatal Push",
+            "Prismatic Ending",
+            "Subtlety"
         ],
         "sideboardCards": [
-            "Flusterstorm",
             "Consign to Memory",
-            "Celestial Purge",
-            "Stony Silence",
-            "Drannith Magistrate",
+            "Ashiok, Dream Render",
             "Supreme Verdict",
-            "Rest in Peace"
+            "Wrath of the Skies",
+            "Flusterstorm",
+            "High Noon",
+            "Damping Sphere"
         ],
         "maybeboard": [
             {
-                "name": "Grief",
-                "note": "Si se juega en torneos sin restricciones."
-            },
-            {
-                "name": "Aven Interrupter",
-                "note": "Disrupción aérea y exilio temporal."
-            },
-            {
                 "name": "Kaya's Guile",
-                "note": "Versatilidad total contra cementerio, bichos y vidas."
+                "note": "Versatilidad suprema con exilio de cementerio y sacrificio forzado."
+            },
+            {
+                "name": "Rest in Peace",
+                "note": "Apaga cementerios por completo contra Living End y Goryo's Vengeance."
+            },
+            {
+                "name": "Force of Negation",
+                "note": "Protección sin coste de maná contra combos no creaturales."
             }
         ],
         "proTips": [
-            "Solitude evocado por 0 manás con Ephemerate en respuesta al sacrificio exilia dos criaturas y permanece como un 3/2 con vínculo vital.",
-            "Teferi, Time Raveler inhabilita las respuestas instantáneas rivales y te permite parpadear criaturas en su fase de combate.",
-            "Orcish Bowmasters castiga a cualquier mazo que use cantrips o The One Ring disparando daño constante."
+            "Solitude evocado en turno rival + Ephemerate en respuesta al disparo de sacrificio exilia 2 criaturas enemigas y te deja un 3/2 Lifelink en mesa por solo {W}.",
+            "Teferi, Time Raveler apaga totalmente los trucos instantáneos de Izzet Prowess, las activaciones de Kozilek's Command y los hechizos de cascada o storm.",
+            "Psychic Frog es un motor ridículo de ventaja de cartas y daño evasivo volador; descartar cartas no esenciales dopa a la rana y genera evasión letal."
         ],
         "matchups": [
             {
-                "vsDeckName": "Boros Energy",
-                "difficulty": "favorable",
-                "role": "Control",
-                "inCards": [
-                    {
-                        "cardName": "Supreme Verdict",
-                        "quantity": 2,
-                        "role": "in",
-                        "reason": "Limpia la mesa incounterable."
-                    },
-                    {
-                        "cardName": "Celestial Purge",
-                        "quantity": 2,
-                        "role": "in",
-                        "reason": "Exilia Phlage o Blood Moon."
-                    }
-                ],
-                "outCards": [
-                    {
-                        "cardName": "Counterspell",
-                        "quantity": 2,
-                        "role": "out",
-                        "reason": "Difícil de alinear ante salidas de 1 maná."
-                    },
-                    {
-                        "cardName": "Subtlety",
-                        "quantity": 1,
-                        "role": "out",
-                        "reason": "Ajuste de pitch."
-                    }
-                ],
-                "gameplayTips": [
-                    "Solitude es tu mejor respuesta contra Phlage.",
-                    "No uses Prismatic Ending sobre fichas si puedes reservarlo para permanentes clave."
-                ]
-            },
-            {
-                "vsDeckName": "Eldrazi",
+                "vsDeckName": "Eldrazi Ramp",
                 "difficulty": "even",
                 "role": "Control",
                 "inCards": [
@@ -8004,32 +8521,145 @@ export class SideboardService {
                         "cardName": "Consign to Memory",
                         "quantity": 3,
                         "role": "in",
-                        "reason": "Contrarresta disparos o cartas incoloras por solo 1 maná azul."
+                        "reason": "Contrarresta por {U} a Emrakul, Mycospawn y Kozilek's Command."
                     },
                     {
-                        "cardName": "Stony Silence",
+                        "cardName": "Ashiok, Dream Render",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Apaga talismanes y mapas."
+                        "reason": "Exilia el cementerio y previene tutor de tierras de Mycospawn y Urza's Saga."
+                    },
+                    {
+                        "cardName": "Supreme Verdict",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Limpia la mesa de Eldrazis medianos e incounterable."
                     }
                 ],
                 "outCards": [
                     {
                         "cardName": "Orcish Bowmasters",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Sin apenas objetivos para el disparo de 1 daño."
+                    },
+                    {
+                        "cardName": "Spell Snare",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "Menos efectivo ante Eldrazis de alta resistencia."
+                        "reason": "Pocos objetivos clave de coste 2 en su lista."
+                    },
+                    {
+                        "cardName": "Fatal Push",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "No alcanza a monstruos gigantes de coste 4+."
+                    }
+                ],
+                "gameplayTips": [
+                    "Consign to Memory contrarresta tanto los hechizos incoloros como los disparos de cast de Emrakul y Mycospawn.",
+                    "Ashiok neutraliza Shifting Woodland y anula las reducciones de coste de Emrakul al vaciar su cementerio.",
+                    "Solitude es tu salvación contra Emrakul: al ser criatura, sobrepasa la protección de instantáneos."
+                ]
+            },
+            {
+                "vsDeckName": "Boros Energy",
+                "difficulty": "favorable",
+                "role": "Midrange",
+                "inCards": [
+                    {
+                        "cardName": "Wrath of the Skies",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Limpia criaturas y artefactos de energía de un solo golpe."
+                    },
+                    {
+                        "cardName": "Prismatic Ending",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Elimina Guide of Souls y Ocelot Pride limpiamente en turno 1-2."
+                    },
+                    {
+                        "cardName": "Supreme Verdict",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Respuesta garantizada contra mesas anchas de tokens."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Counterspell",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Demasiado reactivo frente a amenazas de coste 1."
+                    },
+                    {
+                        "cardName": "Subtlety",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Solo retrasa temporalmente criaturas baratas."
+                    },
+                    {
+                        "cardName": "Teferi, Time Raveler",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Vulnerable al ataque rápido con múltiples atacantes."
+                    }
+                ],
+                "gameplayTips": [
+                    "Limpiar la mesa con Wrath of the Skies antes de que Phlage escape es prioritario.",
+                    "Solitude es la respuesta ideal a Phlage ya que lo exilia directamente sin dejarlo en cementerio.",
+                    "Psychic Frog puede bloquear y comerse amenazas pequeñas ganando lifelink si descartas cartas sobrantes."
+                ]
+            },
+            {
+                "vsDeckName": "Ruby Storm",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Flusterstorm",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Contrarresta la cadena entera de tormenta de Grapeshot."
+                    },
+                    {
+                        "cardName": "High Noon",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Restringe a 1 hechizo por turno, imposibilitando el combo."
+                    },
+                    {
+                        "cardName": "Damping Sphere",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Impone un impuesto de maná acumulativo a cada ritual sucesivo."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Solitude",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Sin objetivos de criaturas relevantes en su baraja."
                     },
                     {
                         "cardName": "Prismatic Ending",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "No puede exiliar cartas de coste alto."
+                        "reason": "Demasiado lenta frente al combo en turno 2-3."
+                    },
+                    {
+                        "cardName": "Supreme Verdict",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Completamente inútil en este emparejamiento."
                     }
                 ],
                 "gameplayTips": [
-                    "Consign to Memory con Replicate neutraliza los disparos de cast de Emrakul y Kozilek's Command.",
-                    "Mantén Solitude para cuando ataquen con gigantes."
+                    "High Noon o Damping Sphere ganan la partida automáticamente si entran al campo de batalla.",
+                    "Flusterstorm anula cualquier intento de ganar con Grapeshot.",
+                    "Teferi, Time Raveler en mesa impide que lancen hechizos a velocidad instantánea en respuesta a tus jugadas."
                 ]
             }
         ]
@@ -8049,120 +8679,190 @@ export class SideboardService {
         "format": "modern",
         "author": "",
         "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-affinity#online",
-        "description": "Sinergia de artefactos de velocidad extrema con Urza's Saga, Simulacrum Synthesizer, Frogmite y Mox Opal, generando autómatas masivos.",
+        "description": "Explosión de artefactos impulsada por Urza's Saga, Thought Monitor, Cranial Ram y la evasión blindada de Kappa Cannoneer.",
         "keyCards": [
             "Urza's Saga",
-            "Simulacrum Synthesizer",
-            "Mox Opal",
-            "Frogmite",
             "Thought Monitor",
-            "Sojourner's Companion",
+            "Cranial Ram",
+            "Frogmite",
+            "Kappa Cannoneer",
+            "Metallic Rebuke",
+            "Mox Opal",
             "Springleaf Drum",
-            "Mishra's Bauble",
-            "Galvanic Blast",
-            "Shadowspear"
+            "Shadowspear",
+            "Galvanic Blast"
         ],
         "sideboardCards": [
+            "Consign to Memory",
             "Metallic Rebuke",
-            "Dismember",
-            "Whipflare",
-            "Tormod's Crypt",
-            "Pithing Needle",
-            "Hurkyl's Recall",
-            "Flusterstorm"
+            "Dispatch",
+            "Haywire Mite",
+            "Damping Sphere",
+            "Etched Champion",
+            "Wear/Tear"
         ],
         "maybeboard": [
             {
-                "name": "Patchwork Automaton",
-                "note": "Crece con cada artefacto y tiene ward 2."
+                "name": "Pithing Needle",
+                "note": "Tutorizable con Urza's Saga para apagar caminantes o The One Ring."
             },
             {
-                "name": "Nettlecyst",
-                "note": "Equipo colosal para criaturas voladoras."
+                "name": "Soul-Guide Lantern",
+                "note": "Hate de cementerio instantáneo tutorizable con Urza's Saga."
             },
             {
-                "name": "Haywire Mite",
-                "note": "Buscable con Urza's Saga para exiliar artefactos rivales."
+                "name": "Warping Wail",
+                "note": "Exilia criaturas pequeñas de combo y contrarresta conjuros como Wrath of the Skies."
             }
         ],
         "proTips": [
-            "Simulacrum Synthesizer crea una ficha de Constructo cada vez que un artefacto de coste 3+ entra al campo (Thought Monitor, Companion).",
-            "Urza's Saga capítulo III busca Shadowspear para otorgar arrollar y vínculo vital a tus autómatas gigantes.",
-            "Mox Opal activado en turno 1 permite salidas dobles de amenazas."
+            "Vexing Bauble rival en mesa contrarresta Mox Opal y cartas lanzadas por 0 manás con afinidad: debes priorizar destruirlo o contrarrestarlo de inmediato con Metallic Rebuke.",
+            "Kappa Cannoneer con Ward 4 y Cranial Ram genera daño imbloqueable masivo que evade la gran mayoría de removal del formato.",
+            "Urza's Saga en capítulo III te permite buscar Shadowspear para otorgar lifelink letal contra estrategias agresivas como Prowess o Boros Energy."
         ],
         "matchups": [
             {
-                "vsDeckName": "Boros Energy",
+                "vsDeckName": "Jeskai / Boros Energy",
                 "difficulty": "even",
                 "role": "Aggro",
                 "inCards": [
                     {
-                        "cardName": "Whipflare",
+                        "cardName": "Metallic Rebuke",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Limpia tokens y bichos de energía sin tocar tus artefactos."
+                        "reason": "Contrarresta Wrath of the Skies y Phlage en momentos críticos."
                     },
                     {
-                        "cardName": "Dismember",
+                        "cardName": "Dispatch",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Elimina a Phlage."
+                        "reason": "Exilia a Phlage de inmediato sin activar su cementerio."
+                    },
+                    {
+                        "cardName": "Etched Champion",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Inmune a todo el removal de colores de la baraja rival."
                     }
                 ],
                 "outCards": [
                     {
                         "cardName": "Frogmite",
-                        "quantity": 2,
+                        "quantity": 4,
                         "role": "out",
-                        "reason": "Bloqueado fácilmente."
+                        "reason": "Demasiado frágil ante barredores y removal de daño."
                     },
                     {
                         "cardName": "Springleaf Drum",
-                        "quantity": 1,
+                        "quantity": 2,
                         "role": "out",
-                        "reason": "Ajuste de densidad."
+                        "reason": "Ajuste de recursos para resistir el desgaste."
                     }
                 ],
                 "gameplayTips": [
-                    "Shadowspear con tus autómatas 8/8 gana vidas suficientes para resistir su daño.",
-                    "Cuidado con Wrath of the Skies barriendo todos tus artefactos de golpe."
+                    "Prepárate para Wrath of the Skies; no sobreextiendas artefactos en mesa si puedes ganar con 2 Constructos de Urza's Saga.",
+                    "Dispatch exilia a Phlage de inmediato impidiendo que vuelva a escapar.",
+                    "Etched Champion equipado con Cranial Ram es inbloqueable e intocable para sus hechizos."
                 ]
             },
             {
                 "vsDeckName": "Eldrazi Ramp",
-                "difficulty": "favorable",
+                "difficulty": "even",
                 "role": "Aggro",
                 "inCards": [
                     {
-                        "cardName": "Metallic Rebuke",
+                        "cardName": "Consign to Memory",
                         "quantity": 3,
                         "role": "in",
-                        "reason": "Contrarresta All Is Dust y Kozilek's Command por 1 maná."
+                        "reason": "Contrarresta All Is Dust, Kozilek's Command y amenazas incoloras."
                     },
                     {
-                        "cardName": "Pithing Needle",
-                        "quantity": 1,
+                        "cardName": "Haywire Mite",
+                        "quantity": 2,
                         "role": "in",
-                        "reason": "Nombra Expedition Map o Ugin."
+                        "reason": "Tutorizable con Saga para exiliar The One Ring o tierras encantadas."
+                    },
+                    {
+                        "cardName": "Damping Sphere",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Frena tierras de maná múltiple como Eldrazi Temple y Labyrinth."
                     }
                 ],
                 "outCards": [
                     {
-                        "cardName": "Galvanic Blast",
+                        "cardName": "Thoughtcast",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "No mata a sus criaturas de alta resistencia."
+                        "reason": "Demasiado pasivo ante la rampa contraria."
+                    },
+                    {
+                        "cardName": "Frogmite",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Bloqueado fácilmente por bichos gigantes incoloros."
                     },
                     {
                         "cardName": "Shadowspear",
-                        "quantity": 1,
+                        "quantity": 2,
                         "role": "out",
-                        "reason": "Menos relevante frente a ramp."
+                        "reason": "La carrera no es por vidas, sino por velocidad pura."
                     }
                 ],
                 "gameplayTips": [
-                    "Tu velocidad con Urza's Saga los supera antes de que alcancen los 7 manás.",
-                    "Guarda Metallic Rebuke para protegerte de All Is Dust."
+                    "Consign to Memory contrarresta All Is Dust por solo 1 maná azul, salvando toda tu mesa de artefactos.",
+                    "Damping Sphere convierte sus tierras de dos manás en tierras de 1 solo incoloro.",
+                    "Acelera Kappa Cannoneer para cerrar la partida antes de que bajen a Emrakul."
+                ]
+            },
+            {
+                "vsDeckName": "Ruby Storm",
+                "difficulty": "favorable",
+                "role": "Aggro-Disruptive",
+                "inCards": [
+                    {
+                        "cardName": "Damping Sphere",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Impone un impuesto de maná devastador a cada hechizo encadenado."
+                    },
+                    {
+                        "cardName": "Metallic Rebuke",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Contrarresta el primer ritual o a Ral en turno 2."
+                    },
+                    {
+                        "cardName": "Consign to Memory",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Contrarresta el disparo de tormenta de Grapeshot."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Dispatch",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Inútil contra un mazo casi sin criaturas de combate."
+                    },
+                    {
+                        "cardName": "Shadowspear",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "El lifelink no te salvará de un Grapeshot letal de 30 daños."
+                    },
+                    {
+                        "cardName": "Kappa Cannoneer",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Demasiado pesado comparado con la interacción barata."
+                    }
+                ],
+                "gameplayTips": [
+                    "Damping Sphere en mesa anula por completo su capacidad de combar.",
+                    "Metallic Rebuke por {U} interrumpe su turno crítico.",
+                    "Aplica un reloj veloz con Constructos de Urza's Saga mientras mantienes el hate activo."
                 ]
             }
         ]
@@ -8185,108 +8885,190 @@ export class SideboardService {
         "format": "modern",
         "author": "",
         "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-domain-zoo#online",
-        "description": "Estrategia hiperagresiva pentacolor impulsada por Leyline of the Guildpact y Scion of Draco (4/4 volador con todas las habilidades clave en turno 2) y Tribal Flames por 5 de daño.",
+        "description": "Potencia multiversal desatada con Leyline of the Guildpact, Scion of Draco con todas las habilidades y Tribal Flames por 5 daños.",
         "keyCards": [
-            "Leyline of the Guildpact",
             "Scion of Draco",
-            "Nishoba Brawler",
             "Territorial Kavu",
+            "Leyline of the Guildpact",
             "Tribal Flames",
-            "Ragavan, Nimble Pilferer",
-            "Lightning Bolt",
+            "Nishoba Brawler",
+            "Leyline Binding",
             "Stubborn Denial",
-            "Orcish Bowmasters",
-            "Wild Nacatl"
+            "Ragavan, Nimble Pilferer",
+            "Wild Nacatl",
+            "Lightning Bolt"
         ],
         "sideboardCards": [
-            "Flusterstorm",
+            "Consign to Memory",
             "Pick Your Poison",
-            "Wear // Tear",
-            "Rest in Peace",
-            "Gaddock Teeg",
-            "Dismember",
-            "Obsessive Guard"
+            "Wear/Tear",
+            "Veil of Summer",
+            "Kozilek's Return",
+            "Prismatic Ending",
+            "Teferi, Time Raveler"
         ],
         "maybeboard": [
             {
-                "name": "General Ferrous Rokiric",
-                "note": "Genera golems 4/4 con cada hechizo multicolor."
+                "name": "Gaddock Teeg",
+                "note": "Impide que jueguen All Is Dust, The One Ring o Through the Breach."
             },
             {
-                "name": "Ancient Grudge",
-                "note": "Solución contra artefactos."
+                "name": "Rest in Peace",
+                "note": "Hate total contra cementerios y reanimator."
             },
             {
-                "name": "Veil of Summer",
-                "note": "Protección contra counters y removal negro/azul."
+                "name": "Force of Vigor",
+                "note": "Destruye Blood Moon y Torpor Orb sin pagar maná."
             }
         ],
         "proTips": [
-            "Leyline of the Guildpact en mano inicial otorga Dominio 5 inmediato en turno 0.",
-            "Scion of Draco cuesta solo 2 manás incoloros bajo Dominio 5 y otorga a todas tus criaturas Vigilancia, Hexproof, Lifelink, First Strike y Arrollar.",
-            "Tribal Flames hace 5 de daño directo a cualquier objetivo por 2 manás."
+            "Leyline of the Guildpact en mano inicial otorga todos los tipos de tierra básica a tus tierras en turno 0, activando Domain 5 completo para Scion of Draco y Territorial Kavu inmediatamente.",
+            "Scion of Draco otorga Vigilance, Hexproof, Lifelink, First Strike y Deathtouch a tus criaturas según sus colores; con Leyline of the Guildpact tus criaturas adquieren TODAS esas habilidades.",
+            "Contra Eldrazi, retira Stubborn Denial y Spell Pierce: no pueden contrarrestar criaturas incoloras como Sowing Mycospawn o Devourer of Destiny."
         ],
         "matchups": [
-            {
-                "vsDeckName": "Boros Energy",
-                "difficulty": "favorable",
-                "role": "Aggro",
-                "inCards": [
-                    {
-                        "cardName": "Pick Your Poison",
-                        "quantity": 2,
-                        "role": "in",
-                        "reason": "Elimina Phlage o Blood Moon."
-                    },
-                    {
-                        "cardName": "Dismember",
-                        "quantity": 1,
-                        "role": "in",
-                        "reason": "Removal instantáneo."
-                    }
-                ],
-                "outCards": [
-                    {
-                        "cardName": "Stubborn Denial",
-                        "quantity": 2,
-                        "role": "out",
-                        "reason": "Tienen muchas criaturas y poco instantáneo no criatura."
-                    }
-                ],
-                "gameplayTips": [
-                    "Scion of Draco con Lifelink hace imposible que Boros gane la carrera de daño.",
-                    "Tribal Flames remueve bloqueadores molestos o remata la partida a la cabeza."
-                ]
-            },
             {
                 "vsDeckName": "Eldrazi Ramp",
                 "difficulty": "even",
                 "role": "Aggro",
                 "inCards": [
                     {
-                        "cardName": "Stubborn Denial",
-                        "quantity": 2,
+                        "cardName": "Consign to Memory",
+                        "quantity": 3,
                         "role": "in",
-                        "reason": "Corta All Is Dust y Kozilek's Command con Ferocious."
+                        "reason": "Contrarresta por {U} a Emrakul, Devourer of Destiny y disparos de Mycospawn."
                     },
                     {
                         "cardName": "Pick Your Poison",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Hace sacrificar sus criaturas gigantes voladoras."
+                        "reason": "Fuerza el sacrificio de voladores o artefactos gigantes."
+                    },
+                    {
+                        "cardName": "Wear/Tear",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Responde a Urza's Saga y artefactos de rampa rivales."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Stubborn Denial",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "No pueden tocar criaturas incoloras ni disparos de rampa."
+                    },
+                    {
+                        "cardName": "Spell Pierce",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Inútil contra su lista cargada de criaturas."
+                    },
+                    {
+                        "cardName": "Lightning Bolt",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Poco daño contra criaturas de resistencia 5+."
+                    }
+                ],
+                "gameplayTips": [
+                    "Aplica presión directa con Territorial Kavu 5/5 antes de que bajen Ugin's Labyrinth activo.",
+                    "Consign to Memory frena la búsqueda de tierras de Mycospawn y la entrada de monstruos incoloros.",
+                    "Pick Your Poison resuelve situaciones críticas frente a amenazas evasivas gigantes."
+                ]
+            },
+            {
+                "vsDeckName": "Boros Energy",
+                "difficulty": "even",
+                "role": "Midrange",
+                "inCards": [
+                    {
+                        "cardName": "Kozilek's Return",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Limpia tokens de Ocelot Pride y atacantes de energía a velocidad instantánea."
+                    },
+                    {
+                        "cardName": "Prismatic Ending",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Elimina Guide of Souls y Static Prison de forma definitiva."
+                    },
+                    {
+                        "cardName": "Wear/Tear",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Destruye Blood Moon y encantamientos de odio."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Stubborn Denial",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Poco eficiente contra un mazo repleto de bichos agresivos."
+                    },
+                    {
+                        "cardName": "Ragavan, Nimble Pilferer",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Bloqueado fácilmente por tokens 1/1."
+                    },
+                    {
+                        "cardName": "Nishoba Brawler",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Vulnerable a Galvanic Discharge por poco maná."
+                    }
+                ],
+                "gameplayTips": [
+                    "Territorial Kavu con Lifelink (gracias a Scion de Draco) domina el combate terrestre frente a Guide of Souls y Ocelot Pride.",
+                    "Guarda Wear/Tear para responder a Blood Moon antes de que corte tu acceso a 5 colores.",
+                    "Tribal Flames directo a la cabeza suele cerrar la partida sin necesidad de sobreexponerse."
+                ]
+            },
+            {
+                "vsDeckName": "Esper Blink / Control",
+                "difficulty": "favorable",
+                "role": "Aggro",
+                "inCards": [
+                    {
+                        "cardName": "Veil of Summer",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Anula counterspells y removal negro de Solitude/Psychic Frog robando carta."
+                    },
+                    {
+                        "cardName": "Stubborn Denial",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Contrarresta Supreme Verdict o Teferi por solo {U} con Ferocious activado."
+                    },
+                    {
+                        "cardName": "Teferi, Time Raveler",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Impide que jueguen Ephemerate y counterspells en tu turno."
                     }
                 ],
                 "outCards": [
                     {
                         "cardName": "Lightning Bolt",
-                        "quantity": 2,
+                        "quantity": 4,
                         "role": "out",
-                        "reason": "3 de daño no es suficiente contra sus amenazas."
+                        "reason": "Poco impacto contra criaturas de alta resistencia y Solitude."
+                    },
+                    {
+                        "cardName": "Tribal Flames",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Ajuste de interactividad para proteger tus amenazas en mesa."
                     }
                 ],
                 "gameplayTips": [
-                    "Cierra la partida antes del turno 4 con Territorial Kavu y Scion of Draco.",
-                    "Stubborn Denial por 1 maná azul protege tus criaturas clave."
+                    "Veil of Summer en respuesta a su removal te asegura la ventaja de cartas y mantiene tu atacante 5/5.",
+                    "Scion of Draco con Hexproof invalida la mayor parte de su removal dirigido.",
+                    "Teferi en mesa les impide usar Ephemerate en tu turno."
                 ]
             }
         ]
@@ -8299,121 +9081,203 @@ export class SideboardService {
         "metaCount": 286,
         "imageUrl": "https://cards.mtggoldfish.com/images/019ce2f0-08c6-7d89-bc34-c1fcd3173d92/variants/672/938/card_image.webp",
         "colors": [
-            "W",
-            "R"
+            "R",
+            "W"
         ],
         "archetypeType": "Aggro",
         "format": "modern",
         "author": "",
         "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-boros-energy#online",
-        "description": "El rey de la agresión y valor continuo de Modern: abusa de contadores de energía con Ocelot Pride, Guide of Souls, Galvanic Discharge y Phlage, Titan of Fire's Fury.",
+        "description": "Sinérgica máquina de combate agresiva con Guide of Souls, Ocelot Pride, Ajani, Nacatl Pariah y el azote inagotable de Phlage.",
         "keyCards": [
-            "Ocelot Pride",
             "Guide of Souls",
-            "Galvanic Discharge",
+            "Ocelot Pride",
+            "Ajani, Nacatl Pariah",
             "Phlage, Titan of Fire's Fury",
-            "Ragavan, Nimble Pilferer",
-            "Amped Raptor",
+            "Galvanic Discharge",
             "Static Prison",
-            "Unstable Amulet",
-            "Sunbaked Canyon",
-            "Sacred Foundry"
+            "Blood Moon",
+            "Goblin Bombardment",
+            "Ranger-Captain of Eos",
+            "Ragavan, Nimble Pilferer"
         ],
         "sideboardCards": [
             "Blood Moon",
-            "Drannith Magistrate",
-            "Celestial Purge",
-            "Wear // Tear",
-            "Orim's Chant",
+            "Wear/Tear",
+            "Damping Sphere",
+            "Surgical Extraction",
+            "High Noon",
             "Wrath of the Skies",
-            "Meltdown"
+            "Sanctifier en-Vec"
         ],
         "maybeboard": [
             {
-                "name": "Ajani, Nacatl Pariah",
-                "note": "Planeswalker transformable extremadamente agresivo."
+                "name": "Vexing Bauble",
+                "note": "Hate directo para frenar hechizos de 0 manás y cascada."
             },
             {
-                "name": "Chalice of the Void",
-                "note": "Para emparejamientos de tormenta y cantrips."
+                "name": "Celestial Purge",
+                "note": "Exilia permanentes negros o rojos clave de forma limpia."
             },
             {
-                "name": "Magus of the Moon",
-                "note": "Hate de tierras no básicas con cuerpo atacante."
+                "name": "Drannith Magistrate",
+                "note": "Impide que jueguen cartas desde el cementerio o exilio."
             }
         ],
         "proTips": [
-            "Guide of Souls otorga vida y energía con cada criatura que entra, transformando a cualquier atacante en 3/3 volador con 3 energías.",
-            "Ocelot Pride duplica todas las fichas creadas ese turno si tienes la bendición de la ciudad.",
-            "Phlage, Titan of Fire's Fury se lanza desde el cementerio por Escape (RRWW) haciendo Lightning Helix cada vez que entra o ataca."
+            "Blood Moon es devastador contra Eldrazi y Amulet Titan: Eldrazi Temple, Ugin's Labyrinth y Urza's Saga pasan a ser Montañas, cortando el maná incoloro que requieren para Kozilek's Command y Devourer of Destiny.",
+            "Contra Broodscale Combo, Wear/Tear destruye Blade of the Bloodchief (pieza indispensable del bucle infinito de tokens) y Surgical Extraction exilia la pieza de toda su biblioteca.",
+            "High Noon es tu mejor herramienta contra Izzet Prowess y Ruby Storm, ya que restringe a 1 solo hechizo por turno al adversario, matando su motor por completo."
         ],
         "matchups": [
             {
-                "vsDeckName": "Izzet Prowess",
-                "difficulty": "favorable",
-                "role": "Control",
-                "inCards": [
-                    {
-                        "cardName": "Orim's Chant",
-                        "quantity": 2,
-                        "role": "in",
-                        "reason": "Corta su turno de ataque y combo de raíz."
-                    },
-                    {
-                        "cardName": "Celestial Purge",
-                        "quantity": 1,
-                        "role": "in",
-                        "reason": "Exilia amenazas rojas."
-                    }
-                ],
-                "outCards": [
-                    {
-                        "cardName": "Amped Raptor",
-                        "quantity": 2,
-                        "role": "out",
-                        "reason": "Riesgo de bajar criatura pasiva ante ataque inminente."
-                    }
-                ],
-                "gameplayTips": [
-                    "Guide of Souls ganando vidas te saca de rango de muerte rápida.",
-                    "Galvanic Discharge con energía acumulada mata a cualquier atacante inflado."
-                ]
-            },
-            {
                 "vsDeckName": "Eldrazi Ramp",
                 "difficulty": "even",
-                "role": "Aggro",
+                "role": "Aggro-Control",
                 "inCards": [
                     {
                         "cardName": "Blood Moon",
-                        "quantity": 3,
-                        "role": "in",
-                        "reason": "Inhabilita Eldrazi Temple y tierras incoloras."
-                    },
-                    {
-                        "cardName": "Wear // Tear",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Destruye The One Ring y talismanes."
+                        "reason": "Convierte Eldrazi Temple y Ugin's Labyrinth en Montañas, cortando su maná incoloro."
+                    },
+                    {
+                        "cardName": "Wear/Tear",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Destruye Urza's Saga y artefactos de aceleración rivales."
+                    },
+                    {
+                        "cardName": "Damping Sphere",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Hace que sus tierras que dan 2 manás den solo 1 incoloro."
+                    },
+                    {
+                        "cardName": "Surgical Extraction",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Exilia amenazas clave o tierras tras verlas en el cementerio."
                     }
                 ],
                 "outCards": [
+                    {
+                        "cardName": "Goblin Bombardment",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Demasiado lento frente a criaturas gigantes incoloras."
+                    },
                     {
                         "cardName": "Static Prison",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "Poco eficiente si tienen mucho maná."
+                        "reason": "Poco eficiente si sus criaturas tienen disparos de entrada devastadores."
                     },
                     {
-                        "cardName": "Ragavan, Nimble Pilferer",
+                        "cardName": "Seasoned Pyromancer",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "Bloqueado fácilmente por Scions."
+                        "reason": "Ajuste de curva para meter disrupción directa temprana."
                     }
                 ],
                 "gameplayTips": [
-                    "Blood Moon en turno 3 te da la victoria asegurada.",
-                    "Phlage remata la partida directo a la cabeza."
+                    "Mantén Blood Moon dentro: anula Eldrazi Temple y Ugin's Labyrinth de forma concluyente.",
+                    "No confíes en Galvanic Discharge para matar a Emrakul: tiene protección contra instantáneos.",
+                    "Presiona agresivamente con Ragavan y Ocelot Pride antes de que logren maná suficiente para All Is Dust."
+                ]
+            },
+            {
+                "vsDeckName": "Broodscale Combo",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Wear/Tear",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Destruye Blade of the Bloodchief, el artefacto que activa el bucle infinito."
+                    },
+                    {
+                        "cardName": "Surgical Extraction",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Exilia Blade of the Bloodchief de su baraja una vez caiga al cementerio."
+                    },
+                    {
+                        "cardName": "Damping Sphere",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Ralentiza su rampa y castiga el bucle de maná."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Goblin Bombardment",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "No interactúa con su combo de forma directa."
+                    },
+                    {
+                        "cardName": "Thraben Charm",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Wear/Tear cubre Blade y Urza's Saga de forma más eficiente."
+                    }
+                ],
+                "gameplayTips": [
+                    "Prioriza el removal inmediato con Galvanic Discharge sobre Basking Broodscale en cuanto toque mesa.",
+                    "Destruir Blade of the Bloodchief apaga por completo su condición de victoria.",
+                    "Surgical Extraction sobre Blade les deja sin su mejor vía de ataque infinito."
+                ]
+            },
+            {
+                "vsDeckName": "Izzet Prowess",
+                "difficulty": "even",
+                "role": "Midrange",
+                "inCards": [
+                    {
+                        "cardName": "High Noon",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Restringe a 1 hechizo por turno, destrozando su motor de cantrips y Prowess."
+                    },
+                    {
+                        "cardName": "Surgical Extraction",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Elimina copias restantes de Slickshot Show-Off o Lightning Bolt."
+                    },
+                    {
+                        "cardName": "Sanctifier en-Vec",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Protección contra rojo y exilia cartas rojas del cementerio."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Blood Moon",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Tienen básicos y no les frena en absoluto."
+                    },
+                    {
+                        "cardName": "Static Prison",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Lenta contra atacantes agresivos con prisa."
+                    },
+                    {
+                        "cardName": "Seasoned Pyromancer",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Coste 3 demasiado vulnerable a salidas explosivas."
+                    }
+                ],
+                "gameplayTips": [
+                    "High Noon en mesa les imposibilita encadenar múltiples hechizos para hinchar a sus criaturas.",
+                    "Sanctifier en-Vec bloquea a todas sus criaturas terrestres sin recibir daño alguno.",
+                    "Usa Phlage como remate y estabilizador de vidas masivo en el midgame."
                 ]
             }
         ]
@@ -8423,8 +9287,8 @@ export class SideboardService {
         "slug": "modern-goryos-vengeance",
         "name": "Goryo's Vengeance",
         "metaPercentage": "4.4%",
-        "metaCount": 247,
-        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2f0-10f6-7543-aef4-cfbfe6b2cbaa/variants/672/938/card_image.webp",
+        "metaCount": 245,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2f2-c3f2-78d7-b84e-f99333909772/variants/672/938/card_image.webp",
         "colors": [
             "W",
             "U",
@@ -8433,102 +9297,121 @@ export class SideboardService {
         "archetypeType": "Combo",
         "format": "modern",
         "author": "",
-        "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-goryo-s-vengeance#paper",
-        "description": "Combo de reanimación instantánea que regresa a Atraxa, Grand Unifier o Griselbrand con Goryo's Vengeance a velocidad instantánea, rellenando la mano de inmediato.",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-goryos-vengeance#paper",
+        "description": "Reanimación letal instantánea con Goryo's Vengeance y Atraxa, Grand Unifier, asegurando presencia infinita con parpadeos de Ephemerate.",
         "keyCards": [
             "Goryo's Vengeance",
             "Atraxa, Grand Unifier",
             "Griselbrand",
-            "Quantum Riddler",
-            "Solitude",
-            "Tainted Indulgence",
-            "Fallaji Archaeologist",
-            "Thoughtseize",
             "Ephemerate",
-            "Grief"
+            "Psychic Frog",
+            "Fallaji Archaeologist",
+            "Tainted Indulgence",
+            "Thoughtseize",
+            "Prismatic Ending",
+            "Fatal Push"
         ],
         "sideboardCards": [
-            "Flusterstorm",
+            "Consign to Memory",
             "Prismatic Ending",
-            "Celestial Purge",
             "Leyline of Sanctity",
-            "Drannith Magistrate",
-            "Supreme Verdict",
-            "Fatal Push"
+            "Fatal Push",
+            "Teferi, Time Raveler",
+            "Flusterstorm",
+            "Toxic Deluge"
         ],
         "maybeboard": [
             {
-                "name": "Profane Tutor",
-                "note": "Buscador incondicional de Goryo's."
+                "name": "Dauthi Voidwalker",
+                "note": "Presión alternativa que roba hechizos y bloquea evasivamente."
+            },
+            {
+                "name": "Stern Scolding",
+                "note": "Corta hate de criaturas como Drannith Magistrate o Dauthi."
             },
             {
                 "name": "Subtlety",
-                "note": "Respuesta gratuita para proteger el turno del combo."
-            },
-            {
-                "name": "Spell Pierce",
-                "note": "Protección contra Surgical Extraction y Endurance."
+                "note": "Respuesta gratuita para retrasar Phlage o Endurance rival."
             }
         ],
         "proTips": [
-            "Lanza Goryo's Vengeance en el paso final del turno rival; la criatura permanecerá durante todo tu propio turno siguiente antes de ser exiliada.",
-            "Ephemerate sobre una criatura revivida con Goryo's la exilia y la regresa como un nuevo objeto, evitando permanentemente la cláusula de exilio.",
-            "Atraxa al entrar te roba habitualmente entre 4 y 7 cartas (tierra, criatura, conjuro, instantáneo, etc.)."
+            "Goryo's Vengeance reanima a Atraxa a velocidad de instantáneo al final del turno rival; lanzar Ephemerate en tu turno la parpadea, eliminando el exilio de fin de turno y manteniéndola en mesa para siempre.",
+            "Consign to Memory es tu mejor arma en 2026 contra Eldrazi y artefactos de odio, contrarrestando amenazas gigantes o hate en la pila por solo {U}.",
+            "Si el rival despliega odio severo de cementerio (Rest in Peace, Sanctifier en-Vec), gana a través del plan beatdown con Psychic Frog y Orcish Bowmasters."
         ],
         "matchups": [
             {
-                "vsDeckName": "Boros Energy",
+                "vsDeckName": "Eldrazi Ramp",
                 "difficulty": "favorable",
                 "role": "Combo",
                 "inCards": [
                     {
-                        "cardName": "Fatal Push",
-                        "quantity": 2,
+                        "cardName": "Consign to Memory",
+                        "quantity": 3,
                         "role": "in",
-                        "reason": "Frena su inicio agresivo."
+                        "reason": "Contrarresta por {U} a Emrakul, Devourer of Destiny y Kozilek's Command."
                     },
                     {
                         "cardName": "Prismatic Ending",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Elimina Guide of Souls y permanentes de energía."
+                        "reason": "Elimina hate temprano y aceleradores de artefactos."
+                    },
+                    {
+                        "cardName": "Leyline of Sanctity",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Protege tu mano de Thought-Knot Seer y disrupción dirigida."
                     }
                 ],
                 "outCards": [
                     {
-                        "cardName": "Thoughtseize",
-                        "quantity": 2,
+                        "cardName": "Fatal Push",
+                        "quantity": 3,
                         "role": "out",
-                        "reason": "Pagar vidas contra aggro es peligroso."
+                        "reason": "Inútil contra bichos incoloros gigantes de coste alto."
                     },
                     {
-                        "cardName": "Quantum Riddler",
-                        "quantity": 1,
+                        "cardName": "Orcish Bowmasters",
+                        "quantity": 2,
                         "role": "out",
-                        "reason": "Ajuste de velocidad."
+                        "reason": "Sin impacto relevante en este emparejamiento."
+                    },
+                    {
+                        "cardName": "Tainted Indulgence",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Ajuste de interacción para asegurar la protección del combo."
                     }
                 ],
                 "gameplayTips": [
-                    "Atraxa en mesa con Lifelink recupera todas tus vidas y para sus ataques.",
-                    "Cuidado con Soul-Guide Lantern o Rest in Peace post-sideboard."
+                    "Reanimar Atraxa al final de su turno te permite robar 6-7 cartas y atacar al siguiente turno ganando vidas.",
+                    "Consign to Memory frena a Kozilek's Command cuando intenten exiliar tu cementerio.",
+                    "Leyline of Sanctity en turno 0 anula la disrupción de mano de Thought-Knot Seer."
                 ]
             },
             {
-                "vsDeckName": "Izzet Prowess",
+                "vsDeckName": "Boros Energy",
                 "difficulty": "even",
-                "role": "Combo",
+                "role": "Combo-Control",
                 "inCards": [
                     {
                         "cardName": "Fatal Push",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Mata a Slickshot Show-Off."
+                        "reason": "Mata a Guide of Souls y Ocelot Pride antes de que acumulen recursos."
                     },
                     {
-                        "cardName": "Flusterstorm",
+                        "cardName": "Toxic Deluge",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Limpia la mesa saltándose indestructibilidad."
+                    },
+                    {
+                        "cardName": "Prismatic Ending",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Corta sus cadenas de cantrips o contrahechizos."
+                        "reason": "Responde a Static Prison que exile a Atraxa."
                     }
                 ],
                 "outCards": [
@@ -8536,12 +9419,69 @@ export class SideboardService {
                         "cardName": "Thoughtseize",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "2 vidas menos ayudan a su carrera de daño."
+                        "reason": "Perder 2 vidas acelera demasiado su reloj agresivo."
+                    },
+                    {
+                        "cardName": "Ephemerate",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de recursos de banquillo."
+                    },
+                    {
+                        "cardName": "Fallaji Archaeologist",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Demasiado pasivo ante salidas explosivas."
                     }
                 ],
                 "gameplayTips": [
-                    "Reanima a Griselbrand o Atraxa tan pronto como caigan al cementerio.",
-                    "Solitude por evoked salva turnos decisivos."
+                    "Atraxa con Lifelink en turno 3 desbarata cualquier carrera de daño de Boros Energy.",
+                    "Guarda Prismatic Ending para responder a Static Prison si encierran a tu criatura reanimada.",
+                    "Cuidado con Surgical Extraction rival en el cementerio tras usar mill de Fallaji."
+                ]
+            },
+            {
+                "vsDeckName": "Jeskai Energy",
+                "difficulty": "even",
+                "role": "Combo",
+                "inCards": [
+                    {
+                        "cardName": "Thoughtseize",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Quita counterspells o Subtlety antes de iniciar el combo."
+                    },
+                    {
+                        "cardName": "Teferi, Time Raveler",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Impide que respondan a Goryo's Vengeance con contrahechizos."
+                    },
+                    {
+                        "cardName": "Flusterstorm",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Gana la guerra de interacción en la pila."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Fatal Push",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Poco efectivo contra mazos basados en control y planeswalkers."
+                    },
+                    {
+                        "cardName": "Fallaji Archaeologist",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Reemplazado por protección contra counterspells."
+                    }
+                ],
+                "gameplayTips": [
+                    "Teferi en mesa te asegura combar sin temor a Subtlety, Solitude o Wrath of the Skies.",
+                    "Goryo a velocidad de instantáneo al final de su turno les fuerza a girar maná en su contra.",
+                    "Si exilian a Atraxa con Solitude, responde con Ephemerate para salvarla y robar otra tanda de cartas."
                 ]
             }
         ]
@@ -8554,128 +9494,204 @@ export class SideboardService {
         "metaCount": 237,
         "imageUrl": "https://cards.mtggoldfish.com/images/019ce2f0-0936-780b-9c54-40eb67534b50/variants/672/938/card_image.webp",
         "colors": [
-            "W",
             "U",
-            "R"
+            "R",
+            "W"
         ],
         "archetypeType": "Control",
         "format": "modern",
         "author": "",
         "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-jeskai-energy#online",
-        "description": "La versión controlera definitiva de energía: combina Phlage y Wrath of the Skies con Counterspell, Teferi, Time Raveler y The One Ring.",
+        "description": "Muralla de control absoluto con Wrath of the Skies barriendo mesas, Galvanic Discharge eficiente y Phlage como finalizador inevitable.",
         "keyCards": [
             "Phlage, Titan of Fire's Fury",
             "Wrath of the Skies",
             "Galvanic Discharge",
+            "Subtlety",
+            "Teferi, Time Raveler",
             "Tune the Narrative",
             "Counterspell",
+            "Solitude",
             "The One Ring",
-            "Teferi, Time Raveler",
-            "Subtlety",
-            "Raugrin Triome",
-            "Flooded Strand"
+            "Prismatic Ending"
         ],
         "sideboardCards": [
-            "Celestial Purge",
             "Consign to Memory",
-            "Flusterstorm",
-            "Blood Moon",
-            "Wear // Tear",
-            "Obsessive Guard",
-            "Supreme Verdict"
+            "Ashiok, Dream Render",
+            "Mystical Dispute",
+            "Stern Scolding",
+            "Celestial Purge",
+            "Wrath of the Skies",
+            "Flusterstorm"
         ],
         "maybeboard": [
             {
-                "name": "Solitude",
-                "note": "Removal incondicional gratuito adicional."
+                "name": "Narset, Parter of Veils",
+                "note": "Corta robos adicionales de The One Ring y busca interacción."
             },
             {
-                "name": "Dress Down",
-                "note": "Apaga habilidades de Scion of Draco y Eldrazis."
+                "name": "Rest in Peace",
+                "note": "Hate total de cementerios si el meta tiene exceso de Reanimator."
             },
             {
-                "name": "Chalice of the Void",
-                "note": "Para frenar Prowess y Living End."
+                "name": "Obsidian Charmaw",
+                "note": "Destruye tierras no básicas de rampa (Ugin's Labyrinth) entrando con descuento."
             }
         ],
         "proTips": [
-            "Wrath of the Skies paga X energías y limpia artefactos, criaturas y encantamientos de coste X o menor.",
-            "Phlage desde el cementerio es una condición de victoria inagotable que limpia amenazas y te cura constantemente.",
-            "Tune the Narrative proporciona energía instantánea y roba carta por un solo maná azul."
+            "Wrath of the Skies por {X}{W}{U} gasta energía para destruir todas las criaturas, artefactos y encantamientos de coste X o menor; barre Urza's Saga, Constructos y mesas anchas sin despeinarse.",
+            "Ashiok, Dream Render desde el banquillo exilia cementerios rivales y anula los tutores de tierras de Sowing Mycospawn, Urza's Saga y Amulet Titan.",
+            "Solitude o Phlage escapan del cementerio para cerrar partidas de desgaste larguísimas; asegúrate de no gastar toda la energía en removal innecesario."
         ],
         "matchups": [
-            {
-                "vsDeckName": "Boros Energy",
-                "difficulty": "favorable",
-                "role": "Control",
-                "inCards": [
-                    {
-                        "cardName": "Celestial Purge",
-                        "quantity": 2,
-                        "role": "in",
-                        "reason": "Exilia su propio Phlage o Blood Moon."
-                    },
-                    {
-                        "cardName": "Supreme Verdict",
-                        "quantity": 1,
-                        "role": "in",
-                        "reason": "Sweeper incounterable adicional."
-                    }
-                ],
-                "outCards": [
-                    {
-                        "cardName": "Counterspell",
-                        "quantity": 2,
-                        "role": "out",
-                        "reason": "Difícil de alinear contra criaturas de 1 maná."
-                    },
-                    {
-                        "cardName": "Subtlety",
-                        "quantity": 1,
-                        "role": "out",
-                        "reason": "Ajuste de valor."
-                    }
-                ],
-                "gameplayTips": [
-                    "Wrath of the Skies barre su mesa por completo.",
-                    "En el late game, tu propio Phlage domina el combate y la carrera de vidas."
-                ]
-            },
             {
                 "vsDeckName": "Eldrazi Ramp",
                 "difficulty": "even",
                 "role": "Control",
                 "inCards": [
                     {
+                        "cardName": "Ashiok, Dream Render",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Corta búsquedas de biblioteca de Mycospawn y Urza's Saga, vaciando su cementerio."
+                    },
+                    {
                         "cardName": "Consign to Memory",
                         "quantity": 3,
                         "role": "in",
-                        "reason": "Corta sus amenazas incoloras y habilidades disparadas."
+                        "reason": "Contrarresta hechizos incoloros y habilidades disparadas por solo {U}."
                     },
                     {
-                        "cardName": "Blood Moon",
+                        "cardName": "Solitude",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Apaga Eldrazi Temple y Urza lands."
+                        "reason": "Exilia a Emrakul esquivando su protección contra instantáneos."
                     }
                 ],
                 "outCards": [
                     {
                         "cardName": "Galvanic Discharge",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Daño insuficiente frente a monstruos incoloros gigantes."
+                    },
+                    {
+                        "cardName": "Wrath of the Skies",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "No mata gigantes con facilidad."
+                        "reason": "No alcanza a Emrakul (coste 13) de forma eficiente."
                     },
                     {
                         "cardName": "Tune the Narrative",
-                        "quantity": 1,
+                        "quantity": 2,
                         "role": "out",
-                        "reason": "Ajuste de tempo."
+                        "reason": "Ajuste de interacción para priorizar respuestas directas."
                     }
                 ],
                 "gameplayTips": [
-                    "Blood Moon en turno 3 los paraliza.",
-                    "Consign to Memory con replicate neutraliza la habilidad de Emrakul de controlar tu turno."
+                    "Ashiok neutraliza la rampa de Mycospawn y anula el Delirium de Shifting Woodland.",
+                    "Solitude es tu respuesta directa a Emrakul: al ser invocación de criatura, se salta la protección de instantáneos.",
+                    "Consign to Memory frena en seco Kozilek's Command y All Is Dust."
+                ]
+            },
+            {
+                "vsDeckName": "Izzet Prowess",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Stern Scolding",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Corta Dragon's Rage Channeler y Slickshot Show-Off por un maná azul."
+                    },
+                    {
+                        "cardName": "Mystical Dispute",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Cuesta {U} contra Expressive Iteration y Preordain."
+                    },
+                    {
+                        "cardName": "Wrath of the Skies",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Limpia la mesa antes de que acumulen daño letal."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Teferi, Time Raveler",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Demasiado lento ante tanta agresividad en mesa."
+                    },
+                    {
+                        "cardName": "The One Ring",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Poco margen para pagar 4 manás sin morir en el intento."
+                    },
+                    {
+                        "cardName": "Counterspell",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Coste doble azul difícil mientras intentas lanzar removal rojo y blanco."
+                    }
+                ],
+                "gameplayTips": [
+                    "Galvanic Discharge y Stern Scolding deben usarse de inmediato para evitar que Slickshot Show-Off ataque.",
+                    "Wrath of the Skies con X=2 barre toda su presencia de criaturas.",
+                    "Phlage resolviendo en el midgame sella la partida con ganancia de vida recurrente."
+                ]
+            },
+            {
+                "vsDeckName": "Boros Energy (Mirror/Hermano)",
+                "difficulty": "even",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Wrath of the Skies",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Barre criaturas, tokens y encantamientos acumuladores de energía."
+                    },
+                    {
+                        "cardName": "Celestial Purge",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Exilia a Phlage y Blood Moon de forma limpia e irreversible."
+                    },
+                    {
+                        "cardName": "Ashiok, Dream Render",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Vacía su cementerio evitando el escape de Phlage."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Subtlety",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Solo retrasa temporalmente criaturas de bajo coste."
+                    },
+                    {
+                        "cardName": "Counterspell",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Demasiado lento contra salidas de Guide of Souls y Ocelot Pride."
+                    },
+                    {
+                        "cardName": "Tune the Narrative",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Reemplazado por hate directo de cementerio."
+                    }
+                ],
+                "gameplayTips": [
+                    "Quien mejor controle el cementerio y el escape de Phlage gana el emparejamiento; Ashiok y Celestial Purge exilian a Phlage definitivamente.",
+                    "Wrath of the Skies reinicia mesas descontroladas de Ocelot Pride y Ajani.",
+                    "No te precipites en escapar a tu propio Phlage si sospechas Celestial Purge o Static Prison rival."
                 ]
             }
         ]
@@ -8694,89 +9710,70 @@ export class SideboardService {
         "format": "modern",
         "author": "",
         "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-ruby-storm#online",
-        "description": "Mazo tormenta de alta velocidad que encadena Ruby Medallion, Ral, Monsoon Mage, Desperate Ritual y Manamorphose para cerrar con Grapeshot o Wish en turnos 2-3.",
+        "description": "Explosión ininterrumpida de tormenta roja con Ruby Medallion, Ral, Monsoon Mage, rituales infinitos y remate letal con Grapeshot.",
         "keyCards": [
             "Ruby Medallion",
             "Ral, Monsoon Mage",
             "Desperate Ritual",
             "Pyretic Ritual",
             "Manamorphose",
-            "Wish",
             "Grapeshot",
             "Past in Flames",
+            "Wish",
             "Reckless Impulse",
             "Wrenn's Resolve"
         ],
         "sideboardCards": [
-            "Empty the Warrens",
-            "Lightning Bolt",
             "Abrade",
             "Defense Grid",
-            "Grapeshot",
-            "Past in Flames",
-            "Blood Moon"
+            "Empty the Warrens",
+            "Lightning Bolt",
+            "Flame Slash",
+            "Shattering Spree",
+            "Consign to Memory"
         ],
         "maybeboard": [
             {
-                "name": "Galvanic Relay",
-                "note": "Preparación masiva para el turno siguiente si no combas de inmediato."
+                "name": "Veil of Summer",
+                "note": "Splash verde para apagar counterspells y descarte negro."
             },
             {
-                "name": "Pact of Negation",
-                "note": "Protección gratuita de combo."
+                "name": "Blood Moon",
+                "note": "Hate sorpresivo para castigar bases no básicas."
             },
             {
-                "name": "Shattering Spree",
-                "note": "Destrucción múltiple de artefactos con replicate."
+                "name": "Grapeshot (Copia extra)",
+                "note": "Objetivo directo de Wish desde el banquillo."
             }
         ],
         "proTips": [
-            "Ral, Monsoon Mage reduce los costes de los conjuros e instantáneos rojos y se transforma en planeswalker si ganas un lanzamiento de moneda.",
-            "Wish te permite buscar Grapeshot o Empty the Warrens directamente desde el banquillo sin llevarlos en el mazo principal.",
-            "Past in Flames te permite rejugar todos los rituales y cantrips desde el cementerio para alcanzar tormenta 20 fácilmente."
+            "Ral, Monsoon Mage reduce costes y al lanzar instantáneos o conjuros tira moneda; al transformarse en Planeswalker, su -2 duplica tu próximo ritual o Grapeshot para daño letal instantáneo.",
+            "Cuidado extremo con High Noon, Trinisphere, Damping Sphere y Vexing Bauble: debes incluir Abrade o Smash to Smithereens para destruirlos antes de iniciar tu cadena de tormenta.",
+            "Consign to Memory rival puede contrarrestar el disparo de Storm de Grapeshot o Past in Flames; ten preparada una victoria alternativa vía Empty the Warrens si el cementerio está vigilado."
         ],
         "matchups": [
             {
-                "vsDeckName": "Boros Energy",
-                "difficulty": "favorable",
-                "role": "Combo",
-                "inCards": [
-                    {
-                        "cardName": "Lightning Bolt",
-                        "quantity": 2,
-                        "role": "in",
-                        "reason": "Mata a Guide of Souls antes de que acumule vidas."
-                    }
-                ],
-                "outCards": [
-                    {
-                        "cardName": "Wrenn's Resolve",
-                        "quantity": 2,
-                        "role": "out",
-                        "reason": "Ajuste de velocidad para combar en T2/T3."
-                    }
-                ],
-                "gameplayTips": [
-                    "Boros Energy tiene poca o nula interacción en la pila en G1.",
-                    "En G2/G3, cuidado con Drannith Magistrate o Damping Sphere; usa Abrade o Bolt para quitarlos del medio."
-                ]
-            },
-            {
-                "vsDeckName": "Esper Blink",
+                "vsDeckName": "Boros / Jeskai Energy",
                 "difficulty": "even",
                 "role": "Combo",
                 "inCards": [
                     {
+                        "cardName": "Abrade",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Rompe Damping Sphere, High Noon o Vexing Bauble rivales."
+                    },
+                    {
                         "cardName": "Defense Grid",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Fuerza a pagar 3 manás adicionales por sus counters."
+                        "reason": "Apaga Galvanic Discharge, Subtlety y Flusterstorm en tu turno de combo."
                     },
                     {
                         "cardName": "Empty the Warrens",
-                        "quantity": 1,
+                        "quantity": 2,
                         "role": "in",
-                        "reason": "Plan B con 12-16 trasgos tempranos."
+                        "reason": "Condición de victoria alternativa si tienen hate contra Grapeshot."
                     }
                 ],
                 "outCards": [
@@ -8784,113 +9781,75 @@ export class SideboardService {
                         "cardName": "Past in Flames",
                         "quantity": 1,
                         "role": "out",
-                        "reason": "Vulnerable a Rest in Peace."
+                        "reason": "Vulnerable a Surgical Extraction y hate de cementerio."
                     },
                     {
-                        "cardName": "Pyretic Ritual",
-                        "quantity": 1,
+                        "cardName": "Manamorphose",
+                        "quantity": 2,
                         "role": "out",
-                        "reason": "Ajuste de densidad."
+                        "reason": "Ajuste de cartas para meter protección contra odio."
+                    },
+                    {
+                        "cardName": "Lightning Bolt",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Poco eficiente si necesitamos combar lo más rápido posible."
                     }
                 ],
                 "gameplayTips": [
-                    "Defense Grid en turno 2 te asegura combar libremente en turno 3.",
-                    "Ten cuidado con Flusterstorm; genera suficiente tormenta o usa Grapeshot dividido en dos momentos."
+                    "Abrade destruye High Noon o Damping Sphere antes de iniciar la cadena de rituales.",
+                    "Defense Grid en turno 2 te da vía libre completa para combar en turno 3.",
+                    "Empty the Warrens con tormenta 6-8 genera una legión de trasgos imposible de frenar por ataques terrestres."
                 ]
-            }
-        ]
-    },
-    {
-        "id": "modern-broodscale-combo",
-        "slug": "modern-broodscale-combo",
-        "name": "Mono-Green Broodscale Combo",
-        "metaPercentage": "3.3%",
-        "metaCount": 187,
-        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2f0-1825-7c84-9a0e-2d66566ca335/variants/672/938/card_image.webp",
-        "colors": [
-            "G"
-        ],
-        "archetypeType": "Combo",
-        "format": "modern",
-        "author": "",
-        "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-mono-green-basking-broodscale-combo#online",
-        "description": "Combo verde imparable que explota Basking Broodscale con Sadistic Glee / Blade of the Bloodchief para generar maná infinito y fichas Eldrazi infinitas, cerrando con Emrakul o Kozilek's Command.",
-        "keyCards": [
-            "Basking Broodscale",
-            "Sowing Mycospawn",
-            "Kozilek's Command",
-            "Emrakul, the Promised End",
-            "Blade of the Bloodchief",
-            "Chord of Calling",
-            "Summoner's Pact",
-            "Delighted Halfling",
-            "Boseiju, Who Endures",
-            "Nykthos, Shrine to Nyx"
-        ],
-        "sideboardCards": [
-            "Pick Your Poison",
-            "Chalice of the Void",
-            "Dismember",
-            "Trinisphere",
-            "Relic of Progenitus",
-            "Veil of Summer",
-            "Force of Vigor"
-        ],
-        "maybeboard": [
-            {
-                "name": "Writhing Chrysalis",
-                "note": "Cuerpo gigantesco alternativo y generación de Scions."
             },
             {
-                "name": "Endurance",
-                "note": "Hate de cementerio con cuerpo con alcance."
-            },
-            {
-                "name": "Walking Ballista",
-                "note": "Condición de victoria instantánea con maná infinito."
-            }
-        ],
-        "proTips": [
-            "Delighted Halfling hace que tus criaturas legendarias y Eldrazis no puedan ser contrarrestados.",
-            "Blade of the Bloodchief equipado a Basking Broodscale genera contadores y fichas ilimitadas sacrificando Scions.",
-            "Chord of Calling convocado busca la pieza que falta al final del turno rival."
-        ],
-        "matchups": [
-            {
-                "vsDeckName": "Boros Energy",
-                "difficulty": "even",
+                "vsDeckName": "Eldrazi Ramp",
+                "difficulty": "favorable",
                 "role": "Combo",
                 "inCards": [
                     {
-                        "cardName": "Chalice of the Void",
+                        "cardName": "Abrade",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Corta Galvanic Discharge y Ocelot Pride."
+                        "reason": "Destruye Chalice of the Void o Trinisphere tempranos."
                     },
                     {
-                        "cardName": "Pick Your Poison",
+                        "cardName": "Empty the Warrens",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Mata a Phlage o Blood Moon."
+                        "reason": "Sobrepasa bloqueadores gigantes con multitud de atacantes."
+                    },
+                    {
+                        "cardName": "Dismember",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Mata a Thought-Knot Seer antes de que desmonte tu mano."
                     }
                 ],
                 "outCards": [
                     {
-                        "cardName": "Emrakul, the Promised End",
-                        "quantity": 1,
+                        "cardName": "Manamorphose",
+                        "quantity": 2,
                         "role": "out",
-                        "reason": "Lenta si te presionan agresivamente."
+                        "reason": "Ajuste de banquillo."
                     },
                     {
-                        "cardName": "Summoner's Pact",
-                        "quantity": 1,
+                        "cardName": "Past in Flames",
+                        "quantity": 2,
                         "role": "out",
-                        "reason": "Ajuste de riesgo."
+                        "reason": "Lento si te colocan Trinisphere en mesa."
+                    },
+                    {
+                        "cardName": "Grapeshot",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Empty the Warrens es más eficaz contra amenazas gigantes."
                     }
                 ],
                 "gameplayTips": [
-                    "Comba cuando el rival no tenga maná para Galvanic Discharge.",
-                    "Los Scions bloquean a Phlage y Guide of Souls."
+                    "Chalice of the Void o Trinisphere rival deben destruirse con Abrade antes de iniciar el turno de tormenta.",
+                    "Crea 12+ trasgos con Empty the Warrens en turno 2 para ganar la carrera antes de que bajen a Emrakul.",
+                    "No acumules cartas innecesariamente si sospechas Thought-Knot Seer en turno 2."
                 ]
             },
             {
@@ -8899,29 +9858,256 @@ export class SideboardService {
                 "role": "Combo",
                 "inCards": [
                     {
-                        "cardName": "Chalice of the Void",
-                        "quantity": 3,
+                        "cardName": "Lightning Bolt",
+                        "quantity": 2,
                         "role": "in",
-                        "reason": "Anula cantrips de coste 1."
+                        "reason": "Elimina a Slickshot Show-Off o Swiftspear de inmediato."
+                    },
+                    {
+                        "cardName": "Abrade",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Mata criaturas o rompe artefactos molestos."
+                    },
+                    {
+                        "cardName": "Flame Slash",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Mata criaturas con Prowess infladas por 1 maná."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Past in Flames",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Demasiado lento frente a daño en turno 3."
+                    },
+                    {
+                        "cardName": "Wish",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Partida decidida por velocidad pura."
+                    },
+                    {
+                        "cardName": "Manamorphose",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Ajuste para añadir interactividad de daño."
+                    }
+                ],
+                "gameplayTips": [
+                    "Es una carrera pura de velocidad hacia el turno 3.",
+                    "Mata a Slickshot Show-Off en cuanto toque mesa para frenar su daño explosivo.",
+                    "Ral, Monsoon Mage puede bloquear y transformarse absorbiendo daño crucial."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "modern-broodscale-combo",
+        "slug": "modern-broodscale-combo",
+        "name": "Basking Broodscale Combo",
+        "metaPercentage": "3.3%",
+        "metaCount": 185,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2f3-c584-7a19-a1b7-4a0bfa5113d7/variants/672/938/card_image.webp",
+        "colors": [
+            "G"
+        ],
+        "archetypeType": "Combo",
+        "format": "modern",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-broodscale-combo#paper",
+        "description": "Bucle infinito con Basking Broodscale y Blade of the Bloodchief generando maná incoloro infinito, fichas de Eldrazi Spawn y un atacante de fuerza infinita.",
+        "keyCards": [
+            "Basking Broodscale",
+            "Blade of the Bloodchief",
+            "Sadistic Glee",
+            "Metallic Mimic",
+            "Chord of Calling",
+            "Malevolent Rumble",
+            "Urza's Saga",
+            "Ancient Stirrings",
+            "Haywire Mite",
+            "Springleaf Drum"
+        ],
+        "sideboardCards": [
+            "Pick Your Poison",
+            "Nature's Claim",
+            "Dismember",
+            "Trinisphere",
+            "Thought-Knot Seer",
+            "Veil of Summer",
+            "Haywire Mite"
+        ],
+        "maybeboard": [
+            {
+                "name": "Endurance",
+                "note": "Hate de cementerio instantáneo que aporta cuerpo 3/4 con Reach."
+            },
+            {
+                "name": "Cavern of Souls",
+                "note": "Asegura la entrada incounterable de Basking Broodscale contra control."
+            },
+            {
+                "name": "Chalice of the Void",
+                "note": "Hate temprano contra cantrips y mazos de Prowess."
+            }
+        ],
+        "proTips": [
+            "El bucle infinito: Basking Broodscale equipado con Blade of the Bloodchief (o encantado con Sadistic Glee) genera un Eldrazi Spawn al recibir un contador; sacrificas el Spawn para {C}, disparando Blade para poner otro contador sobre Broodscale y crear otro Spawn, logrando maná incoloro infinito y una criatura con fuerza infinita.",
+            "Urza's Saga busca Blade of the Bloodchief directamente en capítulo III, permitiendo ensamblar el combo sin necesidad de robarlo en mano.",
+            "Cuidado con Wear/Tear, Dismember y Consign to Memory rival; guarda Chord of Calling para buscar respuestas de protección o combar al final del turno rival."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Boros Energy",
+                "difficulty": "even",
+                "role": "Combo",
+                "inCards": [
+                    {
+                        "cardName": "Pick Your Poison",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Destruye Blood Moon y Static Prison por un solo maná verde."
+                    },
+                    {
+                        "cardName": "Nature's Claim",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Rompe encantamientos u odio de artefactos a velocidad instantánea."
+                    },
+                    {
+                        "cardName": "Dismember",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Elimina Guide of Souls antes de que ganen vidas masivas."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Chord of Calling",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Demasiado pesado si el rival presiona con atacantes baratos."
+                    },
+                    {
+                        "cardName": "Malevolent Rumble",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Ajuste de interacción directa."
+                    },
+                    {
+                        "cardName": "Springleaf Drum",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Vulnerable al removal de artefactos rival."
+                    }
+                ],
+                "gameplayTips": [
+                    "Destruye Blood Moon y Static Prison con Pick Your Poison o Nature's Claim para liberar tu combo.",
+                    "Dismember elimina Guide of Souls antes de que el rival acumule contadores de energía.",
+                    "Combos en turno 3 son posibles si tienes Blade of the Bloodchief en mano y juegas Broodscale."
+                ]
+            },
+            {
+                "vsDeckName": "Eldrazi Ramp",
+                "difficulty": "favorable",
+                "role": "Combo",
+                "inCards": [
+                    {
+                        "cardName": "Trinisphere",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Frena su tempo de rampa y disrupción temprana."
+                    },
+                    {
+                        "cardName": "Thought-Knot Seer",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Despoja su mano de All Is Dust o Kozilek's Command."
+                    },
+                    {
+                        "cardName": "Nature's Claim",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Destruye The One Ring o artefactos de rampa rivales."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Sadistic Glee",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Vulnerable a Kozilek's Command exiliando criaturas."
+                    },
+                    {
+                        "cardName": "Dismember",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Poco daño contra criaturas gigantes incoloras."
+                    },
+                    {
+                        "cardName": "Springleaf Drum",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Ajuste de interacción de banquillo."
+                    }
+                ],
+                "gameplayTips": [
+                    "Bajar Trinisphere o combar en turno 3 sobrepasa con creces la rampa de Eldrazi.",
+                    "Thought-Knot Seer remueve All Is Dust o Kozilek's Command antes de que puedan lanzarlos.",
+                    "Urza's Saga te garantiza encontrar Blade of the Bloodchief de forma inevitable."
+                ]
+            },
+            {
+                "vsDeckName": "Izzet Prowess",
+                "difficulty": "even",
+                "role": "Midrange-Combo",
+                "inCards": [
+                    {
+                        "cardName": "Dismember",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Responde instantáneamente a Slickshot Show-Off."
+                    },
+                    {
+                        "cardName": "Haywire Mite",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Gana vidas cruciales y bloquea atacantes terrestres."
                     },
                     {
                         "cardName": "Veil of Summer",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Protege tus piezas de removal y counters."
+                        "reason": "Protege tus piezas de combo frente a Stern Scolding o Lightning Bolt."
                     }
                 ],
                 "outCards": [
                     {
-                        "cardName": "Sowing Mycospawn",
+                        "cardName": "Chord of Calling",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "Lento ante salidas explosivas."
+                        "reason": "Lento frente a la velocidad pura de Prowess."
+                    },
+                    {
+                        "cardName": "Blade of the Bloodchief",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Difícil de combar si tienen removal constante; prioriza el control de mesa."
+                    },
+                    {
+                        "cardName": "Malevolent Rumble",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Ajuste de interactividad."
                     }
                 ],
                 "gameplayTips": [
-                    "Un Chalice con X=1 en turno 2 detiene todo su ataque.",
-                    "Veil of Summer asegura el turno de combo."
+                    "Basking Broodscale actúa como un excelente bloqueador de criaturas terrestres rivales.",
+                    "Haywire Mite exilia artefactos rivales y te proporciona vidas para salir del rango de quemadura.",
+                    "Veil of Summer anula sus contrahechizos protegiendo tu jugada decisiva."
                 ]
             }
         ]
@@ -8941,85 +10127,48 @@ export class SideboardService {
         "format": "modern",
         "author": "",
         "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-azorius-control#paper",
-        "description": "El pilar de control reactivo clásico en Modern con Supreme Verdict incounterable, Solitude, Teferi, Time Raveler, Counterspell y la ventaja abrumadora de The One Ring.",
+        "description": "El clásico indiscutible del control en Modern: Teferi, Time Raveler silenciando respuestas, Solitude y Supreme Verdict dominando la mesa.",
         "keyCards": [
-            "Supreme Verdict",
-            "Solitude",
             "Teferi, Time Raveler",
+            "Solitude",
+            "Subtlety",
+            "Supreme Verdict",
             "Counterspell",
             "The One Ring",
-            "Prismatic Ending",
             "Memory Deluge",
-            "Subtlety",
-            "Hall of Storm Giants",
-            "Flooded Strand"
+            "Prismatic Ending",
+            "Celestial Purge",
+            "Leyline Binding"
         ],
         "sideboardCards": [
+            "Consign to Memory",
+            "Ashiok, Dream Render",
+            "Wrath of the Skies",
             "Celestial Purge",
             "Flusterstorm",
-            "Rest in Peace",
-            "Stony Silence",
-            "Drannith Magistrate",
-            "Consign to Memory",
-            "Dovin's Veto"
+            "High Noon",
+            "Damping Sphere"
         ],
         "maybeboard": [
             {
-                "name": "Leyline of the Guildpact",
-                "note": "Si se opta por la variante con Scion of Draco."
+                "name": "Narset, Parter of Veils",
+                "note": "Ahoga los robos de The One Ring rival y busca conjuros clave."
             },
             {
-                "name": "Chalice of the Void",
-                "note": "Freno automático contra Living End y Prowess."
+                "name": "Rest in Peace",
+                "note": "Exilio absoluto de cementerios contra Reanimator y Living End."
             },
             {
-                "name": "Dress Down",
-                "note": "Neutraliza habilidades disparadas de entrada."
+                "name": "Dovin's Veto",
+                "note": "Contrahechizo incounterable para guerras de control."
             }
         ],
         "proTips": [
-            "Supreme Verdict no puede ser contrarrestado por ninguna carta rival.",
-            "Teferi, Time Raveler en mesa te permite lanzar Supreme Verdict a velocidad instantánea en la fase de ataque del oponente.",
-            "The One Ring te da protección absoluta contra todo durante un turno completo."
+            "Teferi, Time Raveler desactiva las mecánicas de cascada, storm y cualquier interacción instantánea rival; defiéndelo como tu recurso más valioso.",
+            "Solitude evocado no es un instantáneo (es una criatura), lo que le permite exiliar legalmente a Emrakul, the Promised End a pesar de su protección contra instantáneos.",
+            "Consign to Memory es tu mejor banquillo en 2026 frente a Eldrazi y Affinity: contrarresta hechizos incoloros y habilidades disparadas por solo un maná {U}."
         ],
         "matchups": [
-            {
-                "vsDeckName": "Boros Energy",
-                "difficulty": "favorable",
-                "role": "Control",
-                "inCards": [
-                    {
-                        "cardName": "Celestial Purge",
-                        "quantity": 2,
-                        "role": "in",
-                        "reason": "Exilia Phlage o Blood Moon."
-                    },
-                    {
-                        "cardName": "Rest in Peace",
-                        "quantity": 2,
-                        "role": "in",
-                        "reason": "Anula el Escape de Phlage permanentemente."
-                    }
-                ],
-                "outCards": [
-                    {
-                        "cardName": "Counterspell",
-                        "quantity": 2,
-                        "role": "out",
-                        "reason": "Difícil de alinear ante salidas de 1 maná."
-                    },
-                    {
-                        "cardName": "Subtlety",
-                        "quantity": 1,
-                        "role": "out",
-                        "reason": "Ajuste de pitch."
-                    }
-                ],
-                "gameplayTips": [
-                    "Rest in Peace apaga por completo el plan de late game de Phlage.",
-                    "Usa Supreme Verdict en cuanto comprometan 3 o más criaturas en mesa."
-                ]
-            },
             {
                 "vsDeckName": "Eldrazi Ramp",
                 "difficulty": "even",
@@ -9029,32 +10178,145 @@ export class SideboardService {
                         "cardName": "Consign to Memory",
                         "quantity": 3,
                         "role": "in",
-                        "reason": "Contrarresta cartas incoloras y disparos de Emrakul."
+                        "reason": "Contrarresta por {U} a Emrakul, Devourer of Destiny y Kozilek's Command."
                     },
                     {
-                        "cardName": "Stony Silence",
+                        "cardName": "Ashiok, Dream Render",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Apaga talismanes y mapas."
+                        "reason": "Corta la búsqueda de tierras de Mycospawn y Urza's Saga, vaciando el cementerio."
+                    },
+                    {
+                        "cardName": "Celestial Purge",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Responde a Through the Breach o permanentes de apoyo."
                     }
                 ],
                 "outCards": [
                     {
+                        "cardName": "Spell Snare",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Apenas tienen objetivos de coste 2 relevantes."
+                    },
+                    {
                         "cardName": "Prismatic Ending",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "No puede remover cartas de coste alto."
+                        "reason": "No alcanza a monstruos gigantes de coste 4+."
                     },
                     {
-                        "cardName": "Memory Deluge",
-                        "quantity": 1,
+                        "cardName": "Supreme Verdict",
+                        "quantity": 2,
                         "role": "out",
-                        "reason": "Lenta."
+                        "reason": "Lenta si te bajan amenazas con protección o cast triggers letales."
                     }
                 ],
                 "gameplayTips": [
-                    "Consign to Memory es tu mejor respuesta contra el disparo de cast de Emrakul.",
-                    "Teferi previene que respondan a tus hechizos."
+                    "Consign to Memory contrarresta las amenazas incoloras clave y los disparos de rampa de Mycospawn.",
+                    "Ashiok exilia el cementerio y anula las reducciones de coste de Emrakul.",
+                    "Solitude es tu respuesta directa para exiliar a Emrakul esquivando su protección de instantáneos."
+                ]
+            },
+            {
+                "vsDeckName": "Boros Energy",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Wrath of the Skies",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Barre criaturas y artefactos de energía de un plumazo."
+                    },
+                    {
+                        "cardName": "Celestial Purge",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Exilia a Phlage y Blood Moon de forma limpia e irreversible."
+                    },
+                    {
+                        "cardName": "High Noon",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Frena su tempo agresivo impidiendo jugar más de una criatura por turno."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Counterspell",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Demasiado reactivo contra salidas de coste 1."
+                    },
+                    {
+                        "cardName": "Subtlety",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Solo retrasa temporalmente criaturas de bajo coste."
+                    },
+                    {
+                        "cardName": "The One Ring",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Poco margen de vidas para pagar costes de robo frente a daño directo."
+                    }
+                ],
+                "gameplayTips": [
+                    "Wrath of the Skies limpia tokens, criaturas de energía y encantamientos.",
+                    "Celestial Purge exilia de raíz a Phlage impidiendo que vuelva del cementerio.",
+                    "Teferi en mesa limita su interacción forzándolos a actuar solo a velocidad de conjuro."
+                ]
+            },
+            {
+                "vsDeckName": "Ruby Storm",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Flusterstorm",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Contrarresta la cadena entera de tormenta de Grapeshot."
+                    },
+                    {
+                        "cardName": "High Noon",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Restringe a 1 hechizo por turno, imposibilitando el combo por completo."
+                    },
+                    {
+                        "cardName": "Damping Sphere",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Impone un impuesto de maná acumulativo a cada ritual sucesivo."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Solitude",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Sin objetivos de criaturas relevantes en su baraja."
+                    },
+                    {
+                        "cardName": "Supreme Verdict",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Completamente inútil en este emparejamiento."
+                    },
+                    {
+                        "cardName": "Prismatic Ending",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Demasiado lenta frente al combo en turno 2-3."
+                    }
+                ],
+                "gameplayTips": [
+                    "High Noon o Damping Sphere en turno 2 cierran completamente el acceso a la victoria del rival.",
+                    "Flusterstorm anula cualquier intento de ganar con Grapeshot.",
+                    "Mantén mana abierto para Counterspell sobre Ruby Medallion o Ral, Monsoon Mage."
                 ]
             }
         ]
@@ -9069,118 +10331,200 @@ export class SideboardService {
         "colors": [
             "G"
         ],
-        "archetypeType": "Ramp",
+        "archetypeType": "Combo",
         "format": "modern",
         "author": "",
         "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-amulet-titan#paper",
-        "description": "El mazo de tierras más técnico de la historia de Modern: Amulet of Vigor + tierras rebotadoras para bajar Primeval Titan en turnos 2-3 y atacar por 20 con Slayers' Stronghold y Sunhome.",
+        "description": "Ingeniería de tierras magistral combinando Amulet of Vigor con Primeval Titan, bouncelands y Valakut para infligir daño letal en un solo turno.",
         "keyCards": [
             "Primeval Titan",
             "Amulet of Vigor",
             "Summoner's Pact",
             "Urza's Saga",
+            "Cultivator Colossus",
             "Dryad of the Ilysian Grove",
-            "Valakut, the Molten Pinnacle",
+            "Boseiju, Who Endures",
             "Simic Growth Chamber",
-            "Tolaria West",
-            "The One Ring",
-            "Arboreal Grazer"
+            "Valakut, the Molten Pinnacle",
+            "The One Ring"
         ],
         "sideboardCards": [
-            "Boseiju, Who Endures",
-            "Dismember",
-            "Endurance",
             "Force of Vigor",
-            "Chalice of the Void",
-            "Pithing Needle",
-            "Engineered Explosives"
+            "Endurance",
+            "Collector Ouphe",
+            "Consign to Memory",
+            "Cavern of Souls",
+            "Engineered Explosives",
+            "Boseiju, Who Endures"
         ],
         "maybeboard": [
             {
-                "name": "Cultivator Colossus",
-                "note": "Roba toda la biblioteca y pone todas las tierras en campo."
+                "name": "Tireless Tracker",
+                "note": "Motor de ventaja en partidas largas contra mazos cargados de removal."
             },
             {
-                "name": "Cavern of Souls",
-                "note": "Hace incounterable a Primeval Titan."
+                "name": "Pithing Needle",
+                "note": "Tutorizable con Urza's Saga contra caminantes o The One Ring."
             },
             {
-                "name": "Radiant Fountain",
-                "note": "Ganancia de vidas infinita con rebotes."
+                "name": "Ghost Quarter",
+                "note": "Respuesta terrestre a Tron o tierras problemáticas rivales."
             }
         ],
         "proTips": [
-            "Múltiples Amulet of Vigor acumulan sus disparos: dos amuletos hacen que una tierra rebotadora se enderece dos veces, produciendo 4 manás por tierra.",
-            "Dryad of the Ilysian Grove convierte todas tus tierras en montañas, activando Valakut para infligir 3 de daño con cada tierra bajada.",
-            "Tolaria West transmutado busca Summoner's Pact, Urza's Saga o tierras clave."
+            "Con Amulet of Vigor y Primeval Titan, busca Simic Growth Chamber + Hanweir Battlements (o Boros Garrison + Slayers' Stronghold) para darle prisa y atacar el mismo turno buscando Valakut, the Molten Pinnacle.",
+            "Cuidado con Blood Moon y Damping Sphere: convierten tus bouncelands en productoras de 1 solo incoloro, desarmando la aceleración de Titan.",
+            "Consign to Memory rival contrarresta los disparos de Amulet of Vigor y la habilidad de entrada de Primeval Titan: ten Boseiju preparado para destruir hate de artefactos."
         ],
         "matchups": [
             {
-                "vsDeckName": "Boros Energy",
+                "vsDeckName": "Boros / Jeskai Energy",
                 "difficulty": "even",
-                "role": "Ramp",
-                "inCards": [
-                    {
-                        "cardName": "Engineered Explosives",
-                        "quantity": 2,
-                        "role": "in",
-                        "reason": "Limpia Ocelot Pride, fichas y Guide of Souls por 0-1 maná."
-                    },
-                    {
-                        "cardName": "Dismember",
-                        "quantity": 1,
-                        "role": "in",
-                        "reason": "Removal de emergencia."
-                    }
-                ],
-                "outCards": [
-                    {
-                        "cardName": "The One Ring",
-                        "quantity": 1,
-                        "role": "out",
-                        "reason": "Ajuste de velocidad."
-                    },
-                    {
-                        "cardName": "Arboreal Grazer",
-                        "quantity": 1,
-                        "role": "out",
-                        "reason": "Menor impacto tardío."
-                    }
-                ],
-                "gameplayTips": [
-                    "Engineered Explosives con X=1 o X=0 limpia toda su presencia agresiva.",
-                    "Primeval Titan con Slayers' Stronghold y Boros Garrison ataca inmediatamente de turno 3."
-                ]
-            },
-            {
-                "vsDeckName": "Eldrazi Ramp",
-                "difficulty": "favorable",
-                "role": "Ramp",
+                "role": "Combo",
                 "inCards": [
                     {
                         "cardName": "Force of Vigor",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Destruye The One Ring y talismanes gratis."
+                        "reason": "Destruye Blood Moon, Static Prison y hate de artefactos sin pagar maná."
                     },
                     {
-                        "cardName": "Boseiju, Who Endures",
+                        "cardName": "Endurance",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Frena el escape de Phlage en momentos decisivos y bloquea por tierra."
+                    },
+                    {
+                        "cardName": "Cavern of Souls",
                         "quantity": 1,
                         "role": "in",
-                        "reason": "Rompe tierras clave."
+                        "reason": "Asegura la entrada incounterable de Primeval Titan nombrando Gigante."
                     }
                 ],
                 "outCards": [
                     {
-                        "cardName": "Arboreal Grazer",
+                        "cardName": "Summoner's Pact",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Peligroso si el rival lleva disrupción de maná."
+                    },
+                    {
+                        "cardName": "Cultivator Colossus",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "Innecesario ante mazo lento."
+                        "reason": "Demasiado pesado frente a presión rápida."
+                    },
+                    {
+                        "cardName": "Explore",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Ajuste de interactividad de banquillo."
                     }
                 ],
                 "gameplayTips": [
-                    "Tu rampa con Amulet es más rápida que su rampa con Eldrazi Temple.",
-                    "Valakut con Dryad of the Ilysian Grove dispara 18-24 de daño directo en un solo turno."
+                    "Force of Vigor responde a Blood Moon y Static Prison en respuesta a su lanzamiento.",
+                    "Endurance frena el escape de Phlage vaciando su cementerio.",
+                    "Cavern of Souls garantiza que Primeval Titan resuelva a través de Counterspell y Subtlety."
+                ]
+            },
+            {
+                "vsDeckName": "Eldrazi Ramp",
+                "difficulty": "even",
+                "role": "Combo",
+                "inCards": [
+                    {
+                        "cardName": "Collector Ouphe",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Apaga Springleaf Drum, Talismanes y The One Ring rivales."
+                    },
+                    {
+                        "cardName": "Force of Vigor",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Rompe Urza's Saga y Ugin's Labyrinth de forma instantánea."
+                    },
+                    {
+                        "cardName": "Consign to Memory",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Contrarresta All Is Dust y Kozilek's Command."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Explore",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Reemplazado por respuestas directas contra artefactos."
+                    },
+                    {
+                        "cardName": "Radiant Fountain",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "El lifegain no es prioritario contra criaturas gigantes."
+                    },
+                    {
+                        "cardName": "Cultivator Colossus",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Ajuste de velocidad para no atascarse ante monstruos incoloros."
+                    }
+                ],
+                "gameplayTips": [
+                    "Collector Ouphe apaga totalmente las fuentes de activación de artefactos rivales.",
+                    "Force of Vigor rompe Urza's Saga antes de que cree constructos.",
+                    "Boseiju, Who Endures responde a tierras no básicas como Eldrazi Temple a velocidad incounterable."
+                ]
+            },
+            {
+                "vsDeckName": "Izzet Prowess",
+                "difficulty": "even",
+                "role": "Combo",
+                "inCards": [
+                    {
+                        "cardName": "Engineered Explosives",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Con X=1 limpia toda su mesa de atacantes agresivos de bajo coste."
+                    },
+                    {
+                        "cardName": "Endurance",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Cuerpo 3/4 con Reach que bloquea a Dragon's Rage Channeler y frena Delirium."
+                    },
+                    {
+                        "cardName": "Force of Vigor",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Destruye Cori-Steel Cutter y artefactos rápidos."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Cultivator Colossus",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Demasiado lento ante tanta agresividad en mesa."
+                    },
+                    {
+                        "cardName": "Summoner's Pact",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Pagar 4 manás el siguiente turno puede costar la partida."
+                    },
+                    {
+                        "cardName": "Urza's Saga",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Lenta para generar constructos frente a daño en turno 3."
+                    }
+                ],
+                "gameplayTips": [
+                    "Engineered Explosives con X=1 barre a Monastery Swiftspear y Dragon's Rage Channeler.",
+                    "Endurance con Reach frena en seco los ataques aéreos de Slickshot Show-Off y Channeler.",
+                    "Busca Radiant Fountain para salir del alcance de su daño de quemadura."
                 ]
             }
         ]
@@ -9199,46 +10543,46 @@ export class SideboardService {
         "format": "modern",
         "author": "",
         "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-tron#paper",
-        "description": "El mítico mazo de las tierras de Urza en Modern (Tower, Mine, Power Plant) que produce 7 manás en turno 3 para resolver Karn, the Great Creator, The One Ring y Ugin.",
+        "description": "El ensamblaje definitivo: Urza's Tower, Power Plant y Mine produciendo 7 manás en turno 3 para desplegar a Karn, The One Ring y titanes incoloros.",
         "keyCards": [
             "Urza's Tower",
-            "Urza's Power Plant",
             "Urza's Mine",
-            "Karn, the Great Creator",
+            "Urza's Power Plant",
+            "Karn the Great Creator",
             "The One Ring",
-            "Expedition Map",
-            "Sylvan Scrying",
-            "Ancient Stirrings",
-            "Ugin, the Spirit Dragon",
-            "Oblivion Stone"
+            "Oblivion Stone",
+            "All Is Dust",
+            "Wurmcoil Engine",
+            "Chromatic Sphere",
+            "Ancient Stirrings"
         ],
         "sideboardCards": [
+            "Nature's Claim",
+            "Dismember",
             "Ensnaring Bridge",
-            "Cityscape Leveler",
-            "Sundering Titan",
             "Haywire Mite",
-            "Tormod's Crypt",
-            "Liquimetal Coating",
-            "Chalice of the Void"
+            "Chalice of the Void",
+            "Sundering Titan",
+            "Consign to Memory"
         ],
         "maybeboard": [
             {
-                "name": "Wurmcoil Engine",
-                "note": "6/6 con vínculo vital y deathtouch que se divide al morir."
+                "name": "Trinisphere",
+                "note": "Buscable con Karn the Great Creator para congelar a Storm y Prowess."
             },
             {
-                "name": "Kozilek's Command",
-                "note": "Flexibilidad incolora con Eldrazi Scions."
+                "name": "Tormod's Crypt",
+                "note": "Hate gratuito de cementerios tutorizable con Karn."
             },
             {
-                "name": "Boseiju, Who Endures",
-                "note": "Respuesta incolora a Blood Moon."
+                "name": "Cityscape Leveler",
+                "note": "Destrucción continua incolora al entrar y atacar con Unearth."
             }
         ],
         "proTips": [
-            "Karn, the Great Creator apaga las habilidades activadas de todos los artefactos del oponente pasivamente.",
-            "Karn -2 busca Liquimetal Coating para convertir una tierra rival en artefacto y destruirla con Karn +1 cada turno (Karn-lock).",
-            "Ancient Stirrings busca cualquier carta incolora entre las 5 primeras de la biblioteca (tierras, artefactos o Eldrazis)."
+            "Karn the Great Creator busca respuestas inmediatas en tu banquillo: Ensnaring Bridge contra mazos agresivos, Trinisphere contra Storm/Prowess o Sundering Titan contra mazos de 3+ colores.",
+            "Si el rival juega Blood Moon, puedes responder con Nature's Claim o usar Oblivion Stone (cargando contadores de destino) para barrer la mesa independientemente de tus tipos de tierra.",
+            "The One Ring te otorga protección contra todo durante un turno completo, dándote el respiro necesario para montar Tron y bajar Karn o Ulamog."
         ],
         "matchups": [
             {
@@ -9247,35 +10591,48 @@ export class SideboardService {
                 "role": "Control",
                 "inCards": [
                     {
-                        "cardName": "Oblivion Stone",
-                        "quantity": 1,
+                        "cardName": "Nature's Claim",
+                        "quantity": 3,
                         "role": "in",
-                        "reason": "Sweeper total de mesa."
+                        "reason": "Rompe Blood Moon y Static Prison en turno 2-3 de forma inmediata."
+                    },
+                    {
+                        "cardName": "Dismember",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Elimina Guide of Souls y Ocelot Pride antes de que acumulen valor."
                     },
                     {
                         "cardName": "Haywire Mite",
                         "quantity": 1,
                         "role": "in",
-                        "reason": "Gana vidas y remueve amenazas."
+                        "reason": "Exilia encantamientos molestos y proporciona ganancia de vidas."
                     }
                 ],
                 "outCards": [
                     {
-                        "cardName": "Ugin, the Spirit Dragon",
-                        "quantity": 1,
+                        "cardName": "The One Ring",
+                        "quantity": 2,
                         "role": "out",
-                        "reason": "Coste 8 algo pesado."
+                        "reason": "Poco margen de vidas para pagar costes de robo frente a ataques agresivos."
                     },
                     {
-                        "cardName": "Sylvan Scrying",
-                        "quantity": 1,
+                        "cardName": "Relic of Progenitus",
+                        "quantity": 2,
                         "role": "out",
-                        "reason": "Ajuste de velocidad."
+                        "reason": "Ajuste para meter interacción de destrucción de odio."
+                    },
+                    {
+                        "cardName": "All Is Dust",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Demasiado cara si Blood Moon retrasa el montaje de Tron."
                     }
                 ],
                 "gameplayTips": [
-                    "Bajar The One Ring en turno 3 te compra el turno vital para estabilizarte.",
-                    "Karn buscando Ensnaring Bridge apaga por completo sus ataques terrestres."
+                    "Nature's Claim es vital para romper Blood Moon en respuesta a su entrada y reactivar las tierras de Tron.",
+                    "Karn the Great Creator buscando Ensnaring Bridge frena en seco a Phlage y atacantes terrestres.",
+                    "Wurmcoil Engine estabiliza las vidas y desanima los ataques rivales."
                 ]
             },
             {
@@ -9285,34 +10642,97 @@ export class SideboardService {
                 "inCards": [
                     {
                         "cardName": "Chalice of the Void",
-                        "quantity": 3,
+                        "quantity": 2,
                         "role": "in",
-                        "reason": "Anula cantrips de coste 1."
+                        "reason": "Con X=1 apaga cantrips, rayos y la mayoría de su mazo."
                     },
                     {
-                        "cardName": "Ensnaring Bridge",
-                        "quantity": 1,
+                        "cardName": "Dismember",
+                        "quantity": 2,
                         "role": "in",
-                        "reason": "Detiene en seco a Slickshot Show-Off."
+                        "reason": "Mata a Slickshot Show-Off a velocidad instantánea."
+                    },
+                    {
+                        "cardName": "Nature's Claim",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Destruye Cori-Steel Cutter y artefactos agresivos."
                     }
                 ],
                 "outCards": [
                     {
-                        "cardName": "Ugin, the Spirit Dragon",
+                        "cardName": "Karn Liberated",
                         "quantity": 2,
                         "role": "out",
-                        "reason": "Demasiado lento."
+                        "reason": "Demasiado lento para lidiar con múltiples atacantes pequeños."
                     },
                     {
-                        "cardName": "Oblivion Stone",
-                        "quantity": 1,
+                        "cardName": "All Is Dust",
+                        "quantity": 2,
                         "role": "out",
-                        "reason": "Ajuste de curva."
+                        "reason": "Curva 7 poco realista si sufrimos presión letal en turno 3."
+                    },
+                    {
+                        "cardName": "Wurmcoil Engine",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Ajuste de velocidad para interactuar en turno 1-2."
                     }
                 ],
                 "gameplayTips": [
-                    "Un Chalice of the Void con X=1 o Ensnaring Bridge temprano es victoria inmediata.",
-                    "The One Ring te otorga un turno completo inmune a quemadura y daño de combate."
+                    "Chalice of the Void con X=1 en turno 2 corta por completo su plan de juego.",
+                    "Baja Trinisphere con Karn the Great Creator para que no puedan encadenar múltiples hechizos.",
+                    "Prioriza sobrevivir y estabilizar vidas antes de buscar amenazas gigantes."
+                ]
+            },
+            {
+                "vsDeckName": "Eldrazi Ramp",
+                "difficulty": "even",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Consign to Memory",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Contrarresta a Kozilek's Command, Emrakul y disparos de Mycospawn."
+                    },
+                    {
+                        "cardName": "Nature's Claim",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Rompe The One Ring y artefactos de aceleración rivales."
+                    },
+                    {
+                        "cardName": "Sundering Titan",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Buscable con Karn para destruir sus bosques y tierras duales."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Oblivion Stone",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Poco eficiente si sus criaturas tienen disparos de entrada devastadores."
+                    },
+                    {
+                        "cardName": "Relic of Progenitus",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Apenas dependen del cementerio comparado con otros mazos."
+                    },
+                    {
+                        "cardName": "Wurmcoil Engine",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Bloqueado o exiliado fácilmente por All Is Dust o Kozilek's Command."
+                    }
+                ],
+                "gameplayTips": [
+                    "Consign to Memory frena a Kozilek's Command y Emrakul por solo {U}.",
+                    "Sundering Titan destruye sus tierras de color dejándolos sin acceso a maná verde.",
+                    "Monta Tron lo antes posible para lanzar Ulamog o Karn antes de que bajen a sus titanes."
                 ]
             }
         ]
@@ -9332,85 +10752,48 @@ export class SideboardService {
         "format": "modern",
         "author": "",
         "decklistUrl": "https://www.mtggoldfish.com/archetype/modern-rakdos-midrange#online",
-        "description": "El clásico mazo de desgaste 'Jund-style' rojo y negro con Thoughtseize, Nethergoyf, Orcish Bowmasters, Lightning Bolt y Blood Moon para desmontar el plan rival.",
+        "description": "Dominio absoluto del desgaste con Orcish Bowmasters, Thoughtseize, Blood Moon castigando tierras no básicas y la versatilidad de Fable.",
         "keyCards": [
-            "Thoughtseize",
-            "Nethergoyf",
             "Orcish Bowmasters",
-            "Lightning Bolt",
+            "Thoughtseize",
             "Blood Moon",
             "Fatal Push",
-            "Unholy Heat",
-            "Mishra's Bauble",
-            "Kroxa, Titan of Death's Hunger",
-            "Bloodstained Mire"
+            "Dauthi Voidwalker",
+            "Fable of the Mirror-Breaker",
+            "Kolaghan's Command",
+            "Terminate",
+            "Ragavan, Nimble Pilferer",
+            "Lightning Bolt"
         ],
         "sideboardCards": [
-            "Chalice of the Void",
-            "Engineered Explosives",
+            "Blood Moon",
             "Damping Sphere",
-            "Nihil Spellbomb",
-            "Kolaghan's Command",
-            "Feed the Swarm",
-            "Cast into the Fire"
+            "Engineered Explosives",
+            "Toxic Deluge",
+            "Trinisphere",
+            "Flusterstorm",
+            "Kolaghan's Command"
         ],
         "maybeboard": [
             {
-                "name": "Terminator",
-                "note": "Removal incondicional que no permite regeneración."
+                "name": "Sheoldred, the Apocalypse",
+                "note": "Castiga a mazos de cantrips y The One Ring ganando vidas."
             },
             {
-                "name": "Tourach, Dread Cantor",
-                "note": "Hate directo contra barajas blancas de control."
+                "name": "Brotherhood's End",
+                "note": "Barre criaturas pequeñas o destruye artefactos como The One Ring."
             },
             {
-                "name": "Chandra, Torch of Defiance",
-                "note": "Motor de ventaja y daño continuo."
+                "name": "Feed the Swarm",
+                "note": "Respuesta negra para destruir encantamientos problemáticos como Leylines."
             }
         ],
         "proTips": [
-            "Thoughtseize en turno 1 extrae la carta angular del rival (The One Ring, Scion of Draco, Slickshot).",
-            "Nethergoyf se beneficia de los tipos de cartas en cementerio y puede escapar repetidamente para presionar.",
-            "Blood Moon en turno 3 apaga bases de maná de 3 a 5 colores y tierras de Urza."
+            "Blood Moon es tu carta estrella en el formato actual: arruina totalmente a Eldrazi Temple, Ugin's Labyrinth, Urza's Saga y las bases maná de 5 colores de Domain Zoo.",
+            "Dauthi Voidwalker exilia cartas en lugar de enviarlas al cementerio, anulando el Escape de Phlage, el combo de Goryo's Vengeance y el delirium de Shifting Woodland.",
+            "Orcish Bowmasters castiga severamente los cantrips de Izzet Prowess (Preordain, Expressive Iteration) y los robos masivos de The One Ring."
         ],
         "matchups": [
-            {
-                "vsDeckName": "Boros Energy",
-                "difficulty": "even",
-                "role": "Midrange",
-                "inCards": [
-                    {
-                        "cardName": "Engineered Explosives",
-                        "quantity": 2,
-                        "role": "in",
-                        "reason": "Limpia permanentes de coste 1."
-                    },
-                    {
-                        "cardName": "Fatal Push",
-                        "quantity": 2,
-                        "role": "in",
-                        "reason": "Removal seguro para Guide of Souls y Ocelot."
-                    }
-                ],
-                "outCards": [
-                    {
-                        "cardName": "Thoughtseize",
-                        "quantity": 2,
-                        "role": "out",
-                        "reason": "Pagar 2 vidas ayuda a su estrategia agresiva."
-                    },
-                    {
-                        "cardName": "Blood Moon",
-                        "quantity": 1,
-                        "role": "out",
-                        "reason": "Menos decisiva contra Boros."
-                    }
-                ],
-                "gameplayTips": [
-                    "Kroxa en el late game vacía su mano y drena sus últimas vidas.",
-                    "Orcish Bowmasters castiga sus robos y bloquea con eficiencia."
-                ]
-            },
             {
                 "vsDeckName": "Eldrazi Ramp",
                 "difficulty": "favorable",
@@ -9420,13 +10803,19 @@ export class SideboardService {
                         "cardName": "Blood Moon",
                         "quantity": 3,
                         "role": "in",
-                        "reason": "Inhabilita Eldrazi Temple y Ugin's Labyrinth por completo."
+                        "reason": "Inhabilita Eldrazi Temple y Ugin's Labyrinth por completo cortando su maná incoloro."
                     },
                     {
                         "cardName": "Damping Sphere",
                         "quantity": 2,
                         "role": "in",
-                        "reason": "Frena tierras de maná múltiple."
+                        "reason": "Frena tierras de maná múltiple y castiga turnos de múltiples hechizos."
+                    },
+                    {
+                        "cardName": "Kolaghan's Command",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Destruye artefactos de rampa y fuerza el descarte de amenazas gigantes."
                     }
                 ],
                 "outCards": [
@@ -9434,18 +10823,125 @@ export class SideboardService {
                         "cardName": "Lightning Bolt",
                         "quantity": 3,
                         "role": "out",
-                        "reason": "Inútil contra resistencia 5+."
+                        "reason": "Inútil contra criaturas de resistencia 5+."
                     },
                     {
                         "cardName": "Fatal Push",
-                        "quantity": 1,
+                        "quantity": 2,
                         "role": "out",
-                        "reason": "No alcanza a monstruos gigantes."
+                        "reason": "No alcanza a monstruos gigantes de coste alto."
+                    },
+                    {
+                        "cardName": "Orcish Bowmasters",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Apenas tienen robos adicionales que castigar."
                     }
                 ],
                 "gameplayTips": [
-                    "Blood Moon o Damping Sphere en mesa les corta todo el plan de rampa.",
-                    "Thoughtseize les quita su único acelerador temprano."
+                    "Blood Moon o Damping Sphere en mesa les corta todo el plan de rampa de raíz.",
+                    "Thoughtseize en turno 1 les quita su único acelerador o tutor temprano.",
+                    "Dauthi Voidwalker puede lanzar gratis un All Is Dust o Kozilek's Command exiliado del rival."
+                ]
+            },
+            {
+                "vsDeckName": "Boros Energy",
+                "difficulty": "even",
+                "role": "Midrange",
+                "inCards": [
+                    {
+                        "cardName": "Engineered Explosives",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Limpia tokens de Ocelot Pride y atacantes de coste 1."
+                    },
+                    {
+                        "cardName": "Toxic Deluge",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Barre la mesa saltándose indestructibilidad."
+                    },
+                    {
+                        "cardName": "Kolaghan's Command",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Destruye artefactos de odio y recupera criaturas de tu cementerio."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Blood Moon",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Tienen básicos y su baraja de 2 colores opera bien bajo Montañas."
+                    },
+                    {
+                        "cardName": "Thoughtseize",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Pagar 2 vidas ayuda a su agresividad temprana."
+                    },
+                    {
+                        "cardName": "Fable of the Mirror-Breaker",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Lenta si te están atacando con criaturas hinchadas en turno 3."
+                    }
+                ],
+                "gameplayTips": [
+                    "Limpia tokens y criaturas pequeñas con Toxic Deluge antes de que se descontrolen.",
+                    "Dauthi Voidwalker impide que Phlage toque el cementerio, bloqueando su capacidad de escape.",
+                    "Fatal Push debe reservarse prioritariamente para Guide of Souls y Ocelot Pride."
+                ]
+            },
+            {
+                "vsDeckName": "Ruby Storm",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Damping Sphere",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Impone un impuesto de maná acumulativo a cada ritual sucesivo."
+                    },
+                    {
+                        "cardName": "Trinisphere",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Impide lanzar hechizos con reducción de costes por menos de 3 manás."
+                    },
+                    {
+                        "cardName": "Flusterstorm",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Contrarresta la cadena entera de tormenta de Grapeshot."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Fatal Push",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Sin objetivos de criaturas relevantes en su baraja."
+                    },
+                    {
+                        "cardName": "Terminate",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Completamente innecesario en este emparejamiento."
+                    },
+                    {
+                        "cardName": "Kolaghan's Command",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Demasiado lento frente al combo en turno 2-3."
+                    }
+                ],
+                "gameplayTips": [
+                    "Damping Sphere y Trinisphere apagan totalmente su motor de rituales y storm.",
+                    "Thoughtseize en turno 1 quita Ruby Medallion o Ral, Monsoon Mage dejándolos atascados.",
+                    "Dauthi Voidwalker exilia sus rituales e impide el uso de Past in Flames."
                 ]
             }
         ]
