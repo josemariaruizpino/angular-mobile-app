@@ -1,14 +1,9 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NavigationService } from '../../core/services/navigation.service';
+import { SideboardService } from '../../core/services/sideboard.service';
+import { PlayersService } from '../../core/services/players.service';
 import { IconComponent } from '../../shared/components/icon/icon.component';
-
-interface QuickStat {
-  label: string;
-  value: string;
-  trend: string;
-  icon: string;
-}
 
 @Component({
   selector: 'app-home',
@@ -20,12 +15,12 @@ interface QuickStat {
 })
 export class HomeComponent {
   private readonly navService = inject(NavigationService);
+  readonly sideboardService = inject(SideboardService);
+  readonly playersService = inject(PlayersService);
 
-  readonly stats: QuickStat[] = [
-    { label: 'Rendimiento', value: '99.8%', trend: '+0.4%', icon: 'pulse' },
-    { label: 'Tareas Activas', value: '14', trend: '3 hoy', icon: 'check' },
-    { label: 'Módulos', value: '4', trend: 'Standalone', icon: 'sparkles' }
-  ];
+  readonly topDecks = computed(() => this.sideboardService.decks().slice(0, 3));
+  readonly totalDecksCount = computed(() => this.sideboardService.decks().length);
+  readonly totalPlayersCount = computed(() => this.playersService.players().length);
 
   openMenu(): void {
     this.navService.openDrawer();

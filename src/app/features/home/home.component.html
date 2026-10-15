@@ -1,23 +1,97 @@
 <div class="mobile-container">
-  <!-- Sección Header / Saludo -->
-  <header class="section-header">
-    <span class="section-tag">RESUMEN GENERAL</span>
-    <h1 class="section-title">Bienvenido 👋</h1>
-    <p class="section-description">
-      Nos vemos en los turnos
+  <!-- Cabecera Hero con Identidad MTG Pauper -->
+  <header class="home-hero">
+    <div class="hero-tag-wrap">
+      <span class="hero-tag">MTG PAUPER • COMPETITIVO</span>
+      <span class="live-dot" aria-hidden="true"></span>
+    </div>
+    <h1 class="hero-title">Fase de Pensar</h1>
+    <p class="hero-description">
+      Estrategia de banquillo, planes In/Out y análisis de emparejamientos del metagame de Pauper.
     </p>
+
+    <!-- Métricas en tiempo real con números tabulares -->
+    <div class="metrics-row" aria-label="Métricas del metagame">
+      <div class="metric-pill">
+        <span class="metric-num tabular-nums">{{ totalDecksCount() }}</span>
+        <span class="metric-lbl">Arquetipos</span>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric-pill">
+        <span class="metric-num tabular-nums">12.6%</span>
+        <span class="metric-lbl">Top Meta</span>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric-pill">
+        <span class="metric-num tabular-nums">{{ totalPlayersCount() }}</span>
+        <span class="metric-lbl">Pilotos</span>
+      </div>
+    </div>
   </header>
 
-  <!-- Banner de Acceso Rápido al Menú -->
-  <div class="menu-callout">
-    <a routerLink="/sideboard" class="quick-sideboard-btn">
-      <app-icon name="sparkles" [size]="18" />
-      <span>Explorar Guías de Sideboard</span>
+  <!-- Acciones Principales Rápidas -->
+  <nav class="quick-nav-grid" aria-label="Accesos directos principales">
+    <a routerLink="/sideboard" class="quick-nav-card primary">
+      <div class="card-glow"></div>
+      <div class="card-icon-box">
+        <app-icon name="sparkles" [size]="20" />
+      </div>
+      <div class="card-info">
+        <span class="card-title">Guías de Sideboard</span>
+        <span class="card-desc">Planes de banquillo y matchups</span>
+      </div>
+      <app-icon name="chevron-right" [size]="18" class="card-arrow" />
     </a>
-    <a routerLink="/players" class="quick-sideboard-btn">
-      <app-icon name="users" [size]="18" />
-      <span>Explorar Jugadores</span>
-    </a>
-  </div>
 
+    <a routerLink="/players" class="quick-nav-card secondary">
+      <div class="card-icon-box">
+        <app-icon name="users" [size]="20" />
+      </div>
+      <div class="card-info">
+        <span class="card-title">Comunidad & Jugadores</span>
+        <span class="card-desc">Perfiles y mazos destacados</span>
+      </div>
+      <app-icon name="chevron-right" [size]="18" class="card-arrow" />
+    </a>
+  </nav>
+
+  <!-- Arquetipos Destacados del Metagame -->
+  <section class="featured-section" aria-label="Mazos destacados">
+    <div class="section-top-row">
+      <div>
+        <h2 class="subheading">Tier del Metagame</h2>
+        <p class="subheading-desc">Listas con mayor presencia competitiva</p>
+      </div>
+      <a routerLink="/sideboard" class="see-all-link">
+        <span>Ver todos</span>
+        <app-icon name="chevron-right" [size]="14" />
+      </a>
+    </div>
+
+    <div class="featured-decks-list">
+      @for (deck of topDecks(); track deck.id) {
+        <a [routerLink]="['/sideboard', deck.slug]" class="mini-deck-card">
+          <div class="mini-deck-thumb">
+            <img [src]="deck.imageUrl" [alt]="deck.name" loading="lazy" />
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="mini-deck-details">
+            <div class="deck-header-row">
+              <span class="deck-name">{{ deck.name }}</span>
+              <span class="meta-tag tabular-nums">{{ deck.metaPercentage }}</span>
+            </div>
+            <div class="deck-type-row">
+              <span class="type-text">{{ deck.archetypeType }}</span>
+              <div class="colors-wrap">
+                @for (c of deck.colors; track c) {
+                  <span class="color-dot" [class]="'mana-' + c">{{ c }}</span>
+                }
+              </div>
+            </div>
+          </div>
+          <app-icon name="chevron-right" [size]="16" class="deck-arrow" />
+        </a>
+      }
+    </div>
+  </section>
 </div>

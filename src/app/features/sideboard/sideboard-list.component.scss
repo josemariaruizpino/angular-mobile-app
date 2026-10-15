@@ -86,10 +86,11 @@
   }
 
   &.active {
-    background-color: var(--text-primary);
-    color: var(--bg-app);
-    border-color: var(--text-primary);
+    background-color: var(--accent);
+    color: var(--accent-contrast);
+    border-color: var(--accent);
     font-weight: 600;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
   }
 }
 
@@ -97,9 +98,22 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+
+  @media (min-width: 680px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 1080px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 .deck-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--surface-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
@@ -114,7 +128,7 @@
   &:hover {
     box-shadow: var(--shadow-md);
     border-color: var(--border-hover);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
   }
 
   &:active {
@@ -128,6 +142,10 @@
   height: 140px;
   overflow: hidden;
   background-color: var(--surface-subtle);
+
+  @media (min-width: 768px) {
+    height: 160px;
+  }
 }
 
 .deck-card-image {
@@ -188,6 +206,9 @@
 }
 
 .deck-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 1.125rem 1.25rem;
 }
 
@@ -267,6 +288,7 @@
 }
 
 .deck-footer-action {
+  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;

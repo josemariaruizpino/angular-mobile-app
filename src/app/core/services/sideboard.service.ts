@@ -4766,6 +4766,2741 @@ export class SideboardService {
           ]
         }
       ]
+    },
+    {
+        "id": "tron",
+        "slug": "tron",
+        "name": "Tron",
+        "metaPercentage": "6.4%",
+        "metaCount": 182,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2ef-3280-7dc4-a8a5-666164870afb/variants/672/938/card_image.webp",
+        "colors": [
+            "U",
+            "R",
+            "G"
+        ],
+        "archetypeType": "Ramp",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-tron#paper",
+        "description": "Control y combo de maná masivo mediante las tres tierras de Urza (Tower, Mine y Power Plant) para cerrar con bucles de Ghostly Flicker o Altar of the Brood.",
+        "keyCards": [
+            "Urza's Tower",
+            "Urza's Power Plant",
+            "Urza's Mine",
+            "Mnemonic Wall",
+            "Ghostly Flicker",
+            "Mulldrifter",
+            "Expedition Map",
+            "Crop Rotation",
+            "Energy Refractor",
+            "Compulsive Research"
+        ],
+        "sideboardCards": [
+            "Weather the Storm",
+            "Pyroblast / Red Elemental Blast",
+            "Hydroblast",
+            "Breath Weapon",
+            "Fangren Marauder",
+            "Stonehorn Dignitary",
+            "Ancient Grudge"
+        ],
+        "maybeboard": [
+            {
+                "name": "Altar of the Brood",
+                "note": "Condición de victoria mill en bucle infinito con dos Mnemonic Walls."
+            },
+            {
+                "name": "Foundry Inspector",
+                "note": "Acelera artefactos y mapas en listas centradas en Altar."
+            },
+            {
+                "name": "Gorilla Shaman",
+                "note": "Hate letal de tierras artefacto contra Affinity cuando se tiene maná ilimitado."
+            },
+            {
+                "name": "Moment's Peace",
+                "note": "Niebla con flashback excelente contra agresivas."
+            }
+        ],
+        "proTips": [
+            "Prioriza ensamblar el trío de Urza antes de gastar recursos en cantrips reactivos.",
+            "Energy Refractor es tu seguro de vida para filtrar incoloro a maná de color bajo Blood Moon o Ponza.",
+            "Un Stonehorn Dignitary en bucle con Ghostly Flicker salta indefinidamente la fase de combate rival."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "even",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Weather the Storm",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Frena su explosividad de daño directo."
+                    },
+                    {
+                        "cardName": "Hydroblast",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Corta removals y daño letal."
+                    },
+                    {
+                        "cardName": "Stonehorn Dignitary",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Bloquea sus ataques continuos."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Compulsive Research",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Demasiado lento ante presión rápida."
+                    },
+                    {
+                        "cardName": "Ghostly Flicker",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de densidad del bucle."
+                    },
+                    {
+                        "cardName": "Mulldrifter",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Costoso para jugar en curva inicial."
+                    }
+                ],
+                "gameplayTips": [
+                    "Juega alrededor de Fireblast calculando tus vidas efectivas en cada turno.",
+                    "Weather the Storm tras una cadena de quemaduras cierra por completo su ventana de victoria."
+                ]
+            },
+            {
+                "vsDeckName": "Grixis Affinity",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Fangren Marauder",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Cada artefacto sacrificado o destruido nos otorga 5 vidas."
+                    },
+                    {
+                        "cardName": "Ancient Grudge",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Removal 2x1 contra Enforcers e Ichor Wellspring."
+                    },
+                    {
+                        "cardName": "Hydroblast",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Neutraliza Makeshift Munitions y Galvanic Blast."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Stonehorn Dignitary",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Pueden ganar con Munitions sin atacar."
+                    },
+                    {
+                        "cardName": "Breath Weapon",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Sus criaturas clave resisten 4 de daño."
+                    }
+                ],
+                "gameplayTips": [
+                    "Fangren Marauder en mesa hace prácticamente imposible que pierdas contra Makeshift Munitions.",
+                    "Cuidado con Blood Fountain en partidas largas."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "elves",
+        "slug": "elves",
+        "name": "Elves",
+        "metaPercentage": "6.2%",
+        "metaCount": 176,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2f0-0bc6-7dd5-afe0-19d7b418c5af/variants/672/938/card_image.webp",
+        "colors": [
+            "G"
+        ],
+        "archetypeType": "Aggro",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-elves#paper",
+        "description": "Estrategia tribal arquetípica de generación hiperacelerada de maná y presencia masiva en mesa para cerrar con Timberwatch Elf o Distant Melody.",
+        "keyCards": [
+            "Quirion Ranger",
+            "Priest of Titania",
+            "Timberwatch Elf",
+            "Jaspera Sentinel",
+            "Llanowar Elves",
+            "Elvish Mystic",
+            "Lead the Stampede",
+            "Distant Melody",
+            "Birchlore Rangers",
+            "Wellwisher"
+        ],
+        "sideboardCards": [
+            "Gleeful Sabotage",
+            "Scattershot Archer",
+            "Spidersilk Armor",
+            "Hydroblast",
+            "Magnify",
+            "Relic of Progenitus",
+            "Tormod's Crypt"
+        ],
+        "maybeboard": [
+            {
+                "name": "Lys Alana Huntmaster",
+                "note": "Multiplicador de fichas elfo para sobrepasar bloqueadores."
+            },
+            {
+                "name": "Viridian Longbow",
+                "note": "Herramienta de control repetitiva con Quirion Ranger."
+            },
+            {
+                "name": "Prohibit",
+                "note": "Respuesta reactiva contra sweepers de daño masivo."
+            }
+        ],
+        "proTips": [
+            "Wellwisher gana partidas él solo contra quemaduras y barajas agresivas si se protege el turno 2.",
+            "Usa Quirion Ranger dos veces por turno devolviendo un bosque a la mano antes y después del ataque.",
+            "Calcula siempre el impacto de sweepers (Breath Weapon, Krark-Clan Shaman, End the Festivities) antes de vaciar la mano."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "even",
+                "role": "Aggro",
+                "inCards": [
+                    {
+                        "cardName": "Spidersilk Armor",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Saca a nuestros elfos del rango de End the Festivities y Lava Dart."
+                    },
+                    {
+                        "cardName": "Hydroblast",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Contrarresta removals de área y quemaduras."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Lead the Stampede",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ritmo algo lento en los primeros turnos."
+                    },
+                    {
+                        "cardName": "Distant Melody",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Difícil de resolver ante removal instantáneo."
+                    }
+                ],
+                "gameplayTips": [
+                    "Si Wellwisher sobrevive un turno, prioriza ganar vidas cada turno con Quirion Ranger.",
+                    "No bloquees a menos que sea estrictamente necesario para preservar tu motor de maná."
+                ]
+            },
+            {
+                "vsDeckName": "Blue Terror",
+                "difficulty": "favorable",
+                "role": "Aggro",
+                "inCards": [
+                    {
+                        "cardName": "Relic of Progenitus",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Ralentiza el descuento de coste de Tolarian Terror y Cryptic Serpent."
+                    },
+                    {
+                        "cardName": "Spidersilk Armor",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Resistencia a cartas de tempo."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Wellwisher",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "No nos presionan vidas rápido, nos interesa densidad de amenazas."
+                    }
+                ],
+                "gameplayTips": [
+                    "Sobrepásalos en número de criaturas: sus criaturas no tienen arrollar (trample).",
+                    "Timberwatch Elf fuerza bloqueos desfavorables cada turno."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "dimir-faeries",
+        "slug": "dimir-faeries",
+        "name": "Dimir Faeries",
+        "metaPercentage": "5.1%",
+        "metaCount": 146,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2ef-f58a-775e-91a2-b988f45f108c/variants/672/938/card_image.webp",
+        "colors": [
+            "U",
+            "B"
+        ],
+        "archetypeType": "Control",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-dimir-faeries-625747e4-1ba6-4401-af7b-5c8033a12c6c#online",
+        "description": "Estrategia tempo-control reactiva que explota la sinergia de hadas con Spellstutter Sprite y Ninjutsu, combinada con el removal más eficiente de Pauper (Snuff Out, Cast Down).",
+        "keyCards": [
+            "Spellstutter Sprite",
+            "Ninja of the Deep Hours",
+            "Faerie Seer",
+            "Snuff Out",
+            "Cast Down",
+            "Counterspell",
+            "Brainstorm",
+            "Lorien Revealed",
+            "Thorn of the Black Rose",
+            "Moon-Circuit Hacker"
+        ],
+        "sideboardCards": [
+            "Hydroblast",
+            "Blue Elemental Blast",
+            "Nihil Spellbomb",
+            "Suffocating Fumes",
+            "Arms of Hadar",
+            "Okiba-Gang Shinobi",
+            "Annul"
+        ],
+        "maybeboard": [
+            {
+                "name": "Gurmag Angler",
+                "note": "Cierra partidas rápidamente tras llenar el cementerio con cantrips."
+            },
+            {
+                "name": "Unexpected Fangs",
+                "note": "Vínculo vital clave contra barajas agresivas y quemadura."
+            },
+            {
+                "name": "Dispel",
+                "note": "Protección de bajo coste para batallas de contrahechizos."
+            }
+        ],
+        "proTips": [
+            "No tengas miedo de pagar 4 vidas por Snuff Out si eso asegura un Ninja conectando en turno 2.",
+            "Usa Faerie Seer con Ninjutsu para reordenar la parte superior de la biblioteca continuamente.",
+            "Conserva Spellstutter Sprite para los hechizos clave de 1 y 2 manás del rival."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Hydroblast",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Contrarresta sus cartas de daño y frena su tempo."
+                    },
+                    {
+                        "cardName": "Suffocating Fumes",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Limpia Epicures y fichas a velocidad instantánea."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Snuff Out",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "El coste de 4 vidas es letal contra barajas de quemadura."
+                    },
+                    {
+                        "cardName": "Thorn of the Black Rose",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Monarch arriesgado ante criaturas atacantes."
+                    }
+                ],
+                "gameplayTips": [
+                    "Banquillea fuera Snuff Out inmediatamente: 4 vidas son dos Lightning Bolts en tu contra.",
+                    "Estabiliza la mesa y luego saca ventaja con Ninja of the Deep Hours."
+                ]
+            },
+            {
+                "vsDeckName": "Grixis Affinity",
+                "difficulty": "even",
+                "role": "Tempo",
+                "inCards": [
+                    {
+                        "cardName": "Annul",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Corta amenazas de coste bajo y Makeshift Munitions."
+                    },
+                    {
+                        "cardName": "Cast Down",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Respuestas a Myr Enforcer y Kenku Artificer."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Suffocating Fumes",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ineficaz contra resistencia 4+."
+                    },
+                    {
+                        "cardName": "Moon-Circuit Hacker",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Dificultad para atacar a través de bloqueadores resistentes."
+                    }
+                ],
+                "gameplayTips": [
+                    "Reserva Counterspell para Thoughtcast y Blood Fountain.",
+                    "Spellstutter Sprite debe cortar Reckoner's Bargain o Deadly Dispute."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "bogles",
+        "slug": "bogles",
+        "name": "Bogles",
+        "metaPercentage": "4.5%",
+        "metaCount": 127,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2f0-1028-7163-8dc1-8a19fc6bf145/variants/672/938/card_image.webp",
+        "colors": [
+            "W",
+            "G"
+        ],
+        "archetypeType": "Aggro",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-bogles#paper",
+        "description": "Estrategia de auras y criaturas con Antimaleficio (Hexproof) como Slippery Bogle y Gladecover Scout, transformándolas en monstruos masivos inalcanzables.",
+        "keyCards": [
+            "Slippery Bogle",
+            "Gladecover Scout",
+            "Rancor",
+            "Armadillo Cloak",
+            "Ancestral Mask",
+            "Ethereal Armor",
+            "Abundant Growth",
+            "Utopia Sprawl",
+            "Cartouche of Solidarity",
+            "Commune with Spirits"
+        ],
+        "sideboardCards": [
+            "Flaring Pain",
+            "Lifelink",
+            "Standard Bearer",
+            "Relic of Progenitus",
+            "Ray of Revelation",
+            "Freewind Falconer",
+            "Ram Through"
+        ],
+        "maybeboard": [
+            {
+                "name": "Tamiyo's Safekeeping",
+                "note": "Protección adicional y ganancia de vidas incidental."
+            },
+            {
+                "name": "Mask of Law and Grace",
+                "note": "Protección contra negro y rojo frente a edictos y Pyroblasts."
+            },
+            {
+                "name": "Favor of the Overbeing",
+                "note": "Vuelo y vigilancia en criaturas verde/azules."
+            }
+        ],
+        "proTips": [
+            "Armadillo Cloak no da Lifelink técnico, se dispara como habilidad de ganancia de vidas (se acumula con Lifelink real).",
+            "Juega Cartouche of Solidarity para crear una ficha blanca que te proteja de efectos de sacrificio tipo Chainer's Edict.",
+            "No sobrecomprometas todas tus auras en una sola criatura si sospechas sweepers globales o edictos."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "favorable",
+                "role": "Aggro",
+                "inCards": [
+                    {
+                        "cardName": "Lifelink",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Garantiza ventaja de vidas imposible de superar."
+                    },
+                    {
+                        "cardName": "Ram Through",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Elimina bloqueadores y conecta daño arrollador."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Commune with Spirits",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de velocidad."
+                    },
+                    {
+                        "cardName": "Ancestral Mask",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Curva alta, con Armadillo Cloak es suficiente."
+                    }
+                ],
+                "gameplayTips": [
+                    "Armadillo Cloak en turno 2 o 3 con Utopia Sprawl gana la partida de inmediato.",
+                    "Ten cuidado con Cast into the Fire destruyendo tu aura principal si el bogle no es letal."
+                ]
+            },
+            {
+                "vsDeckName": "Blue Terror",
+                "difficulty": "even",
+                "role": "Aggro",
+                "inCards": [
+                    {
+                        "cardName": "Flaring Pain",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Supera nieblas o trucos defensivos."
+                    },
+                    {
+                        "cardName": "Ram Through",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Limpia a Tolarian Terror antes de que bloquee."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Cartouche of Solidarity",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "No usan edictos usualmente."
+                    },
+                    {
+                        "cardName": "Abundant Growth",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Prioridad a presión."
+                    }
+                ],
+                "gameplayTips": [
+                    "Rancor o Armadillo Cloak son vitales para otorgar arrollar sobre sus serpientes y terrores 5/5.",
+                    "Ataca solo cuando el combate sea letal o te otorgue un intercambio abrumador de vidas."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "spy-combo",
+        "slug": "spy-combo",
+        "name": "Spy Combo",
+        "metaPercentage": "4.2%",
+        "metaCount": 120,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2f0-0f67-7e9a-939b-fa88f12eea41/variants/672/938/card_image.webp",
+        "colors": [
+            "B",
+            "R",
+            "G"
+        ],
+        "archetypeType": "Combo",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-spy-combo#online",
+        "description": "Baraja 'Oops All Spells' sin tierras tradicionales que utiliza maná ritual y Balustrade Spy para auto-millearse por completo y cerrar con Dread Return sobre Lotleth Giant en turno 1-3.",
+        "keyCards": [
+            "Balustrade Spy",
+            "Dread Return",
+            "Lotleth Giant",
+            "Songs of the Damned",
+            "Lotus Petal",
+            "Dark Ritual",
+            "Simian Spirit Guide",
+            "Tinder Wall",
+            "Cabal Ritual",
+            "Haunting Misery"
+        ],
+        "sideboardCards": [
+            "Flaring Pain",
+            "Duress",
+            "Red Elemental Blast",
+            "Pyroblast",
+            "Fangren Marauder",
+            "Dwarven Forge-Chanter",
+            "Nature's Claim"
+        ],
+        "maybeboard": [
+            {
+                "name": "Golgari Brownscale",
+                "note": "Dragado y ganancia de vidas en emparejamientos largos."
+            },
+            {
+                "name": "Stinkweed Imp",
+                "note": "Opción alternativa de dragado y defensa aérea."
+            },
+            {
+                "name": "Land Grant",
+                "note": "Buscador de la única tierra si la lista lleva 1 bosque/pantano."
+            }
+        ],
+        "proTips": [
+            "Calcula meticulosamente el maná flotante antes de lanzar Balustrade Spy para asegurar el lanzamiento de Songs of the Damned tras el mill.",
+            "Si temes contrarrestras, fuerza su respuesta con Duress o Pyroblast en el turno del combo.",
+            "Respeta el hate de cementerio (Relic of Progenitus, Nihil Spellbomb); comba antes de que tengan maná para activarlo."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Blue Terror",
+                "difficulty": "even",
+                "role": "Combo",
+                "inCards": [
+                    {
+                        "cardName": "Pyroblast",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Protege el combo contra Counterspell y Spell Pierce."
+                    },
+                    {
+                        "cardName": "Duress",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Descarta contrahechizos clave antes de empezar."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Tinder Wall",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de densidad de rituales."
+                    },
+                    {
+                        "cardName": "Haunting Misery",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Plan B innecesario en G2/G3."
+                    }
+                ],
+                "gameplayTips": [
+                    "Lanza Duress en el turno de victoria para revisar su mano.",
+                    "No intentes combar si tienen dos islas enderezadas sin respaldo de Pyroblast."
+                ]
+            },
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "favorable",
+                "role": "Combo",
+                "inCards": [
+                    {
+                        "cardName": "Fangren Marauder",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Opción alternativa de estabilización."
+                    },
+                    {
+                        "cardName": "Duress",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Descarta quemaduras rápidas o hate."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Haunting Misery",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Demasiado lento."
+                    }
+                ],
+                "gameplayTips": [
+                    "Es una carrera pura: Spy Combo puede ganar en T1 o T2, mucho antes de que Mono Red llegue a 20 de daño.",
+                    "Cuidado con Relic of Progenitus que puedan banquillear."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "mono-red-rally",
+        "slug": "mono-red-rally",
+        "name": "Mono Red Rally",
+        "metaPercentage": "3.8%",
+        "metaCount": 107,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2ef-2bdc-728a-9164-89bb84f6ccc2/variants/672/938/card_image.webp",
+        "colors": [
+            "R"
+        ],
+        "archetypeType": "Aggro",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-mono-red-rally#online",
+        "description": "Variante hiperagresiva de Kuldotha Rebirth y trasgos con efectos de ataque en masa (Bushwhacker, Goblin Tomb Raider) para liquidar en turnos 3-4.",
+        "keyCards": [
+            "Kuldotha Rebirth",
+            "Goblin Bushwhacker",
+            "Goblin Tomb Raider",
+            "Reckless Lackey",
+            "Monastery Swiftspear",
+            "Lightning Bolt",
+            "Experimental Synthesizer",
+            "Voldaren Epicure",
+            "Great Furnace",
+            "Galvanic Blast"
+        ],
+        "sideboardCards": [
+            "Pyroblast",
+            "Red Elemental Blast",
+            "End the Festivities",
+            "Cast into the Fire",
+            "Flaring Pain",
+            "Smash to Smithereens",
+            "Raze"
+        ],
+        "maybeboard": [
+            {
+                "name": "Foundry Street Denizen",
+                "note": "Potencia el daño si hay gran generación de fichas rojas."
+            },
+            {
+                "name": "Jack-o'-Lantern",
+                "note": "Artefacto cantrip para sacrificar con Kuldotha Rebirth."
+            },
+            {
+                "name": "Campfire",
+                "note": "Herramienta en mirror para escapar de rango de quemadura."
+            }
+        ],
+        "proTips": [
+            "Asegúrate de tener un artefacto en mesa antes de planear el turno con Kuldotha Rebirth.",
+            "Goblin Bushwhacker con Kicker es letal cuando se combina con fichas de trasgo generadas el mismo turno.",
+            "Administra el maná de Great Furnace teniendo en cuenta que cuenta para el artefacto de Goblin Tomb Raider."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Blue Terror",
+                "difficulty": "favorable",
+                "role": "Aggro",
+                "inCards": [
+                    {
+                        "cardName": "Pyroblast",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Contrarresta Lorien Revealed, Murmuring Mystic y Counterspell."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Experimental Synthesizer",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Reducción de cartas que no ejercen presión directa."
+                    },
+                    {
+                        "cardName": "Voldaren Epicure",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Menor poder de combate."
+                    }
+                ],
+                "gameplayTips": [
+                    "El daño rápido es la clave; no les des tiempo a descontar sus Tolarian Terrors a 1 maná.",
+                    "Usa Pyroblast para proteger tu última oleada de ataque o quemadura letal."
+                ]
+            },
+            {
+                "vsDeckName": "Grixis Affinity",
+                "difficulty": "even",
+                "role": "Aggro",
+                "inCards": [
+                    {
+                        "cardName": "Cast into the Fire",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Exilia tierras artefacto o mata pequeñas criaturas."
+                    },
+                    {
+                        "cardName": "Smash to Smithereens",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Destruye Myr Enforcer y causa 3 de daño directo."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Goblin Tomb Raider",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Bloqueado fácilmente por Enforcers."
+                    },
+                    {
+                        "cardName": "Voldaren Epicure",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de curva."
+                    }
+                ],
+                "gameplayTips": [
+                    "Cast into the Fire sobre una tierra puente o básica artefacto en turno 1 puede cortarles el maná de por vida.",
+                    "Ataca en masa antes de que bajen múltiples bloqueadores 4/4."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "jund-wildfire",
+        "slug": "jund-wildfire",
+        "name": "Jund Wildfire",
+        "metaPercentage": "3.6%",
+        "metaCount": 102,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2ef-f737-716e-b76e-c3426c0501e4/variants/672/938/card_image.webp",
+        "colors": [
+            "B",
+            "R",
+            "G"
+        ],
+        "archetypeType": "Combo",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-jund-wildfire#online",
+        "description": "Poderoso mazo midrange-combo basado en la interacción entre Basking Broodscale y Sadistic Glee para crear infinitos Eldrazi Scions y una criatura gigantesca, respaldado por ramp con Cleansing Wildfire.",
+        "keyCards": [
+            "Basking Broodscale",
+            "Sadistic Glee",
+            "Cleansing Wildfire",
+            "Deadly Dispute",
+            "Fanatical Offering",
+            "Toxin Analysis",
+            "Snuff Out",
+            "Cast Down",
+            "Drossforge Bridge",
+            "Slagwoods Bridge"
+        ],
+        "sideboardCards": [
+            "Weather the Storm",
+            "Pyroblast",
+            "Red Elemental Blast",
+            "Nihil Spellbomb",
+            "Cast into the Fire",
+            "Arms of Hadar",
+            "Pick Your Poison"
+        ],
+        "maybeboard": [
+            {
+                "name": "Writhing Chrysalis",
+                "note": "Criatura dominante que genera fichas y alcanza tamaños descomunales."
+            },
+            {
+                "name": "Chainer's Edict",
+                "note": "Solución contra criaturas individuales con antimaleficio."
+            },
+            {
+                "name": "Gorilla Shaman",
+                "note": "Presión despiadada a bases de maná de artefactos."
+            }
+        ],
+        "proTips": [
+            "Cleansing Wildfire sobre tus propias tierras puente indestructibles actúa como un acelerador de maná que roba carta por 2 manás.",
+            "Toxin Analysis sobre Basking Broodscale permite poner contadores cada vez que lucha o recibe daño, generando Scions y ganando vidas.",
+            "Sadistic Glee + Broodscale crea un bucle infinito de fichas sacrificando un Scion para obtener maná incoloro y otro contador."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "even",
+                "role": "Midrange",
+                "inCards": [
+                    {
+                        "cardName": "Weather the Storm",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Detiene en seco su plan de daño directo."
+                    },
+                    {
+                        "cardName": "Toxin Analysis",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Vínculo vital y toque mortal en bloqueos clave."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Snuff Out",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "El coste de 4 vidas es contraproducente."
+                    },
+                    {
+                        "cardName": "Cleansing Wildfire",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Lento si te presionan en curva 1."
+                    }
+                ],
+                "gameplayTips": [
+                    "Comba solo cuando tengan menos de 2 manás rojos abiertos para evitar que maten a Broodscale en respuesta a Sadistic Glee.",
+                    "Usa los Scions generados para bloquear y ganar tiempo."
+                ]
+            },
+            {
+                "vsDeckName": "Blue Terror",
+                "difficulty": "favorable",
+                "role": "Combo",
+                "inCards": [
+                    {
+                        "cardName": "Pyroblast",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Protege el combo contra contrahechizos."
+                    },
+                    {
+                        "cardName": "Nihil Spellbomb",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Exilia su cementerio antes de que bajen serpientes."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Snuff Out",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Terror es negro, no se puede hacer objetivo con Snuff Out."
+                    },
+                    {
+                        "cardName": "Fanatical Offering",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de densidad de robo."
+                    }
+                ],
+                "gameplayTips": [
+                    "Nihil Spellbomb vacía su cementerio y neutraliza su plan proactivo de juego.",
+                    "El combo vuela por encima de sus grandes bloqueadores 5/5."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "esper-affinity",
+        "slug": "esper-affinity",
+        "name": "Esper Affinity",
+        "metaPercentage": "3.4%",
+        "metaCount": 97,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2f0-2e57-7528-84d8-1a09bf74296e/variants/672/938/card_image.webp",
+        "colors": [
+            "W",
+            "U",
+            "B"
+        ],
+        "archetypeType": "Aggro",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-esper-affinity#online",
+        "description": "Versión rápida y evasiva de Affinity que combina Refurbished Familiar y Glaze Fiend para golpear por el aire mientras desgasta la mano rival.",
+        "keyCards": [
+            "Refurbished Familiar",
+            "Glaze Fiend",
+            "Myr Enforcer",
+            "Thoughtcast",
+            "Deadly Dispute",
+            "Kenku Artificer",
+            "Blood Fountain",
+            "Mistvault Bridge",
+            "Goldmire Bridge",
+            "Razortide Bridge"
+        ],
+        "sideboardCards": [
+            "Dust to Dust",
+            "Hydroblast",
+            "Nihil Spellbomb",
+            "Cast Down",
+            "Suffocating Fumes",
+            "Destroy Evil",
+            "Tormod's Crypt"
+        ],
+        "maybeboard": [
+            {
+                "name": "Somber Hoverguard",
+                "note": "Presencia aérea 3/2 de afinidad."
+            },
+            {
+                "name": "Metallic Rebuke",
+                "note": "Contrahechizo de improvisación clave."
+            },
+            {
+                "name": "Cast into the Fire",
+                "note": "Si se opta por tocar rojo con fuentes de tesoro."
+            }
+        ],
+        "proTips": [
+            "Glaze Fiend gana +2/+2 por cada artefacto que entra al campo; enlaza varios artefactos de coste cero o bajo para inflarlo a 7/7 o 9/9 y atacar por aire.",
+            "Refurbished Familiar entra habitualmente por un solo maná negro y descarta una carta del rival mientras añade un volador 2/1.",
+            "Usa Kenku Artificer sobre una tierra puente para tener un 3/3 indestructible volador imposible de matar con removal habitual."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "even",
+                "role": "Midrange",
+                "inCards": [
+                    {
+                        "cardName": "Hydroblast",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Corta quemaduras y Cast into the Fire."
+                    },
+                    {
+                        "cardName": "Cast Down",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Removal seguro para amenazas rápidas."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Thoughtcast",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Lento si te presionan en curva 1."
+                    },
+                    {
+                        "cardName": "Blood Fountain",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de ritmo."
+                    }
+                ],
+                "gameplayTips": [
+                    "Un Kenku Artificer sobre una tierra puente frena en seco sus ataques terrestres.",
+                    "Refurbished Familiar les quita su última carta de gas en mano."
+                ]
+            },
+            {
+                "vsDeckName": "Grixis Affinity",
+                "difficulty": "favorable",
+                "role": "Aggro",
+                "inCards": [
+                    {
+                        "cardName": "Dust to Dust",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "La carta definitiva del mirror: exilia 2 artefactos o tierras puente por 3 manás."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Glaze Fiend",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Muere ante Galvanic Blast o Makeshift Munitions."
+                    },
+                    {
+                        "cardName": "Deadly Dispute",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Ajuste de banquillo."
+                    }
+                ],
+                "gameplayTips": [
+                    "Dust to Dust en turno 3 sobre dos de sus tierras puente es habitualmente jaque mate.",
+                    "Juega alrededor de su propio Dust to Dust no sobrecargando todas tus tierras si puedes evitarlo."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "white-aggro",
+        "slug": "white-aggro",
+        "name": "White Aggro / Caw Gates",
+        "metaPercentage": "2.5%",
+        "metaCount": 70,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2ef-98e6-7f07-b81c-361cdf964043/variants/672/938/card_image.webp",
+        "colors": [
+            "W",
+            "U"
+        ],
+        "archetypeType": "Midrange",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-white-aggro#online",
+        "description": "Estrategia midrange evasiva que abusa de Squadron Hawk y Sacred Cat potenciados exponencialmente con Basilisk Gate y The Modern Age.",
+        "keyCards": [
+            "Squadron Hawk",
+            "Sacred Cat",
+            "Basilisk Gate",
+            "The Modern Age",
+            "Brainstorm",
+            "Guardian of the Guildpact",
+            "Prismatic Strands",
+            "Counterspell",
+            "Lorien Revealed",
+            "Heap Gate"
+        ],
+        "sideboardCards": [
+            "Dust to Dust",
+            "Hydroblast",
+            "Blue Elemental Blast",
+            "Destroy Evil",
+            "Relic of Progenitus",
+            "Arms of Hadar",
+            "Dawnbringer Cleric"
+        ],
+        "maybeboard": [
+            {
+                "name": "Thraben Inspector",
+                "note": "Cantrip con pista y presencia terrestre."
+            },
+            {
+                "name": "Seekers' Squire",
+                "note": "Filtrado de biblioteca y tierras."
+            },
+            {
+                "name": "Standard Bearer",
+                "note": "Hate directo contra Bogles y mono red quemadura."
+            }
+        ],
+        "proTips": [
+            "Guarda Squadron Hawk en mano con Brainstorm para devolver 2 halcones y buscarlos de nuevo con el tercer halcón (ventaja virtual de cartas).",
+            "Sacred Cat con Basilisk Gate es una fuente inagotable de vidas que aplasta a barajas aggro.",
+            "Prismatic Strands se puede lanzar desde el cementerio tapeando una criatura blanca enderezada, sin coste de maná."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "favorable",
+                "role": "Midrange",
+                "inCards": [
+                    {
+                        "cardName": "Hydroblast",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Corta quemaduras clave y Flaring Pain."
+                    },
+                    {
+                        "cardName": "Dawnbringer Cleric",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Gana vidas, bloquea o destruye encantamientos."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Guardian of the Guildpact",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Curva 4 algo lenta ante salidas hiperagresivas."
+                    },
+                    {
+                        "cardName": "The Modern Age",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de tempo."
+                    }
+                ],
+                "gameplayTips": [
+                    "Cuidado con Flaring Pain anulando tu Prismatic Strands; mantén Hydroblast listo para responder a Flaring Pain.",
+                    "Sacred Cat embalsamado con Basilisk Gate te devuelve a 20 vidas rápidamente."
+                ]
+            },
+            {
+                "vsDeckName": "Grixis Affinity",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Dust to Dust",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Exilia 2 artefactos clave del oponente por 3 manás."
+                    },
+                    {
+                        "cardName": "Destroy Evil",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Elimina a Myr Enforcer o Makeshift Munitions."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Sacred Cat",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Bloqueado con facilidad sin gate activa."
+                    },
+                    {
+                        "cardName": "Prismatic Strands",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de densidad."
+                    }
+                ],
+                "gameplayTips": [
+                    "Dust to Dust en curva es casi insuperable para Affinity.",
+                    "Guardian of the Guildpact no puede ser bloqueado ni dañado por ninguna criatura monocolor de Affinity."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "golgari-gardens",
+        "slug": "golgari-gardens",
+        "name": "Golgari Gardens",
+        "metaPercentage": "2.2%",
+        "metaCount": 62,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2ef-c6da-791a-b3fe-14ff39cb33c7/variants/672/938/card_image.webp",
+        "colors": [
+            "B",
+            "G"
+        ],
+        "archetypeType": "Control",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-golgari-gardens#online",
+        "description": "La cúspide del control puro basado en removal selectivo, sinergia con Khalni Garden y Crypt Rats, finalizando con la superioridad de Avenging Hunter (Iniciativa).",
+        "keyCards": [
+            "Avenging Hunter",
+            "Crypt Rats",
+            "Spinning Darkness",
+            "Cast Down",
+            "Chainer's Edict",
+            "Deadly Dispute",
+            "Khalni Garden",
+            "Snuff Out",
+            "Toxin Analysis",
+            "Lembas"
+        ],
+        "sideboardCards": [
+            "Weather the Storm",
+            "Nihil Spellbomb",
+            "Duress",
+            "Fangren Marauder",
+            "Campfire",
+            "Trespasser's Curse",
+            "Deglamer"
+        ],
+        "maybeboard": [
+            {
+                "name": "Thorn of the Black Rose",
+                "note": "Monarch como motor de robo alternativo."
+            },
+            {
+                "name": "Suffocating Fumes",
+                "note": "Sweeper instantáneo con ciclado."
+            },
+            {
+                "name": "Extract a Confession",
+                "note": "Efecto edicto mejorado con sospecha."
+            }
+        ],
+        "proTips": [
+            "Spinning Darkness se puede lanzar gratis exiliando 3 cartas negras de tu cementerio (gran truco contra Aggro).",
+            "Usa las fichas de planta de Khalni Garden para activar Deadly Dispute o bloquear atacantes terrestres masivos.",
+            "Avenging Hunter introduce la Iniciativa en mesa; asegúrate de tener el control de mesa antes de bajarlo para no cederla al rival."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "even",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Weather the Storm",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Neutraliza la cadena de quemaduras."
+                    },
+                    {
+                        "cardName": "Campfire",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Ganancia de vidas recurrente fuera de alcance de su removal."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Snuff Out",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "El coste de 4 vidas es prohibitivo."
+                    },
+                    {
+                        "cardName": "Chainer's Edict",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Poco efectivo ante fichas de Voldaren Epicure."
+                    }
+                ],
+                "gameplayTips": [
+                    "Crypt Rats con X=1 o X=2 barre toda su mesa.",
+                    "Gana vidas con Spinning Darkness en cuanto bajen su primera criatura atacante."
+                ]
+            },
+            {
+                "vsDeckName": "Blue Terror",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Nihil Spellbomb",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Exilia cementerio y frena sus amenazas."
+                    },
+                    {
+                        "cardName": "Chainer's Edict",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Removal ideal contra pocas criaturas grandes."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Crypt Rats",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Tolarian Terror tiene resistencia 5, difícil de matar con ratas."
+                    },
+                    {
+                        "cardName": "Spinning Darkness",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Terror es negro, no se puede hacer objetivo."
+                    }
+                ],
+                "gameplayTips": [
+                    "Chainer's Edict y Cast Down son tus mejores armas.",
+                    "Avenging Hunter con Iniciativa genera ventaja abrumadora mientras ellos solo juegan reactivo."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "mono-blue-faeries",
+        "slug": "mono-blue-faeries",
+        "name": "Mono-Blue Faeries",
+        "metaPercentage": "2.0%",
+        "metaCount": 56,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2ef-f58a-775e-91a2-b988f45f108c/variants/672/938/card_image.webp",
+        "colors": [
+            "U"
+        ],
+        "archetypeType": "Control",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-mono-blue-faeries-f7d232c7-2c3c-4459-b219-f3e8d9abbec6#online",
+        "description": "La versión mono-azul clásica y veloz con base de maná sin tierras giradas, combinando Faerie Miscreant, Spellstutter Sprite y Ninjas con protección como Mutagenic Growth.",
+        "keyCards": [
+            "Faerie Miscreant",
+            "Faerie Seer",
+            "Spellstutter Sprite",
+            "Ninja of the Deep Hours",
+            "Moon-Circuit Hacker",
+            "Mutagenic Growth",
+            "Counterspell",
+            "Snap",
+            "Of One Mind",
+            "Spire Golem"
+        ],
+        "sideboardCards": [
+            "Hydroblast",
+            "Blue Elemental Blast",
+            "Annul",
+            "Gut Shot",
+            "Relic of Progenitus",
+            "Curse of Chains",
+            "Dispel"
+        ],
+        "maybeboard": [
+            {
+                "name": "Bind the Monster",
+                "note": "Removal permanente por un solo maná azul."
+            },
+            {
+                "name": "Steel Sabotage",
+                "note": "Herramienta flexible contra Affinity."
+            },
+            {
+                "name": "Boomerang",
+                "note": "Tempo puro rebotando tierras rivales en turno 2."
+            }
+        ],
+        "proTips": [
+            "Mutagenic Growth salva a tus criaturas de Lightning Bolt o Breath Weapon por cero manás.",
+            "Snap te permite levantar una criatura rival y enderezar dos islas para dejar abierto Counterspell.",
+            "No lances Ninja of the Deep Hours si el rival tiene maná abierto para removal y no tienes protección."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "even",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Hydroblast",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Parada obligatoria contra quemadura."
+                    },
+                    {
+                        "cardName": "Gut Shot",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Elimina Kessig Flamebreather y Epicure sin gastar maná."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Spire Golem",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Demasiado lento."
+                    },
+                    {
+                        "cardName": "Snap",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Su criaturas tienen prisa o efectos de entrar en campo."
+                    }
+                ],
+                "gameplayTips": [
+                    "Spellstutter Sprite debe reservar su disparo para Lightning Bolt o Goblin Bushwhacker.",
+                    "Mantén maná azul disponible siempre que sea posible."
+                ]
+            },
+            {
+                "vsDeckName": "Grixis Affinity",
+                "difficulty": "even",
+                "role": "Tempo",
+                "inCards": [
+                    {
+                        "cardName": "Annul",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Corta amenazas de coste 0 y Makeshift Munitions."
+                    },
+                    {
+                        "cardName": "Curse of Chains",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Neutraliza Myr Enforcers permanentemente."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Mutagenic Growth",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Menos relevante contra 4/4."
+                    },
+                    {
+                        "cardName": "Faerie Miscreant",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de densidad."
+                    }
+                ],
+                "gameplayTips": [
+                    "Annul en turno 1 sobre una tierra puente o en turno 2 sobre Munitions frena su motor por completo.",
+                    "Usa Spire Golem como bloqueador gratuito una vez tengas 4 o 5 islas."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "grixis-control",
+        "slug": "grixis-control",
+        "name": "Grixis Control",
+        "metaPercentage": "2.0%",
+        "metaCount": 56,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2f0-213d-7889-9b47-7f757c094415/variants/672/938/card_image.webp",
+        "colors": [
+            "U",
+            "B",
+            "R"
+        ],
+        "archetypeType": "Control",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-grixis-control-334e14c5-6fe9-46da-9c9b-799ef8bd1f0f#online",
+        "description": "Control interactivo de tres colores con sweepers de daño como Breath Weapon, removal de calidad (Cast Down, Skred) y card advantage masivo con Lorien Revealed.",
+        "keyCards": [
+            "Breath Weapon",
+            "Cast Down",
+            "Skred",
+            "Counterspell",
+            "Lorien Revealed",
+            "Gurmag Angler",
+            "Thorn of the Black Rose",
+            "Brainstorm",
+            "Lightning Bolt",
+            "Chainer's Edict"
+        ],
+        "sideboardCards": [
+            "Pyroblast",
+            "Hydroblast",
+            "Nihil Spellbomb",
+            "Arms of Hadar",
+            "Gorilla Shaman",
+            "Suffocating Fumes",
+            "Relic of Progenitus"
+        ],
+        "maybeboard": [
+            {
+                "name": "Fiery Cannonade",
+                "note": "Alternativa de sweeper tribal pirata."
+            },
+            {
+                "name": "Tainted Pact",
+                "note": "Para listas singleton de prueba."
+            },
+            {
+                "name": "Extract a Confession",
+                "note": "Remueve amenazas protegidas."
+            }
+        ],
+        "proTips": [
+            "Breath Weapon no daña a dragones, ten en cuenta esto ante posibles espejos o cartas concretas.",
+            "Lorien Revealed cicla por una tierra dual con subtipo isla y sirve de robacartas masivo en el late game.",
+            "Guarda Skred para cuando tus tierras de nieve alcancen el daño necesario sobre criaturas gigantes."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Hydroblast",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Neutraliza daño directo y criaturas agresivas."
+                    },
+                    {
+                        "cardName": "Suffocating Fumes",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Limpia tokens y orcos sin gastar maná alto."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Thorn of the Black Rose",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Monarch arriesgado."
+                    },
+                    {
+                        "cardName": "Gurmag Angler",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de curva."
+                    }
+                ],
+                "gameplayTips": [
+                    "Limpia la mesa en turno 3 con Breath Weapon.",
+                    "Mantén Hydroblast para responder a Fireblast."
+                ]
+            },
+            {
+                "vsDeckName": "Grixis Affinity",
+                "difficulty": "even",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Gorilla Shaman",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Destruye tierras puente y artefactos de coste 0 o 1."
+                    },
+                    {
+                        "cardName": "Pyroblast",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Corta Thoughtcast y Kenku Artificer."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Breath Weapon",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Myr Enforcer resiste 4 de daño."
+                    }
+                ],
+                "gameplayTips": [
+                    "Gorilla Shaman con maná disponible destruye tierras artefacto no indestructibles en turno 2.",
+                    "Usa Cast Down para Myrs y Skred para los voladores."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "rakdos-madness",
+        "slug": "rakdos-madness",
+        "name": "Rakdos Madness",
+        "metaPercentage": "1.9%",
+        "metaCount": 55,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2ef-c396-7a5e-ac99-b938d683dbc4/variants/672/938/card_image.webp",
+        "colors": [
+            "B",
+            "R"
+        ],
+        "archetypeType": "Aggro",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-rakdos-madness#online",
+        "description": "Versión negra/roja de locura que integra Kitchen Imp como amenaza voladora con prisa de coste B y Alms of the Vein para ganar vidas mientras drena al rival.",
+        "keyCards": [
+            "Kitchen Imp",
+            "Voldaren Epicure",
+            "Faithless Looting",
+            "Blood Fountain",
+            "Fiery Temper",
+            "Alms of the Vein",
+            "Lightning Bolt",
+            "Sneaky Snacker",
+            "Grab the Prize",
+            "Highway Robbery"
+        ],
+        "sideboardCards": [
+            "Pyroblast",
+            "Red Elemental Blast",
+            "Cast into the Fire",
+            "Nihil Spellbomb",
+            "Duress",
+            "Suffocating Fumes",
+            "Chainer's Edict"
+        ],
+        "maybeboard": [
+            {
+                "name": "Gorging Vampire",
+                "note": "Drenador adicional con buena resistencia."
+            },
+            {
+                "name": "Cast Down",
+                "note": "Removal incondicional en lugar de daño directo."
+            },
+            {
+                "name": "Tormod's Crypt",
+                "note": "Hate gratuito de cementerio."
+            }
+        ],
+        "proTips": [
+            "Kitchen Imp descartado entra por un solo maná negro como 2/2 volador con prisa.",
+            "Alms of the Vein te da 3 vidas y hace 3 de daño por un solo maná negro al activarse por demencia.",
+            "Blood Fountain recupera tus dos mejores amenazas del cementerio en partidas de desgaste."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Blue Terror",
+                "difficulty": "even",
+                "role": "Aggro",
+                "inCards": [
+                    {
+                        "cardName": "Pyroblast",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Corta contrahechizos y cantrips clave."
+                    },
+                    {
+                        "cardName": "Chainer's Edict",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Elimina a Tolarian Terror a través de su protección."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Voldaren Epicure",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Menor impacto en el combate."
+                    },
+                    {
+                        "cardName": "Highway Robbery",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de tempo."
+                    }
+                ],
+                "gameplayTips": [
+                    "Kitchen Imp vuela sobre sus terrores terrestres.",
+                    "Usa Alms of the Vein para cerrar la partida a través de su defensa."
+                ]
+            },
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "favorable",
+                "role": "Midrange",
+                "inCards": [
+                    {
+                        "cardName": "Duress",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Descarta sus quemaduras y robacartas."
+                    },
+                    {
+                        "cardName": "Suffocating Fumes",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Limpia Epicures y fichas."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Faithless Looting",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Genera desventaja de cartas pura si te presionan."
+                    },
+                    {
+                        "cardName": "Highway Robbery",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de velocidad."
+                    }
+                ],
+                "gameplayTips": [
+                    "Alms of the Vein es la carta diferencial en este emparejamiento gracias a la ganancia de 3 vidas.",
+                    "Kitchen Imp bloquea y ataca por aire con superioridad."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ruby-storm",
+        "slug": "ruby-storm",
+        "name": "Ruby Storm",
+        "metaPercentage": "1.9%",
+        "metaCount": 53,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2ef-2dcd-77f8-b2f9-42e9d7bcb8ba/variants/672/938/card_image.webp",
+        "colors": [
+            "R"
+        ],
+        "archetypeType": "Combo",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-ruby-storm#online",
+        "description": "Mazo combo explosivo de Tormenta roja que encadena rituales de maná y robacartas con Kessig Flamebreather o Reckless Impulse para quemar en un solo turno.",
+        "keyCards": [
+            "Rite of Flame",
+            "Manamorphose",
+            "Kessig Flamebreather",
+            "Reckless Impulse",
+            "Wrenn's Resolve",
+            "Lotus Petal",
+            "Simian Spirit Guide",
+            "Lava Dart",
+            "Galvanic Relay",
+            "Pyrite Spellbomb"
+        ],
+        "sideboardCards": [
+            "Pyroblast",
+            "Red Elemental Blast",
+            "Flaring Pain",
+            "Cast into the Fire",
+            "Weather the Storm",
+            "Gut Shot",
+            "Abrade"
+        ],
+        "maybeboard": [
+            {
+                "name": "Grapeshot",
+                "note": "Si el formato o torneo permite variantes específicas."
+            },
+            {
+                "name": "Fiery Temper",
+                "note": "Disparo adicional con descarte."
+            },
+            {
+                "name": "Cathartic Reunion",
+                "note": "Robo masivo de 3 cartas."
+            }
+        ],
+        "proTips": [
+            "Galvanic Relay al final de un turno de tormenta te prepara una mano de 6-8 cartas para el turno siguiente.",
+            "Kessig Flamebreather hace 1 de daño por cada hechizo lanzado; con 10 hechizos la partida está sentenciada.",
+            "Manamorphose filtra tu maná a otros colores para jugar respuestas de banquillo como Weather the Storm."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Blue Terror",
+                "difficulty": "even",
+                "role": "Combo",
+                "inCards": [
+                    {
+                        "cardName": "Pyroblast",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Corta sus contrahechizos cuando vas a combar."
+                    },
+                    {
+                        "cardName": "Flaring Pain",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Por si llevan prevención de daño."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Pyrite Spellbomb",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Lento."
+                    },
+                    {
+                        "cardName": "Lava Dart",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Daño bajo."
+                    }
+                ],
+                "gameplayTips": [
+                    "Bait sus contrahechizos con robacartas antes de resolver Kessig Flamebreather.",
+                    "Galvanic Relay te garantiza ganar al turno siguiente sobrepasando sus respuestas."
+                ]
+            },
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "favorable",
+                "role": "Combo",
+                "inCards": [
+                    {
+                        "cardName": "Weather the Storm",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Gana 15-20 vidas fácilmente con Manamorphose."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Pyrite Spellbomb",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de velocidad."
+                    }
+                ],
+                "gameplayTips": [
+                    "Weather the Storm te saca de rango de quemadura de por vida.",
+                    "Tu combo de Kessig es habitualmente más rápido que su curva de daño."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "gruul-ponza",
+        "slug": "gruul-ponza",
+        "name": "Gruul Ponza",
+        "metaPercentage": "1.8%",
+        "metaCount": 52,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2f0-0fc9-719e-9c7e-1bb4c5108b25/variants/672/938/card_image.webp",
+        "colors": [
+            "R",
+            "G"
+        ],
+        "archetypeType": "Midrange",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-gruul-ponza#online",
+        "description": "Estrategia de destrucción sistemática de tierras rivales (Thermokarst, Mwonvuli Acid-Moss) acelerada con arbor elf y utopia sprawl, finalizando con gigantes y la Iniciativa.",
+        "keyCards": [
+            "Thermokarst",
+            "Mwonvuli Acid-Moss",
+            "Arbor Elf",
+            "Utopia Sprawl",
+            "Wild Growth",
+            "Avenging Hunter",
+            "Jewel Thief",
+            "Boarding Party",
+            "Annoyed Altisaur",
+            "Lightning Bolt"
+        ],
+        "sideboardCards": [
+            "Weather the Storm",
+            "Pyroblast",
+            "Red Elemental Blast",
+            "Cast into the Fire",
+            "Deglamer",
+            "Relic of Progenitus",
+            "Breath Weapon"
+        ],
+        "maybeboard": [
+            {
+                "name": "Raze",
+                "note": "Destrucción de tierra en turno 1 si es necesario."
+            },
+            {
+                "name": "Stone Rain",
+                "note": "Más densidad de destrucción de tierras."
+            },
+            {
+                "name": "Spidersilk Armor",
+                "note": "Defensa aérea contra hadas y delver."
+            }
+        ],
+        "proTips": [
+            "Arbor Elf + Utopia Sprawl te permite tener 4 manás en turno 2 para destruir la primera tierra del oponente.",
+            "Mwonvuli Acid-Moss destruye una tierra y busca un bosque a tu campo, duplicando tu ventaja de tempo.",
+            "Avenging Hunter o Boarding Party en cascada cierran la partida mientras el rival está atascado de maná."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Blue Terror",
+                "difficulty": "favorable",
+                "role": "Midrange",
+                "inCards": [
+                    {
+                        "cardName": "Pyroblast",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Corta Counterspell y Lorien Revealed."
+                    },
+                    {
+                        "cardName": "Relic of Progenitus",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Frena su cementerio."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Lightning Bolt",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "No mata a sus criaturas 5/5."
+                    },
+                    {
+                        "cardName": "Boarding Party",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de curva."
+                    }
+                ],
+                "gameplayTips": [
+                    "Destruir sus islas antes de que tengan maná para contrarrestar los deja completamente bloqueados.",
+                    "Un Avenging Hunter temprano es inalcanzable para Terror."
+                ]
+            },
+            {
+                "vsDeckName": "Grixis Affinity",
+                "difficulty": "even",
+                "role": "Midrange",
+                "inCards": [
+                    {
+                        "cardName": "Deglamer",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Bara tierras puente indestructibles barajándolas en el mazo."
+                    },
+                    {
+                        "cardName": "Cast into the Fire",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Exilia tierras artefacto básicas."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Thermokarst",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "No puede hacer objetivo a tierras puente indestructibles."
+                    },
+                    {
+                        "cardName": "Lightning Bolt",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de removal."
+                    }
+                ],
+                "gameplayTips": [
+                    "Ten en cuenta que las tierras puente tienen 'Indestructible'; Thermokarst solo puede apuntar a básicas o tierras no indestructibles.",
+                    "Deglamer y Cast into the Fire sí interactúan eficazmente con sus tierras."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "familiars",
+        "slug": "familiars",
+        "name": "Familiars",
+        "metaPercentage": "1.8%",
+        "metaCount": 50,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2ef-e93e-7ba0-af8f-c8ef40ed2b6b/variants/672/938/card_image.webp",
+        "colors": [
+            "W",
+            "U"
+        ],
+        "archetypeType": "Combo",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-familiars#online",
+        "description": "Mazo combo/control azul y blanco que utiliza Sunscape Familiar para abaratar hechizos y generar bucles infinitos con Ghostly Flicker, Mulldrifter y God-Pharaoh's Faithful.",
+        "keyCards": [
+            "Sunscape Familiar",
+            "God-Pharaoh's Faithful",
+            "Mulldrifter",
+            "Ghostly Flicker",
+            "Archaeomancer",
+            "Cloud of Faeries",
+            "The Modern Age",
+            "Preordain",
+            "Deep Analysis",
+            "Meeting of Minds"
+        ],
+        "sideboardCards": [
+            "Hydroblast",
+            "Dust to Dust",
+            "Red Elemental Blast",
+            "Stonehorn Dignitary",
+            "Destroy Evil",
+            "Relic of Progenitus",
+            "Prohibit"
+        ],
+        "maybeboard": [
+            {
+                "name": "Murmuring Mystic",
+                "note": "Fábrica de fichas voladoras con cada cantrip."
+            },
+            {
+                "name": "Snap",
+                "note": "Endereza tierras y genera tempo positivo."
+            },
+            {
+                "name": "Dawnbringer Cleric",
+                "note": "Respuestas versátiles contra encantamientos y daño."
+            }
+        ],
+        "proTips": [
+            "Con dos Sunscape Familiars y Ghostly Flicker sobre Archaeomancer y Cloud of Faeries, generas maná infinito y vidas infinitas con God-Pharaoh's Faithful.",
+            "God-Pharaoh's Faithful gana 1 vida por cada hechizo azul, blanco o rojo que lanzas; bloquea con solvencia a las criaturas 2/2.",
+            "Usa Meeting of Minds convocado por tus criaturas para robar cartas sin gastar maná."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Hydroblast",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Corta quemaduras clave."
+                    },
+                    {
+                        "cardName": "Stonehorn Dignitary",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Anula sus ataques."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Deep Analysis",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "El flashback cuesta 3 vidas, inasumible contra rojo."
+                    },
+                    {
+                        "cardName": "Mulldrifter",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de velocidad."
+                    }
+                ],
+                "gameplayTips": [
+                    "God-Pharaoh's Faithful en turno 1 te otorga una ventaja defensiva decisiva.",
+                    "Un bucle de Ghostly Flicker con Faithful fuera de su alcance sella la victoria."
+                ]
+            },
+            {
+                "vsDeckName": "Blue Terror",
+                "difficulty": "even",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Stonehorn Dignitary",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Detiene el ataque de sus criaturas 5/5."
+                    },
+                    {
+                        "cardName": "Relic of Progenitus",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Ralentiza sus invocaciones."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "The Modern Age",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Lento en este emparejamiento."
+                    }
+                ],
+                "gameplayTips": [
+                    "Sobrepasa su ventaja de cartas con Mulldrifter en bucle de parpadeo.",
+                    "Ten cuidado con Spell Pierce cortando tu Ghostly Flicker clave."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "jeskai-ephemerate",
+        "slug": "jeskai-ephemerate",
+        "name": "Jeskai Ephemerate",
+        "metaPercentage": "1.7%",
+        "metaCount": 48,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2ef-4209-7eaf-a2ab-b1ab02b880e8/variants/672/938/card_image.webp",
+        "colors": [
+            "W",
+            "U",
+            "R"
+        ],
+        "archetypeType": "Control",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-jeskai-ephemerate#online",
+        "description": "El clásico motor de 'Blink' de Pauper que combina Ephemerate con Archaeomancer, Mulldrifter y Cleansing Wildfire para una ventaja de cartas y tierras imparable.",
+        "keyCards": [
+            "Ephemerate",
+            "Archaeomancer",
+            "Mulldrifter",
+            "Cleansing Wildfire",
+            "Augur of Bolas",
+            "Lightning Bolt",
+            "Counterspell",
+            "Rustvale Bridge",
+            "Razortide Bridge",
+            "Silverbluff Bridge"
+        ],
+        "sideboardCards": [
+            "Pyroblast",
+            "Hydroblast",
+            "Dust to Dust",
+            "Gorilla Shaman",
+            "Cast into the Fire",
+            "Breath Weapon",
+            "Destroy Evil"
+        ],
+        "maybeboard": [
+            {
+                "name": "Dawnbringer Cleric",
+                "note": "Parpadeo de valor para ganar vidas y destruir auras."
+            },
+            {
+                "name": "Skred",
+                "note": "Si se juega con base de nieve."
+            },
+            {
+                "name": "Murmuring Mystic",
+                "note": "Condición de victoria sólida en el aire."
+            }
+        ],
+        "proTips": [
+            "Ephemerate sobre Mulldrifter evocado en respuesta al sacrificio te da 4 cartas por solo 4 manás (3 de evoke + 1 de ephemerate) y la criatura se queda en mesa.",
+            "Cleansing Wildfire sobre tus propias tierras puente actúa como aceleración que roba carta.",
+            "Archaeomancer con Ephemerate permite reutilizar cualquier hechizo instantáneo o conjuro del cementerio en cada turno del oponente gracias al Rebound."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "even",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Hydroblast",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Contrarresta daño letal y frena su tempo."
+                    },
+                    {
+                        "cardName": "Breath Weapon",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Limpia la mesa de amenazas agresivas."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Mulldrifter",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Costoso para bajar en curva temprana."
+                    },
+                    {
+                        "cardName": "Cleansing Wildfire",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de velocidad."
+                    }
+                ],
+                "gameplayTips": [
+                    "Augur of Bolas es un muro defensivo crucial en turno 2.",
+                    "Usa Hydroblast con sabiduría para protegerte de quemaduras en cadena."
+                ]
+            },
+            {
+                "vsDeckName": "Grixis Affinity",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Dust to Dust",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Exilia 2 artefactos del rival."
+                    },
+                    {
+                        "cardName": "Gorilla Shaman",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Destruye artefactos de bajo coste."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Breath Weapon",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Inútil contra Enforcers 4/4."
+                    },
+                    {
+                        "cardName": "Augur of Bolas",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Superado por sus atacantes."
+                    }
+                ],
+                "gameplayTips": [
+                    "Dust to Dust en turno 3 sobre sus tierras puente desarticula su motor por completo.",
+                    "Ephemerate puede rescatar tus criaturas de Galvanic Blast."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "dimir-terror",
+        "slug": "dimir-terror",
+        "name": "Dimir Terror",
+        "metaPercentage": "0.4%",
+        "metaCount": 11,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2f0-0fc9-7bd2-a5ab-5777a791c3e4/variants/672/938/card_image.webp",
+        "colors": [
+            "U",
+            "B"
+        ],
+        "archetypeType": "Control",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-dimir-terror#online",
+        "description": "Evolución azul/negra de Tolarian Terror y Gurmag Angler que añade removal de máxima categoría (Cast Down, Snuff Out, Chainer's Edict) y robo con Lorien Revealed.",
+        "keyCards": [
+            "Tolarian Terror",
+            "Gurmag Angler",
+            "Cryptic Serpent",
+            "Thought Scour",
+            "Cast Down",
+            "Snuff Out",
+            "Counterspell",
+            "Brainstorm",
+            "Lorien Revealed",
+            "Deep Analysis"
+        ],
+        "sideboardCards": [
+            "Hydroblast",
+            "Blue Elemental Blast",
+            "Nihil Spellbomb",
+            "Arms of Hadar",
+            "Suffocating Fumes",
+            "Dispel",
+            "Chainer's Edict"
+        ],
+        "maybeboard": [
+            {
+                "name": "Agony Warp",
+                "note": "Truco de combate y removal doble."
+            },
+            {
+                "name": "Extract a Confession",
+                "note": "Efecto edicto de bajo coste."
+            },
+            {
+                "name": "Unexpected Fangs",
+                "note": "Vínculo vital gigantesco sobre un Terror 5/5."
+            }
+        ],
+        "proTips": [
+            "Thought Scour haciéndote objetivo a ti mismo acelera de 2 a 3 manás el descuento de tus criaturas en turno 1-2.",
+            "Unexpected Fangs sobre un Tolarian Terror o Gurmag Angler sella instantáneamente cualquier partida contra barajas agresivas.",
+            "Gestiona cuidadosamente el cementerio para no exiliar hechizos que abaraten a Tolarian Terror al pagar el Delve de Gurmag Angler."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "even",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Hydroblast",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Corta su daño letal y frena su tempo."
+                    },
+                    {
+                        "cardName": "Suffocating Fumes",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Limpia tokens y orcos."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Snuff Out",
+                        "quantity": 3,
+                        "role": "out",
+                        "reason": "Pagar 4 vidas te pone en rango de quemadura."
+                    },
+                    {
+                        "cardName": "Deep Analysis",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Poco tiempo para activar el flashback."
+                    }
+                ],
+                "gameplayTips": [
+                    "Banquillea fuera Snuff Out sin dudar: pagar 4 vidas es letal contra quemaduras.",
+                    "Un Tolarian Terror en turno 3 estabiliza tu mesa por completo."
+                ]
+            },
+            {
+                "vsDeckName": "Grixis Affinity",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Cast Down",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Mata a Myr Enforcer y Kenku de forma incondicional."
+                    },
+                    {
+                        "cardName": "Chainer's Edict",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Removal adicional en partidas largas."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Suffocating Fumes",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ineficaz contra resistencia alta."
+                    },
+                    {
+                        "cardName": "Thought Scour",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de densidad."
+                    }
+                ],
+                "gameplayTips": [
+                    "Tus criaturas 5/5 son más grandes que sus Myrs 4/4; en combate terrestre tienes la ventaja.",
+                    "Usa Cast Down para limpiar su presencia antes de que conecten con Makeshift Munitions."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "boros-synthesizer",
+        "slug": "boros-synthesizer",
+        "name": "Boros Synthesizer",
+        "metaPercentage": "0.5%",
+        "metaCount": 13,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2ef-2bdc-728a-9164-89bb84f6ccc2/variants/672/938/card_image.webp",
+        "colors": [
+            "W",
+            "R"
+        ],
+        "archetypeType": "Midrange",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-boros-synthesizer#online",
+        "description": "El motor de ventaja de cartas por excelencia entre Glint Hawk, Kor Skyfisher y Experimental Synthesizer, combinando agresión aérea con control de quemaduras masivo.",
+        "keyCards": [
+            "Experimental Synthesizer",
+            "Glint Hawk",
+            "Kor Skyfisher",
+            "Galvanic Blast",
+            "Lightning Bolt",
+            "Lembas",
+            "Thraben Inspector",
+            "Novice Inspector",
+            "Rustvale Bridge",
+            "Great Furnace"
+        ],
+        "sideboardCards": [
+            "Dust to Dust",
+            "Pyroblast",
+            "Red Elemental Blast",
+            "Cast into the Fire",
+            "Destroy Evil",
+            "Relic of Progenitus",
+            "Dawnbringer Cleric"
+        ],
+        "maybeboard": [
+            {
+                "name": "Militia Bugler",
+                "note": "Buscador de criaturas de resistencia 2 o menor."
+            },
+            {
+                "name": "Seekers' Squire",
+                "note": "Filtrado adicional de biblioteca."
+            },
+            {
+                "name": "Standard Bearer",
+                "note": "Protección contra encantamientos y daño dirigido."
+            }
+        ],
+        "proTips": [
+            "Devuelve Experimental Synthesizer a la mano con Glint Hawk o Kor Skyfisher para volver a exiliar y jugar otra carta.",
+            "Asegúrate de tener maná disponible antes de activar o regresar Synthesizer para no perder la carta exiliada si no puedes pagarla.",
+            "Galvanic Blast hace 4 de daño si tienes 3 o más artefactos (fácilmente alcanzable con fichas de pista, Lembas y tierras artefacto)."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "favorable",
+                "role": "Midrange",
+                "inCards": [
+                    {
+                        "cardName": "Dawnbringer Cleric",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Gana vidas y bloquea con solidez."
+                    },
+                    {
+                        "cardName": "Cast into the Fire",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Mata criaturas pequeñas o exilia piezas clave."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Experimental Synthesizer",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de tempo."
+                    },
+                    {
+                        "cardName": "Thraben Inspector",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Demasiado pasivo."
+                    }
+                ],
+                "gameplayTips": [
+                    "Lembas y Dawnbringer Cleric te dan vidas recurrentes que escapan del alcance del daño rojo.",
+                    "Kor Skyfisher bloquea con 3 de resistencia a casi todas sus amenazas."
+                ]
+            },
+            {
+                "vsDeckName": "Grixis Affinity",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Dust to Dust",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "La respuesta definitiva: exilia 2 artefactos."
+                    },
+                    {
+                        "cardName": "Destroy Evil",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Mata Myr Enforcer o Makeshift Munitions."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Lightning Bolt",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "3 de daño no mata a Myr Enforcer (4/4)."
+                    },
+                    {
+                        "cardName": "Lembas",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de densidad."
+                    }
+                ],
+                "gameplayTips": [
+                    "Dust to Dust en turno 3 sobre sus tierras puente les destroza la base de maná.",
+                    "Usa Galvanic Blast (4 de daño) para destruir a sus Myr Enforcers."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "turbo-fog",
+        "slug": "turbo-fog",
+        "name": "Turbo Fog",
+        "metaPercentage": "1.2%",
+        "metaCount": 33,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2f0-0e98-70ab-9d6d-60066bc7f2f1/variants/672/938/card_image.webp",
+        "colors": [
+            "U",
+            "G"
+        ],
+        "archetypeType": "Control",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-turbo-fog-fe589501-15e6-4511-b259-e066f9f36c51#online",
+        "description": "Mazo de control y desgaste que neutraliza todos los daños de combate con efectos de niebla (Fog, Moment's Peace, Tangle) mientras roba masivamente y gana por vaciado de biblioteca rival (Mill) con Stream of Thought.",
+        "keyCards": [
+            "Fog",
+            "Moment's Peace",
+            "Tangle",
+            "Weather the Storm",
+            "Accumulated Knowledge",
+            "Brainstorm",
+            "Stream of Thought",
+            "Lorien Revealed",
+            "Frantic Search",
+            "Growth Spiral"
+        ],
+        "sideboardCards": [
+            "Hydroblast",
+            "Blue Elemental Blast",
+            "Dispel",
+            "Flaring Pain",
+            "Curse of the Bloody Tome",
+            "Relic of Progenitus",
+            "Spidersilk Armor"
+        ],
+        "maybeboard": [
+            {
+                "name": "Campfire",
+                "note": "Recupera cementerio y previene daño directo."
+            },
+            {
+                "name": "Quiet Disrepair",
+                "note": "Solución contra artefactos y ganancia pasiva de vidas."
+            },
+            {
+                "name": "Turn Aside",
+                "note": "Protección para tus permanentes clave."
+            }
+        ],
+        "proTips": [
+            "Moment's Peace te otorga dos turnos de protección en una sola carta gracias a Flashback.",
+            "Usa Stream of Thought con Replicate para barajar en tu biblioteca tus mejores nieblas y cartas de robo, creando una biblioteca infinita.",
+            "Contra barajas rojas, Weather the Storm es tu condición primaria de supervivencia antes de ensamblar el bucle de nieblas."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "even",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Hydroblast",
+                        "quantity": 4,
+                        "role": "in",
+                        "reason": "Corta quemaduras letal y Flaring Pain."
+                    },
+                    {
+                        "cardName": "Dispel",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Contrarresta hechizos de daño instantáneo."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Tangle",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Niebla terrestre superada por quemadura directa a la cabeza."
+                    },
+                    {
+                        "cardName": "Stream of Thought",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Lenta para los primeros turnos."
+                    }
+                ],
+                "gameplayTips": [
+                    "Las nieblas no previenen el daño de los hechizos directos (Lightning Bolt, Lava Dart, Fireblast); Weather the Storm e Hydroblast son tus únicas salvaguardas.",
+                    "Hydroblast debe guardarse prioritariamente para Flaring Pain."
+                ]
+            },
+            {
+                "vsDeckName": "Blue Terror",
+                "difficulty": "favorable",
+                "role": "Control",
+                "inCards": [
+                    {
+                        "cardName": "Dispel",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Protege tus nieblas de sus contrahechizos."
+                    },
+                    {
+                        "cardName": "Hydroblast",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Control defensivo."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Weather the Storm",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "No generan tormenta ni quemadura directa."
+                    }
+                ],
+                "gameplayTips": [
+                    "Ellos solo ganan por combate: cada niebla que resuelvas es un turno entero comprado.",
+                    "Stream of Thought millea sus pocas cartas de biblioteca mientras reciclas tus nieblas."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "walls-combo",
+        "slug": "walls-combo",
+        "name": "Walls Combo",
+        "metaPercentage": "0.2%",
+        "metaCount": 7,
+        "imageUrl": "https://cards.mtggoldfish.com/images/019ce2f0-0e98-79da-9bfc-d22d904f60d1/variants/672/938/card_image.webp",
+        "colors": [
+            "G"
+        ],
+        "archetypeType": "Combo",
+        "author": "",
+        "decklistUrl": "https://www.mtggoldfish.com/archetype/pauper-walls-combo#online",
+        "description": "Mazo combo basado en criaturas con Defensor (Axebane Guardian, Overgrown Battlement) que generan maná descomunal para activar Freed from the Real y cerrar con Valakut Invoker o fichas infinitas.",
+        "keyCards": [
+            "Axebane Guardian",
+            "Overgrown Battlement",
+            "Freed from the Real",
+            "Quirion Ranger",
+            "Saruli Caretaker",
+            "Valakut Invoker",
+            "Lead the Stampede",
+            "Winding Way",
+            "Tinder Wall",
+            "Shield Sphere"
+        ],
+        "sideboardCards": [
+            "Weather the Storm",
+            "Scattershot Archer",
+            "Spidersilk Armor",
+            "Flaring Pain",
+            "Gleeful Sabotage",
+            "Crimson Fleet Commodore",
+            "Relic of Progenitus"
+        ],
+        "maybeboard": [
+            {
+                "name": "Galvanic Alchemist",
+                "note": "Heredero de Freed from the Real con Soulbond."
+            },
+            {
+                "name": "Secret Door",
+                "note": "Cierra partidas explorando mazmorras con maná infinito."
+            },
+            {
+                "name": "Masked Vandal",
+                "note": "Removal de artefactos o encantamientos."
+            }
+        ],
+        "proTips": [
+            "Axebane Guardian con Freed from the Real genera maná infinito de cualquier color si controlas al menos otro muro.",
+            "Una vez obtenido maná infinito, invoca Valakut Invoker o activa Secret Door para ganar en ese mismo turno.",
+            "Lead the Stampede y Winding Way rellenan tu mano con 4-5 criaturas por solo 2 o 3 manás."
+        ],
+        "matchups": [
+            {
+                "vsDeckName": "Blue Terror",
+                "difficulty": "even",
+                "role": "Combo",
+                "inCards": [
+                    {
+                        "cardName": "Spidersilk Armor",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Resistencia a cartas de tempo y bloqueadores con alcance."
+                    },
+                    {
+                        "cardName": "Relic of Progenitus",
+                        "quantity": 2,
+                        "role": "in",
+                        "reason": "Ralentiza sus terrores."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Shield Sphere",
+                        "quantity": 2,
+                        "role": "out",
+                        "reason": "Poco impacto en combate."
+                    }
+                ],
+                "gameplayTips": [
+                    "Sus criaturas no tienen evasión; tus muros bloquean indefinidamente a Tolarian Terror.",
+                    "Espera a tener protección antes de encantar a Axebane Guardian con Freed from the Real."
+                ]
+            },
+            {
+                "vsDeckName": "Mono Red Madness",
+                "difficulty": "even",
+                "role": "Combo",
+                "inCards": [
+                    {
+                        "cardName": "Weather the Storm",
+                        "quantity": 3,
+                        "role": "in",
+                        "reason": "Supervivencia obligada contra quemadura."
+                    },
+                    {
+                        "cardName": "Scattershot Archer",
+                        "quantity": 1,
+                        "role": "in",
+                        "reason": "Limpia atacantes pequeños."
+                    }
+                ],
+                "outCards": [
+                    {
+                        "cardName": "Valakut Invoker",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Demasiado frágil en curva 3."
+                    },
+                    {
+                        "cardName": "Lead the Stampede",
+                        "quantity": 1,
+                        "role": "out",
+                        "reason": "Ajuste de velocidad."
+                    }
+                ],
+                "gameplayTips": [
+                    "Tus muros de 4 de resistencia (Overgrown Battlement) bloquean perfectamente a sus criaturas terrestres.",
+                    "Cuidado con quemaduras en respuesta a tus activaciones."
+                ]
+            }
+        ]
     }
   ]);
 

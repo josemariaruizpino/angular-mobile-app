@@ -62,7 +62,7 @@
         [attr.aria-selected]="activeSection() === 'matchups'"
       >
         <span>Emparejamientos</span>
-        <span class="tab-count-badge">{{ currentDeck.matchups.length }}</span>
+        <span class="tab-count-badge tabular-nums">{{ currentDeck.matchups.length }}</span>
       </button>
 
       @if (currentDeck.proTips && currentDeck.proTips.length > 0) {
@@ -74,7 +74,7 @@
           role="tab"
           [attr.aria-selected]="activeSection() === 'tips'"
         >
-          <span>TIPS</span>
+          <span>Consejos Clave</span>
         </button>
       }
 

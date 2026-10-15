@@ -1,36 +1,58 @@
 <header class="app-header">
   <div class="header-container">
-    <!-- Botón Hamburguesa -->
-    <button
-      type="button"
-      class="nav-toggle-btn touch-target"
-      [attr.aria-expanded]="navService.isDrawerOpen()"
-      aria-label="Abrir menú de navegación"
-      (click)="onToggleDrawer()"
-    >
-      <app-icon
-        [name]="navService.isDrawerOpen() ? 'close' : 'menu'"
-        [size]="22"
-      />
-    </button>
+    <div class="header-left">
+      <!-- Botón Hamburguesa (solo móvil/tablet pequeña) -->
+      <button
+        type="button"
+        class="nav-toggle-btn touch-target mobile-trigger"
+        [attr.aria-expanded]="navService.isDrawerOpen()"
+        aria-label="Abrir menú de navegación"
+        (click)="onToggleDrawer()"
+      >
+        <app-icon
+          [name]="navService.isDrawerOpen() ? 'close' : 'menu'"
+          [size]="22"
+        />
+      </button>
 
-    <!-- Marca / Título dinámico -->
-    <div class="header-brand">
-      <span class="brand-title">FASE DE PENSAR</span>
+      <!-- Marca / Logo -->
+      <a routerLink="/home" class="header-brand">
+        <span class="brand-mana-gem" aria-hidden="true"></span>
+        <span class="brand-title">FASE DE PENSAR</span>
+        <span class="brand-badge desktop-badge">Pauper MTG</span>
+      </a>
     </div>
 
-    <!-- Acciones Rápidas (Toggle Tema Dark/Light) -->
+    <!-- Navegación Desktop -->
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      @for (item of navService.items(); track item.id) {
+        <a
+          [routerLink]="item.path"
+          routerLinkActive="active"
+          class="desktop-nav-link"
+        >
+          <app-icon [name]="item.icon" [size]="16" class="nav-icon" />
+          <span>{{ item.label }}</span>
+          @if (item.badge) {
+            <span class="nav-badge-pill">{{ item.badge }}</span>
+          }
+        </a>
+      }
+    </nav>
+
+    <!-- Acciones Rápidas (Toggle Tema) -->
     <div class="header-actions">
       <button
         type="button"
-        class="action-btn touch-target"
+        class="action-btn theme-toggle-btn touch-target"
         [attr.aria-label]="themeService.isDark() ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
         (click)="onToggleTheme()"
       >
         <app-icon
           [name]="themeService.isDark() ? 'sun' : 'moon'"
-          [size]="20"
+          [size]="18"
         />
+        <span class="theme-label-desktop">{{ themeService.isDark() ? 'Modo Día' : 'Modo Noche' }}</span>
       </button>
     </div>
   </div>
