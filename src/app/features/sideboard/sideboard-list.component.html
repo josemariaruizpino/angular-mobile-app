@@ -4,101 +4,151 @@
     <span class="section-tag">METAGAME COMPETITIVO</span>
     <h1 class="section-title">Guías de Sideboard ⚔️</h1>
     <p class="section-description">
-      Estrategia de banquillo, planes In/Out y emparejamientos clave para cada arquetipo de Pauper.
+      Selecciona el formato para acceder a los arquetipos, planes In/Out y emparejamientos clave.
     </p>
   </header>
 
-  <!-- Buscador en tiempo real -->
-  <div class="search-box">
-    <app-icon name="search" [size]="18" class="search-icon" />
-    <input
-      type="search"
-      class="search-input"
-      placeholder="Buscar por mazo o carta clave..."
-      [value]="sideboardService.searchQuery()"
-      (input)="onSearch($event)"
-      aria-label="Buscar arquetipos de Pauper"
-    />
-  </div>
-
-  <!-- Filtro por estilo de mazo -->
-  <div class="archetype-chips" role="tablist" aria-label="Filtrar por estilo">
-    @for (filter of filters; track filter.id) {
+  <!-- Selector de Formatos de Magic (Pauper / Modern) -->
+  <div class="format-switcher-row" role="tablist" aria-label="Seleccionar formato de juego">
+    @for (fmt of formats; track fmt.id) {
       <button
         type="button"
-        class="chip-btn touch-target"
-        [class.active]="sideboardService.filterArchetype() === filter.id"
-        (click)="setFilter(filter.id)"
+        class="format-tab-pill touch-target"
+        [class.active]="sideboardService.selectedFormat() === fmt.id"
+        (click)="setFormat(fmt.id)"
         role="tab"
-        [attr.aria-selected]="sideboardService.filterArchetype() === filter.id"
+        [attr.aria-selected]="sideboardService.selectedFormat() === fmt.id"
       >
-        {{ filter.label }}
+        <span class="format-indicator" [class]="'indicator-' + fmt.id"></span>
+        <span class="format-tab-title">{{ fmt.label }}</span>
+        <span class="format-tab-count tabular-nums">
+          {{ fmt.id === 'pauper' ? sideboardService.pauperCount() : sideboardService.modernCount() }}
+        </span>
       </button>
     }
   </div>
 
-  <!-- Cuadrícula de Cards de Mazos de Pauper -->
-  <section class="decks-grid" aria-label="Arquetipos del metagame">
-    @for (deck of sideboardService.filteredDecks(); track deck.id) {
-      <article
-        class="deck-card"
-        [routerLink]="['/sideboard', deck.slug]"
-        tabindex="0"
-        role="button"
-        [attr.aria-label]="'Abrir guía de banquillo de ' + deck.name"
-      >
-        <!-- Banner con Imagen de la Carta de MTGGoldfish -->
-        <div class="deck-media-wrap">
-          <img
-            [src]="deck.imageUrl"
-            [alt]="deck.name"
-            class="deck-card-image"
-            loading="lazy"
-          />
-          <div class="media-overlay"></div>
-          <div class="media-badge-meta">
-            <span class="meta-pct tabular-nums">{{ deck.metaPercentage }}</span>
-            <span class="meta-label">META</span>
-          </div>
-          <div class="media-badge-type">
-            {{ deck.archetypeType }}
-          </div>
+  @if (sideboardService.selectedFormat() === 'modern') {
+    <!-- Estado de Formato Modern (Actualmente vacío / En preparación) -->
+    <section class="format-empty-view" aria-label="Formato Modern">
+      <div class="format-empty-card">
+        <div class="empty-glow"></div>
+        <div class="empty-icon-wrap">
+          <app-icon name="sparkles" [size]="32" />
         </div>
-
-        <!-- Contenido e información del mazo -->
-        <div class="deck-info">
-          <div class="deck-title-row">
-            <h2 class="deck-name">{{ deck.name }}</h2>
-            <div class="color-tags">
-              @for (color of deck.colors; track color) {
-                <span class="color-pip" [class]="'mana-' + color">{{ color }}</span>
-              }
-            </div>
-          </div>
-
-          <p class="deck-desc">{{ deck.description }}</p>
-
-          <div class="key-cards-preview">
-            <span class="key-label">Claves:</span>
-            <div class="tags-container">
-              @for (card of deck.keyCards.slice(0, 3); track card) {
-                <span class="key-tag">{{ card }}</span>
-              }
-            </div>
-          </div>
-
-          <div class="deck-footer-action">
-            <span class="action-hint">Ver guía de Sideboard</span>
-            <app-icon name="chevron-right" [size]="16" class="arrow-icon" />
-          </div>
-        </div>
-      </article>
-    } @empty {
-      <div class="empty-state">
-        <app-icon name="info" [size]="32" class="empty-icon" />
-        <h2 class="empty-title">Sin arquetipos encontrados</h2>
-        <p class="empty-text">No hay mazos que coincidan con "{{ sideboardService.searchQuery() }}".</p>
+        <span class="empty-tag">PRÓXIMAMENTE</span>
+        <h2 class="empty-title">Modern en Preparación</h2>
+        <p class="empty-text">
+          Estamos recopilando las listas, planes In/Out y estrategias de banquillo para el metagame de <strong>Modern</strong> (Boros Energy, Dimir Murktide, Golgari Yawgmoth, Tron, etc.).
+        </p>
+        <p class="empty-subtext">
+          Actualmente puedes consultar todas las guías activas del metagame de <strong>Pauper</strong>.
+        </p>
+        <button
+          type="button"
+          class="btn-return-format touch-target"
+          (click)="setFormat('pauper')"
+        >
+          <app-icon name="arrow-left" [size]="16" />
+          <span>Ver guías de Pauper ({{ sideboardService.pauperCount() }})</span>
+        </button>
       </div>
-    }
-  </section>
+    </section>
+  } @else {
+    <!-- Formato Pauper Activo -->
+
+    <!-- Buscador en tiempo real -->
+    <div class="search-box">
+      <app-icon name="search" [size]="18" class="search-icon" />
+      <input
+        type="search"
+        class="search-input"
+        placeholder="Buscar por mazo o carta clave de Pauper..."
+        [value]="sideboardService.searchQuery()"
+        (input)="onSearch($event)"
+        aria-label="Buscar arquetipos de Pauper"
+      />
+    </div>
+
+    <!-- Filtro por estilo de mazo -->
+    <div class="archetype-chips" role="tablist" aria-label="Filtrar por estilo">
+      @for (filter of filters; track filter.id) {
+        <button
+          type="button"
+          class="chip-btn touch-target"
+          [class.active]="sideboardService.filterArchetype() === filter.id"
+          (click)="setFilter(filter.id)"
+          role="tab"
+          [attr.aria-selected]="sideboardService.filterArchetype() === filter.id"
+        >
+          {{ filter.label }}
+        </button>
+      }
+    </div>
+
+    <!-- Cuadrícula de Cards de Mazos de Pauper -->
+    <section class="decks-grid" aria-label="Arquetipos del metagame de Pauper">
+      @for (deck of sideboardService.filteredDecks(); track deck.id) {
+        <article
+          class="deck-card"
+          [routerLink]="['/sideboard', deck.slug]"
+          tabindex="0"
+          role="button"
+          [attr.aria-label]="'Abrir guía de banquillo de ' + deck.name"
+        >
+          <!-- Banner con Imagen de la Carta de MTGGoldfish -->
+          <div class="deck-media-wrap">
+            <img
+              [src]="deck.imageUrl"
+              [alt]="deck.name"
+              class="deck-card-image"
+              loading="lazy"
+            />
+            <div class="media-overlay"></div>
+            <div class="media-badge-meta">
+              <span class="meta-pct tabular-nums">{{ deck.metaPercentage }}</span>
+              <span class="meta-label">META</span>
+            </div>
+            <div class="media-badge-type">
+              {{ deck.archetypeType }}
+            </div>
+          </div>
+
+          <!-- Contenido e información del mazo -->
+          <div class="deck-info">
+            <div class="deck-title-row">
+              <h2 class="deck-name">{{ deck.name }}</h2>
+              <div class="color-tags">
+                @for (color of deck.colors; track color) {
+                  <span class="color-pip" [class]="'mana-' + color">{{ color }}</span>
+                }
+              </div>
+            </div>
+
+            <p class="deck-desc">{{ deck.description }}</p>
+
+            <div class="key-cards-preview">
+              <span class="key-label">Claves:</span>
+              <div class="tags-container">
+                @for (card of deck.keyCards.slice(0, 3); track card) {
+                  <span class="key-tag">{{ card }}</span>
+                }
+              </div>
+            </div>
+
+            <div class="deck-footer-action">
+              <span class="action-hint">Ver guía de Sideboard</span>
+              <app-icon name="chevron-right" [size]="16" class="arrow-icon" />
+            </div>
+          </div>
+        </article>
+      } @empty {
+        <div class="empty-state">
+          <app-icon name="info" [size]="32" class="empty-icon" />
+          <h2 class="empty-title">Sin arquetipos encontrados</h2>
+          <p class="empty-text">No hay mazos de Pauper que coincidan con "{{ sideboardService.searchQuery() }}".</p>
+        </div>
+      }
+    </section>
+  }
 </div>

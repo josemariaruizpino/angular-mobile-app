@@ -19,6 +19,8 @@ export interface MaybeboardCard {
   note: string;
 }
 
+export type MagicFormat = 'pauper' | 'modern';
+
 export interface PauperDeck {
   id: string;
   slug: string;
@@ -28,6 +30,7 @@ export interface PauperDeck {
   imageUrl: string;
   colors: string[];
   archetypeType: 'Aggro' | 'Control' | 'Midrange' | 'Combo' | 'Ramp';
+  format?: MagicFormat;
   description: string;
   author?: string;
   decklistUrl?: string;

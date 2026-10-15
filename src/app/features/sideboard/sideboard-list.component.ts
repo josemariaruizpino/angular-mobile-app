@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SideboardService } from '../../core/services/sideboard.service';
-import { CardComponent } from '../../shared/components/card/card.component';
+import { MagicFormat } from '../../core/models/sideboard.model';
 import { IconComponent } from '../../shared/components/icon/icon.component';
 
 @Component({
@@ -14,6 +14,11 @@ import { IconComponent } from '../../shared/components/icon/icon.component';
 })
 export class SideboardListComponent {
   readonly sideboardService = inject(SideboardService);
+
+  readonly formats: { id: MagicFormat; label: string; description: string }[] = [
+    { id: 'pauper', label: 'Pauper', description: 'Metagame de comunes de Magic' },
+    { id: 'modern', label: 'Modern', description: 'Metagame de Modern competitivo' }
+  ];
 
   readonly filters = [
     { id: 'all', label: 'Todos' },
@@ -31,5 +36,9 @@ export class SideboardListComponent {
 
   setFilter(filterId: string): void {
     this.sideboardService.setFilter(filterId);
+  }
+
+  setFormat(format: MagicFormat): void {
+    this.sideboardService.setFormat(format);
   }
 }

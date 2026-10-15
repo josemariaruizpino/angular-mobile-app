@@ -1,5 +1,5 @@
 import { Injectable, computed, signal } from '@angular/core';
-import { PauperDeck } from '../models/sideboard.model';
+import { MagicFormat, PauperDeck } from '../models/sideboard.model';
 
 @Injectable({
   providedIn: 'root'
@@ -7506,14 +7506,29 @@ export class SideboardService {
 
   readonly searchQuery = signal<string>('');
   readonly filterArchetype = signal<string>('all');
+  readonly selectedFormat = signal<MagicFormat>('pauper');
 
   readonly decks = this._decks.asReadonly();
+
+  readonly pauperCount = computed(() =>
+    this._decks().filter((d) => !d.format || d.format === 'pauper').length
+  );
+
+  readonly modernCount = computed(() =>
+    this._decks().filter((d) => d.format === 'modern').length
+  );
 
   readonly filteredDecks = computed(() => {
     const query = this.searchQuery().toLowerCase().trim();
     const type = this.filterArchetype();
+    const currentFormat = this.selectedFormat();
 
     return this._decks().filter((deck) => {
+      const deckFormat = deck.format || 'pauper';
+      if (deckFormat !== currentFormat) {
+        return false;
+      }
+
       const matchesType = type === 'all' || deck.archetypeType.toLowerCase() === type.toLowerCase();
       const matchesQuery = !query ||
         deck.name.toLowerCase().includes(query) ||
@@ -7534,5 +7549,9 @@ export class SideboardService {
 
   setFilter(type: string): void {
     this.filterArchetype.set(type);
+  }
+
+  setFormat(format: MagicFormat): void {
+    this.selectedFormat.set(format);
   }
 }
