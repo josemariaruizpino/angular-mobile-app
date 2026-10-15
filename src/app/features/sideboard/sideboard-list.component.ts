@@ -41,4 +41,8 @@ export class SideboardListComponent {
   setFormat(format: MagicFormat): void {
     this.sideboardService.setFormat(format);
   }
+
+  get currentFormatLabel(): string {
+    return this.sideboardService.selectedFormat() === 'modern' ? 'Modern' : 'Pauper';
+  }
 }
