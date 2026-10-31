@@ -16,6 +16,7 @@ import { IconComponent } from '../icon/icon.component';
   styles: `
     :host {
       display: block;
+      margin-top: -8px;
       margin-bottom: 0.75rem;
     }
 
