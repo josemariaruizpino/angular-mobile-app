@@ -1,0 +1,159 @@
+.game-select {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem calc(2rem + var(--safe-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  @media (min-width: 768px) {
+    padding-top: 2.5rem;
+    gap: 1.75rem;
+  }
+}
+
+.game-select__head {
+  padding-bottom: 0.875rem;
+  border-bottom: 3px solid var(--text-primary);
+}
+
+.game-select__title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: var(--text-primary);
+
+  @media (min-width: 768px) {
+    font-size: 4rem;
+  }
+}
+
+.game-select__lede {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.game-select__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.875rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-card);
+  color: var(--text-primary);
+  border: 3px solid var(--text-primary);
+  border-top: 6px solid var(--game-color);
+  transition: transform 0.12s var(--ease-out);
+
+  &:hover {
+    transform: translate(-2px, -2px);
+
+    .game-card__arrow {
+      transform: translateX(3px);
+    }
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+.game-card--magic {
+  --game-color: var(--fmt-pauper);
+}
+
+.game-card--riftbound {
+  --game-color: var(--fmt-modern);
+}
+
+/* Placa clara fija: ambos logos se ven igual de bien en modo claro y oscuro */
+.game-card__logo {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8.5rem;
+  padding: 0.875rem 1.5rem;
+  background: #f4f5f2;
+  border-bottom: 3px solid var(--text-primary);
+
+  @media (min-width: 768px) {
+    height: 10rem;
+  }
+
+  img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
+
+.game-card__footer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+}
+
+.game-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.game-card__tagline {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.game-card__badge {
+  padding: 0.0625rem 0.4375rem;
+  background: var(--text-primary);
+  color: var(--bg-app);
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+}
+
+.game-card__description {
+  font-size: 0.875rem;
+  line-height: 1.35;
+  color: var(--text-secondary);
+}
+
+.game-card__arrow {
+  flex-shrink: 0;
+  transition: transform 0.12s var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-card,
+  .game-card__arrow {
+    transition: none;
+  }
+}

@@ -16,15 +16,16 @@
       </button>
 
       <!-- Marca / Logo -->
-      <a routerLink="/home" class="header-brand">
+      <a routerLink="/games" class="header-brand">
         <span class="brand-mana-gem" aria-hidden="true"></span>
         <span class="brand-title">FASE DE PENSAR</span>
-        <span class="brand-badge desktop-badge">Pauper MTG</span>
+        <!-- <span class="brand-badge desktop-badge">Pauper MTG</span> -->
       </a>
     </div>
 
     <!-- Navegación Desktop -->
     <nav class="desktop-nav" aria-label="Navegación principal">
+      <app-games-menu />
       @for (item of navService.items(); track item.id) {
         <a
           [routerLink]="item.path"

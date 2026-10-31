@@ -32,9 +32,9 @@ describe('NavigationService', () => {
     expect(service.isDrawerOpen()).toBeFalse();
   });
 
-  it('should provide the active mobile sections including SIDEBOARD and JUGADORES', () => {
+  it('should provide the active mobile sections Inicio and JUGADORES', () => {
     const items = service.items();
-    expect(items.length).toBe(3);
-    expect(items.map((i) => i.id)).toEqual(['home', 'sideboard', 'players']);
+    expect(items.length).toBe(2);
+    expect(items.map((i) => i.id)).toEqual(['home', 'players']);
   });
 });

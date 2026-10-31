@@ -1,0 +1,32 @@
+<div class="game-select">
+  <header class="game-select__head">
+    <h1 class="game-select__title">Elige tu juego</h1>
+    <p class="game-select__lede">Planes de banquillo y metagame para cada juego de cartas.</p>
+  </header>
+
+  <nav class="game-select__list" aria-label="Elegir juego">
+    @for (game of games; track game.id) {
+      <a
+        [class]="'game-card game-card--' + game.id"
+        [routerLink]="game.path"
+        [attr.aria-label]="'Ir a ' + game.name"
+      >
+        <span class="game-card__logo">
+          <img [src]="game.logo" [alt]="game.name" />
+        </span>
+        <span class="game-card__footer">
+          <span class="game-card__text">
+            <span class="game-card__tagline">
+              {{ game.tagline }}
+              @if (game.comingSoon) {
+                <span class="game-card__badge">Muy pronto</span>
+              }
+            </span>
+            <span class="game-card__description">{{ game.description }}</span>
+          </span>
+          <app-icon name="chevron-right" [size]="22" class="game-card__arrow" />
+        </span>
+      </a>
+    }
+  </nav>
+</div>

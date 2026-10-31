@@ -1,0 +1,32 @@
+<button
+  type="button"
+  class="games-trigger"
+  [class.is-open]="isOpen()"
+  aria-haspopup="true"
+  [attr.aria-expanded]="isOpen()"
+  (click)="toggle()"
+>
+  <span>Juegos</span>
+  <span class="games-caret" aria-hidden="true"></span>
+</button>
+
+@if (isOpen()) {
+  <ul class="games-panel" role="menu">
+    @for (game of games; track game.id) {
+      <li role="none">
+        <a
+          role="menuitem"
+          class="games-option"
+          routerLinkActive="active"
+          [routerLink]="game.path"
+          (click)="close()"
+        >
+          <span class="games-option__icon">
+            <img [src]="game.icon" alt="" />
+          </span>
+          <span>{{ game.name }}</span>
+        </a>
+      </li>
+    }
+  </ul>
+}

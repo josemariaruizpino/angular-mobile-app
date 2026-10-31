@@ -1,97 +1,120 @@
 /* ==========================================================================
-   PREMIUM MOBILE DESIGN SYSTEM (REDESIGN SKILL & TASTE UPGRADE)
+   FASE DE PENSAR · sistema visual "Boleto"
+   Papel blanco, tinta roja de imprenta, tipografía condensada en mayúsculas
+   y la casilla 1 · X · 2 como firma de cada emparejamiento.
    ========================================================================== */
 
 :root {
-  /* Tipografía */
-  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* Tipografía: DIN de rotulación para títulos, humanista para lectura */
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-sans: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Paleta Light - Tonos neutros cálidos con acento Cobalto/Zafiro */
-  --bg-app: #f8fafc;
-  --bg-header: rgba(248, 250, 252, 0.85);
+  /* Papel y tinta (modo día: pabellón con fluorescentes) */
+  --bg-app: #f4f5f2;
+  --bg-header: #d4161c;
   --bg-drawer: #ffffff;
   --surface-card: #ffffff;
-  --surface-hover: #f1f5f9;
-  --surface-active: #e2e8f0;
-  --surface-subtle: #f8fafc;
+  --surface-hover: #ecede8;
+  --surface-active: #e1e3dc;
+  --surface-subtle: #eef0eb;
 
-  --border-subtle: rgba(15, 23, 42, 0.08);
-  --border-hover: rgba(15, 23, 42, 0.16);
-  --border-strong: rgba(15, 23, 42, 0.28);
+  --border-subtle: rgba(20, 17, 15, 0.16);
+  --border-hover: rgba(20, 17, 15, 0.42);
+  --border-strong: #14110f;
 
-  --text-primary: #0f172a;
-  --text-secondary: #334155;
-  --text-muted: #64748b;
+  --text-primary: #14110f;
+  --text-secondary: #3b3733;
+  --text-muted: #625d57;
 
-  --accent: #2563eb;
-  --accent-soft: rgba(37, 99, 235, 0.08);
+  /* Tinta roja: único acento de marca */
+  --accent: #c8141b;
+  --accent-soft: rgba(200, 20, 27, 0.09);
   --accent-contrast: #ffffff;
-  --accent-hover: #1d4ed8;
+  --accent-hover: #a50f15;
 
-  --badge-bg: #fee2e2;
-  --badge-text: #b91c1c;
+  /* Códigos de formato */
+  --fmt-pauper: #0c7a45;
+  --fmt-modern: #6d3bd0;
+  --fmt-standard: #1b5fc1;
+  --fmt-pioneer: #c25a00;
 
-  --overlay-bg: rgba(15, 23, 42, 0.45);
-  
-  /* Sombras tintadas con profundidad y luz natural */
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02);
-  --shadow-md: 0 4px 14px -2px rgba(15, 23, 42, 0.07), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
-  --shadow-lg: 0 10px 25px -3px rgba(15, 23, 42, 0.09), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
-  --shadow-drawer: 16px 0 36px rgba(15, 23, 42, 0.16);
-  --glass-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+  /* Estados del emparejamiento (1 · X · 2) */
+  --mark-favorable: #0c7a45;
+  --mark-even: #8a5a00;
+  --mark-unfavorable: #c8141b;
 
-  /* Radios jerárquicos de curvatura */
-  --radius-xs: 4px;
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-xl: 22px;
+  --badge-bg: #14110f;
+  --badge-text: #ffffff;
+
+  --overlay-bg: rgba(20, 17, 15, 0.55);
+
+  /* Profundidad plana: línea de tinta, nada de nubes de sombra */
+  --shadow-sm: 0 1px 0 rgba(20, 17, 15, 0.12);
+  --shadow-md: 0 2px 0 rgba(20, 17, 15, 0.16);
+  --shadow-lg: 0 6px 16px -6px rgba(20, 17, 15, 0.35);
+  --shadow-drawer: 12px 0 28px -10px rgba(20, 17, 15, 0.45);
+  --glass-highlight: none;
+
+  /* Esquinas de papel cortado */
+  --radius-xs: 1px;
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 6px;
   --radius-full: 9999px;
 
-  --header-height: 58px;
+  --header-height: 56px;
   --drawer-width: 300px;
 
-  /* Safe areas para notch y barras de navegación en iOS / Android */
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
   --safe-left: env(safe-area-inset-left, 0px);
   --safe-right: env(safe-area-inset-right, 0px);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Modo Oscuro (Obsidian & Deep Slate Tint) */
+/* Modo noche: sala con poca luz, tinta negra y rojo de neón apagado */
 :root[data-theme="dark"],
 .dark {
-  --bg-app: #080c14;
-  --bg-header: rgba(8, 12, 20, 0.85);
-  --bg-drawer: #0d1322;
-  --surface-card: #111827;
-  --surface-hover: #172238;
-  --surface-active: #1e2c49;
-  --surface-subtle: #0c121e;
+  --bg-app: #121110;
+  --bg-header: #b3121a;
+  --bg-drawer: #1a1817;
+  --surface-card: #1b1918;
+  --surface-hover: #242120;
+  --surface-active: #2d2a28;
+  --surface-subtle: #161413;
 
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(255, 255, 255, 0.16);
-  --border-strong: rgba(255, 255, 255, 0.28);
+  --border-subtle: rgba(244, 245, 242, 0.16);
+  --border-hover: rgba(244, 245, 242, 0.42);
+  --border-strong: #f4f5f2;
 
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
+  --text-primary: #f4f5f2;
+  --text-secondary: #d6d3cd;
+  --text-muted: #a8a39b;
 
-  --accent: #38bdf8;
-  --accent-soft: rgba(56, 189, 248, 0.12);
-  --accent-contrast: #080c14;
-  --accent-hover: #7dd3fc;
+  --accent: #ff5a4f;
+  --accent-soft: rgba(255, 90, 79, 0.14);
+  --accent-contrast: #121110;
+  --accent-hover: #ff7a70;
 
-  --badge-bg: rgba(239, 68, 68, 0.2);
-  --badge-text: #f87171;
+  --fmt-pauper: #3fcf8a;
+  --fmt-modern: #a98bff;
+  --fmt-standard: #6aa9ff;
+  --fmt-pioneer: #ff9b4a;
 
-  --overlay-bg: rgba(0, 0, 0, 0.7);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.45);
-  --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.06);
-  --shadow-lg: 0 12px 28px -4px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.08);
-  --shadow-drawer: 20px 0 42px rgba(0, 0, 0, 0.8);
-  --glass-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  --mark-favorable: #3fcf8a;
+  --mark-even: #f0b429;
+  --mark-unfavorable: #ff5a4f;
+
+  --badge-bg: #f4f5f2;
+  --badge-text: #121110;
+
+  --overlay-bg: rgba(0, 0, 0, 0.72);
+  --shadow-sm: 0 1px 0 rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 2px 0 rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 8px 20px -6px rgba(0, 0, 0, 0.8);
+  --shadow-drawer: 14px 0 30px -10px rgba(0, 0, 0, 0.9);
 }
 
 /* Reset y base */
@@ -113,7 +136,15 @@ html, body {
   scroll-behavior: smooth;
 }
 
-/* Cifras tabulares para alineación perfecta en números y porcentajes */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+}
+
+/* Cifras tabulares: alineación de columna de tabla de resultados */
 .tabular-nums,
 .stat-value,
 .meta-pct,
@@ -122,13 +153,11 @@ html, body {
   font-feature-settings: "tnum";
 }
 
-/* Evitar el rebote o scroll cuando el drawer está activo en móvil */
 body.drawer-locked {
   overflow: hidden;
   touch-action: none;
 }
 
-/* Estilo para links y botones accesibles */
 a {
   color: inherit;
   text-decoration: none;
@@ -142,34 +171,49 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Targets táctiles móviles mínimos de 44px x 44px con micro-interacción */
+input {
+  font-family: inherit;
+}
+
+/* Selección y barra de scroll con la tinta de la casa */
+::selection {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-hover) transparent;
+}
+
+/* Objetivos táctiles de 44px mínimo */
 .touch-target {
   min-height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease;
+  transition: transform 0.12s var(--ease-out), background-color 0.12s ease, color 0.12s ease;
 
   &:active {
-    transform: scale(0.97);
+    transform: translateY(1px);
   }
 }
 
-/* Indicador de foco accesible */
+/* Foco: doble anillo papel + tinta, visible sobre rojo y sobre blanco */
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 3px solid var(--text-primary);
   outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--bg-app);
 }
 
-/* Contenedor responsivo mobile first con expansión elegante a desktop */
+/* Contenedor móvil primero */
 .mobile-container,
 .app-container {
   width: 100%;
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
-  padding: 1.125rem 1.25rem calc(2.5rem + var(--safe-bottom));
-  transition: max-width 0.3s ease, padding 0.3s ease;
+  padding: 1rem 1rem calc(2.5rem + var(--safe-bottom));
 
   @media (min-width: 768px) {
     max-width: 900px;
@@ -177,52 +221,119 @@ button {
   }
 
   @media (min-width: 1024px) {
-    max-width: 1200px;
+    max-width: 1100px;
     padding: 2.25rem 2.5rem 4rem;
   }
 }
 
-/* Tipografía de títulos de sección */
+/* Cabecera de sección: título en cabecera de boleto, regla gruesa de tinta */
 .section-header {
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.875rem;
+  border-bottom: 3px solid var(--text-primary);
 
   @media (min-width: 768px) {
-    margin-bottom: 2.25rem;
-  }
-
-  .section-tag {
-    display: inline-block;
-    font-size: 0.6875rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-    margin-bottom: 0.375rem;
+    margin-bottom: 1.75rem;
   }
 
   .section-title {
-    font-size: 1.625rem;
+    font-size: 2.25rem;
     font-weight: 800;
-    letter-spacing: -0.03em;
-    line-height: 1.2;
+    letter-spacing: 0.005em;
+    line-height: 0.95;
     color: var(--text-primary);
     text-wrap: balance;
 
     @media (min-width: 768px) {
-      font-size: 2.25rem;
+      font-size: 3.25rem;
     }
   }
 
   .section-description {
-    font-size: 0.9375rem;
+    font-size: 1rem;
     color: var(--text-secondary);
-    margin-top: 0.375rem;
-    line-height: 1.5;
+    margin-top: 0.5rem;
+    line-height: 1.45;
     text-wrap: pretty;
-    max-width: 720px;
+    max-width: 62ch;
+  }
+}
 
-    @media (min-width: 768px) {
-      font-size: 1.0625rem;
+/* Pastilla de maná compartida (símbolo del color del mazo) */
+.color-pip,
+.color-dot {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1;
+  border: 1.5px solid var(--text-primary);
+
+  &.mana-W { background: #fff3b0; color: #14110f; }
+  &.mana-U { background: #9fd4f5; color: #14110f; }
+  &.mana-B { background: #14110f; color: #f4f5f2; }
+  &.mana-R { background: #f58c7c; color: #14110f; }
+  &.mana-G { background: #8fd49a; color: #14110f; }
+}
+
+/* Casilla 1 · X · 2: la firma del sistema.
+   Tres casillas de boleto; la cruz roja marca el pronóstico. */
+.mark-1x2 {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1.5px solid var(--text-primary);
+  background: var(--surface-card);
+
+  .cell {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 1.75rem;
+    height: 2rem;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-muted);
+
+    & + .cell {
+      border-left: 1.5px solid var(--text-primary);
     }
+
+    &.on {
+      color: var(--text-primary);
+      font-weight: 800;
+
+      /* cruz de bolígrafo sobre la casilla */
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 135%;
+        height: 3px;
+        background: var(--mark-color, var(--accent));
+        transform-origin: center;
+      }
+      &::before { transform: translate(-50%, -50%) rotate(52deg); }
+      &::after { transform: translate(-50%, -50%) rotate(-52deg); }
+      overflow: hidden;
+    }
+  }
+
+  &.is-favorable { --mark-color: var(--mark-favorable); }
+  &.is-even { --mark-color: var(--mark-even); }
+  &.is-unfavorable { --mark-color: var(--mark-unfavorable); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }

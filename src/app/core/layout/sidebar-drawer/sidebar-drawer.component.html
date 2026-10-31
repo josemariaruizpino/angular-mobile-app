@@ -37,6 +37,25 @@
 
   <!-- Navegación y Secciones -->
   <nav class="drawer-nav">
+    <span class="nav-section-title">JUEGOS</span>
+    <ul class="nav-list">
+      @for (game of games; track game.id) {
+        <li class="nav-item">
+          <a
+            [routerLink]="game.path"
+            routerLinkActive="active"
+            (click)="onClose()"
+            class="nav-link touch-target"
+          >
+            <div class="nav-text">
+              <span class="nav-label">{{ game.name }}</span>
+            </div>
+            <app-icon name="chevron-right" [size]="16" class="nav-arrow" />
+          </a>
+        </li>
+      }
+    </ul>
+
     <span class="nav-section-title">SECCIONES</span>
     <ul class="nav-list">
       @for (item of navService.items(); track item.id) {

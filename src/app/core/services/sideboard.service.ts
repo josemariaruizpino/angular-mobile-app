@@ -1,4 +1,5 @@
 import { Injectable, computed, signal } from '@angular/core';
+import { MAGIC_FORMATS } from '../data/magic-formats';
 import { MagicFormat, PauperDeck } from '../models/sideboard.model';
 
 @Injectable({
@@ -10954,13 +10955,13 @@ export class SideboardService {
 
   readonly decks = this._decks.asReadonly();
 
-  readonly pauperCount = computed(() =>
-    this._decks().filter((d) => !d.format || d.format === 'pauper').length
-  );
-
-  readonly modernCount = computed(() =>
-    this._decks().filter((d) => d.format === 'modern').length
-  );
+  readonly formatCounts = computed(() => {
+    const counts = Object.fromEntries(MAGIC_FORMATS.map((format) => [format.id, 0])) as Record<MagicFormat, number>;
+    for (const deck of this._decks()) {
+      counts[deck.format ?? 'pauper']++;
+    }
+    return counts;
+  });
 
   readonly filteredDecks = computed(() => {
     const query = this.searchQuery().toLowerCase().trim();

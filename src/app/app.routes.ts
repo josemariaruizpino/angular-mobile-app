@@ -4,10 +4,22 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home'
+    redirectTo: 'games'
   },
   {
-    path: 'home',
+    path: 'games',
+    title: 'Elige juego • Fase de pensar',
+    loadComponent: () =>
+      import('./features/game-select/game-select.component').then((m) => m.GameSelectComponent)
+  },
+  {
+    path: 'riftbound',
+    title: 'Riftbound • Fase de pensar',
+    loadComponent: () =>
+      import('./features/riftbound/riftbound.component').then((m) => m.RiftboundComponent)
+  },
+  {
+    path: 'magic',
     title: 'Inicio • MinimalApp',
     loadComponent: () =>
       import('./features/home/home.component').then((m) => m.HomeComponent)
@@ -56,6 +68,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'home'
+    redirectTo: 'games'
   }
 ];

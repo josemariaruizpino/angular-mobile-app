@@ -14,17 +14,9 @@ export class NavigationService {
     {
       id: 'home',
       label: 'Inicio',
-      path: '/home',
+      path: '/magic',
       icon: 'home',
       description: 'Panel principal y resumen de actividad'
-    },
-    {
-      id: 'sideboard',
-      label: 'SIDEBOARD',
-      path: '/sideboard',
-      icon: 'sparkles',
-      badge: 'Pauper',
-      description: 'Metagame de Pauper y guías de banquillo'
     },
     {
       id: 'players',

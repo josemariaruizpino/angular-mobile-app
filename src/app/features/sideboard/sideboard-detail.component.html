@@ -132,7 +132,7 @@
             [class.active]="selectedDifficulty() === 'even'"
             (click)="setDifficultyFilter('even')"
           >
-            Even
+            Igualados
           </button>
           <button
             type="button"
@@ -155,7 +155,7 @@
               role="tab"
               [attr.aria-selected]="selectedMatchupIndex() === idx"
             >
-              <span class="diff-dot" [class]="'dot-' + m.difficulty"></span>
+              <span class="diff-mark" [class]="'mark-' + m.difficulty" aria-hidden="true">{{ m.difficulty === 'favorable' ? '1' : m.difficulty === 'even' ? 'X' : '2' }}</span>
               <span>vs {{ m.vsDeckName }}</span>
             </button>
           } @empty {
@@ -169,18 +169,21 @@
             <!-- Cabecera del Matchup con Dificultad y Rol -->
             <div class="matchup-header">
               <div>
-                <span class="vs-label">PLAN DE BANQUILLO CONTRA</span>
-                <h2 class="vs-title">{{ matchup.vsDeckName }}</h2>
+                <h2 class="vs-title"><span class="vs-prefix">Banquillo vs</span> {{ matchup.vsDeckName }}</h2>
               </div>
               <div class="matchup-status-badges">
                 @if (matchup.role) {
                   <span class="role-pill">{{ matchup.role }}</span>
                 }
                 <span
-                  class="difficulty-pill"
-                  [class]="'diff-' + matchup.difficulty"
+                  class="mark-1x2"
+                  [class]="'is-' + matchup.difficulty"
+                  role="img"
+                  [attr.aria-label]="'Emparejamiento ' + (matchup.difficulty === 'favorable' ? 'favorable' : matchup.difficulty === 'even' ? 'igualado' : 'desfavorable')"
                 >
-                  {{ matchup.difficulty }}
+                  <span class="cell" [class.on]="matchup.difficulty === 'favorable'">1</span>
+                  <span class="cell" [class.on]="matchup.difficulty === 'even'">X</span>
+                  <span class="cell" [class.on]="matchup.difficulty === 'unfavorable'">2</span>
                 </span>
               </div>
             </div>
@@ -191,7 +194,7 @@
               <div class="in-box">
                 <div class="box-header in-header">
                   <span class="box-action-icon">+</span>
-                  <span class="box-title">ENTRAN (SIDE IN)</span>
+                  <span class="box-title">Entran</span>
                 </div>
                 @if (matchup.inCards.length > 0) {
                   <ul class="cards-change-list">
@@ -216,7 +219,7 @@
               <div class="out-box">
                 <div class="box-header out-header">
                   <span class="box-action-icon">−</span>
-                  <span class="box-title">SALEN (SIDE OUT)</span>
+                  <span class="box-title">Salen</span>
                 </div>
                 @if (matchup.outCards.length > 0) {
                   <ul class="cards-change-list">
@@ -241,7 +244,7 @@
             <!-- Consejos Tácticos de la Partida -->
             @if (matchup.gameplayTips.length > 0) {
               <div class="tips-box">
-                <h3 class="tips-title">💡 Estrategia y Claves de la Partida</h3>
+                <h3 class="tips-title">Claves de la partida</h3>
                 <ul class="tips-list">
                   @for (tip of matchup.gameplayTips; track tip) {
                     <li>{{ tip }}</li>

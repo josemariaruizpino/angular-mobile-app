@@ -19,7 +19,13 @@ export interface MaybeboardCard {
   note: string;
 }
 
-export type MagicFormat = 'pauper' | 'modern';
+export type MagicFormat = 'pauper' | 'modern' | 'standard' | 'pioneer';
+
+export interface MagicFormatInfo {
+  id: MagicFormat;
+  label: string;
+  description: string;
+}
 
 export interface PauperDeck {
   id: string;

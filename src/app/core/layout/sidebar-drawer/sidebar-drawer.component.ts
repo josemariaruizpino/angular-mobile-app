@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, HostListener, inject } from '@angul
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NavigationService } from '../../services/navigation.service';
 import { ThemeService } from '../../services/theme.service';
+import { GAMES } from '../../data/games';
 import { IconComponent } from '../../../shared/components/icon/icon.component';
 
 @Component({
@@ -15,6 +16,7 @@ import { IconComponent } from '../../../shared/components/icon/icon.component';
 export class SidebarDrawerComponent {
   readonly navService = inject(NavigationService);
   readonly themeService = inject(ThemeService);
+  readonly games = GAMES;
 
   @HostListener('window:keydown.escape')
   onEscape(): void {

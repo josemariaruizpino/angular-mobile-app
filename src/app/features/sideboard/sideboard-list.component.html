@@ -1,14 +1,15 @@
 <div class="mobile-container">
+  <app-back-link link="/magic" target="Magic" />
+
   <!-- Cabecera de la sección -->
   <header class="section-header">
-    <span class="section-tag">METAGAME COMPETITIVO</span>
-    <h1 class="section-title">Guías de Sideboard ⚔️</h1>
+    <h1 class="section-title">Guías de Sideboard</h1>
     <p class="section-description">
       Selecciona el formato para acceder a los arquetipos, planes In/Out y emparejamientos clave.
     </p>
   </header>
 
-  <!-- Selector de Formatos de Magic (Pauper / Modern) -->
+  <!-- Selector de Formatos de Magic (Pauper / Modern / Standard) -->
   <div class="format-switcher-row" role="tablist" aria-label="Seleccionar formato de juego">
     @for (fmt of formats; track fmt.id) {
       <button
@@ -22,7 +23,7 @@
         <span class="format-indicator" [class]="'indicator-' + fmt.id"></span>
         <span class="format-tab-title">{{ fmt.label }}</span>
         <span class="format-tab-count tabular-nums">
-          {{ fmt.id === 'pauper' ? sideboardService.pauperCount() : sideboardService.modernCount() }}
+          {{ sideboardService.formatCounts()[fmt.id] }}
         </span>
       </button>
     }
@@ -57,67 +58,45 @@
     }
   </div>
 
-  <!-- Cuadrícula de Cards de Mazos -->
-  <section class="decks-grid" [attr.aria-label]="'Arquetipos del metagame de ' + currentFormatLabel">
+  <!-- Tabla de arquetipos: una fila por mazo, ordenada por presencia en el meta -->
+  <section class="decks-table" [attr.aria-label]="'Arquetipos del metagame de ' + currentFormatLabel">
+    <div class="table-head" aria-hidden="true">
+      <span>Meta</span>
+      <span>Mazo</span>
+    </div>
     @for (deck of sideboardService.filteredDecks(); track deck.id) {
-      <article
-        class="deck-card"
+      <a
+        class="deck-row"
         [routerLink]="['/sideboard', deck.slug]"
-        tabindex="0"
-        role="button"
         [attr.aria-label]="'Abrir guía de banquillo de ' + deck.name"
       >
-        <!-- Banner con Imagen de la Carta de MTGGoldfish -->
-        <div class="deck-media-wrap">
-          <img
-            [src]="deck.imageUrl"
-            [alt]="deck.name"
-            class="deck-card-image"
-            loading="lazy"
-          />
-          <div class="media-overlay"></div>
-          <div class="media-badge-meta">
-            <span class="meta-pct tabular-nums">{{ deck.metaPercentage }}</span>
-            <span class="meta-label">META</span>
-          </div>
-          <div class="media-badge-type">
-            {{ deck.archetypeType }}
-          </div>
-        </div>
+        <span class="row-pct tabular-nums">{{ deck.metaPercentage }}</span>
 
-        <!-- Contenido e información del mazo -->
-        <div class="deck-info">
-          <div class="deck-title-row">
-            <h2 class="deck-name">{{ deck.name }}</h2>
+        <div class="row-main">
+          <h2 class="deck-name">{{ deck.name }}</h2>
+          <div class="row-meta">
+            <span class="type-tag">{{ deck.archetypeType }}</span>
             <div class="color-tags">
               @for (color of deck.colors; track color) {
                 <span class="color-pip" [class]="'mana-' + color">{{ color }}</span>
               }
             </div>
           </div>
-
-          <p class="deck-desc">{{ deck.description }}</p>
-
-          <div class="key-cards-preview">
-            <span class="key-label">Claves:</span>
-            <div class="tags-container">
-              @for (card of deck.keyCards.slice(0, 3); track card) {
-                <span class="key-tag">{{ card }}</span>
-              }
-            </div>
-          </div>
-
-          <div class="deck-footer-action">
-            <span class="action-hint">Ver guía de Sideboard</span>
-            <app-icon name="chevron-right" [size]="16" class="arrow-icon" />
-          </div>
+          <p class="deck-keys">{{ deck.keyCards.slice(0, 3).join(' · ') }}</p>
         </div>
-      </article>
+
+        <img [src]="deck.imageUrl" alt="" class="row-thumb" loading="lazy" />
+        <app-icon name="chevron-right" [size]="18" class="arrow-icon" />
+      </a>
     } @empty {
       <div class="empty-state">
         <app-icon name="info" [size]="32" class="empty-icon" />
         <h2 class="empty-title">Sin arquetipos encontrados</h2>
-        <p class="empty-text">No hay mazos de {{ currentFormatLabel }} que coincidan con "{{ sideboardService.searchQuery() }}".</p>
+        @if (sideboardService.searchQuery()) {
+          <p class="empty-text">No hay mazos de {{ currentFormatLabel }} que coincidan con "{{ sideboardService.searchQuery() }}".</p>
+        } @else {
+          <p class="empty-text">Aún no hay mazos de {{ currentFormatLabel }}.</p>
+        }
       </div>
     }
   </section>

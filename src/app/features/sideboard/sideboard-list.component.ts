@@ -1,13 +1,15 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SideboardService } from '../../core/services/sideboard.service';
+import { MAGIC_FORMATS, getMagicFormatLabel } from '../../core/data/magic-formats';
 import { MagicFormat } from '../../core/models/sideboard.model';
 import { IconComponent } from '../../shared/components/icon/icon.component';
+import { BackLinkComponent } from '../../shared/components/back-link/back-link.component';
 
 @Component({
   selector: 'app-sideboard-list',
   standalone: true,
-  imports: [RouterLink, IconComponent],
+  imports: [RouterLink, IconComponent, BackLinkComponent],
   templateUrl: './sideboard-list.component.html',
   styleUrl: './sideboard-list.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -15,10 +17,7 @@ import { IconComponent } from '../../shared/components/icon/icon.component';
 export class SideboardListComponent {
   readonly sideboardService = inject(SideboardService);
 
-  readonly formats: { id: MagicFormat; label: string; description: string }[] = [
-    { id: 'pauper', label: 'Pauper', description: 'Metagame de comunes de Magic' },
-    { id: 'modern', label: 'Modern', description: 'Metagame de Modern competitivo' }
-  ];
+  readonly formats = MAGIC_FORMATS;
 
   readonly filters = [
     { id: 'all', label: 'Todos' },
@@ -43,6 +42,6 @@ export class SideboardListComponent {
   }
 
   get currentFormatLabel(): string {
-    return this.sideboardService.selectedFormat() === 'modern' ? 'Modern' : 'Pauper';
+    return getMagicFormatLabel(this.sideboardService.selectedFormat());
   }
 }
